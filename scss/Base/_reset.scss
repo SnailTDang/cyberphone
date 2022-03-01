@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-family: 'Nunito Sans', sans-serif;
+    background-color:$color-white-1 ;
+    @include styleText($fs-1,$fw-1,$color-dark-1);
+}

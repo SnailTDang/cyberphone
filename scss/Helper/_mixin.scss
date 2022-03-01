@@ -1,0 +1,39 @@
+@mixin styleText($fs,$fw,$color) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $color;
+}
+
+@mixin styleButton($bg-color,$pd-y, $pd-x, $border) {
+    background:$bg-color ;
+    padding:$pd-y $pd-x;
+    border: $border;
+    border-radius:$bd-2;
+}
+
+@mixin sytleCardPhone($box-sd, $bg-color, $border, $pd, $mg ) {
+    box-shadow: $box-sd;
+    background-color: $bg-color;
+    border: $border;
+    padding: $pd;
+    margin-bottom: $mg;
+}
+
+@mixin styleHoverButton($color,$bd-color,$bg-color) {
+    color: $color;
+    border-color:$bd-color;
+    background:$bg-color ;
+}
+// $screen: chứa tên màn hình cần lấy giá trị
+@mixin responsive($screen) {
+    @if(map-has-key($map: $breakpoints, $key: $screen)){
+        //tìm thấy
+        $value: map-get($map: $breakpoints, $key: $screen);
+        @media screen and (max-width:$value) {
+            @content;
+        }
+
+    }@else{
+        @warn "$screen không tồn tại";
+    }
+}

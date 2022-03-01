@@ -1,0 +1,16 @@
+.cardPhone {
+    @include sytleCardPhone($box-sd1, $color-white-1, none, $pd-1 + 5, $mg-1);
+    img {
+        box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
+        border-radius: 8px;
+        height: 290px;
+    }
+    .cardPhone__title {
+        @include styleText($fs-1 + 6, $fw-3, $color-blue-1)
+    }
+    .cardPhone__rating {
+        color: #f9d412;
+        display: flex;
+        align-items: center;
+    }
+}
