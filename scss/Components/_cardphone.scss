@@ -1,16 +1,43 @@
 .cardPhone {
-    @include sytleCardPhone($box-sd1, $color-white-1, none, $pd-1 + 5, $mg-1);
+    @include sytleCardPhone($box-sd1, $color-white-1, none, $pd-1 - 5, $mg-1);
     img {
         box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
         border-radius: 8px;
-        height: 290px;
+        height: 230px;
+        transition: all 0.3s ease;
     }
-    .cardPhone__title {
-        @include styleText($fs-1 + 6, $fw-3, $color-blue-1)
+
+    .card-body {
+        padding: 15px 0;
+        .cardPhone__title {
+            @include styleText($fs-1 + 6, $fw-3, $color-blue-1);
+        }
+        .cardPhone__text {
+            color: #e6983a;
+        }
+        .cardPhone__cost {
+            @include styleText($fs-1 + 6, $fw-3, $color-blue-2);
+        }
+        .cardPhone__rating {
+            align-items: center;
+            .yellow-star {
+                color: #f9c312;
+            }
+            .trans-star {
+                color: #e3e3e3;
+            }
+        }
     }
-    .cardPhone__rating {
-        color: #f9d412;
-        display: flex;
-        align-items: center;
+    .cardphone-footer {
+        text-align: center;
     }
+    &:hover {
+        img {
+            transform: translateY(-15px);
+        }
+    }
+}
+
+.sold-out {
+    background-color: #e6623a;
 }

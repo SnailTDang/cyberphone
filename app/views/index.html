@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="headerPhone">
+            <nav class="container navbar navbar-expand-lg ">
+                <a class="navbar-brand" href="#">CyberPhone</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPhone"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fas fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarPhone">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section class="phoneCarousel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 d-flex align-items-center">
+                        <div>
+                            <h1>CyberPhone</h1>
+                            <h2>Best Smartphone of 2021!</h2>
+                            <p>Cras tortor mi, lobortis quis ornare in, varius scelerisque urna. Vivamus imperdiet dolor nec
+                                odio convallis consequat.</p>
+                            <div class="phoneBTN-group">
+                                <button class="phoneBTN-white">More Info</button>
+                                <button class="phoneBTN-blue">Shop</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <img class="img-fluid" src="../../img/product-header2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="products">
+            <div class="container products__contents">
+                <div class="row">
+                    <h2 class="section-title">-Featured Products-</h2>
+                    <div class="flex-wrap d-flex" id="productsList"></div>
+                </div>
+            </div>
+        </section>
+        <footer></footer>
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Thông tin người dùng</h4>
+                        <button type="button" class="close" data-dismiss="modal">X
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer"><button class="btn btn-success" onclick="addNewMember()">Thêm người dùng</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script type="module" src="../controllers/main.js"></script>
+</body>
+
+</html>

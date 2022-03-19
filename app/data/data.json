@@ -1,0 +1,101 @@
+{
+   "data" : [
+         {
+            "id":"1",
+            "tenSP":"CyberBeats",
+            "type":"Tech",
+            "gia": 8990000,
+            "hinhAnh":"../../img/product1.png",
+            "khoHang":15,
+            "rate": {
+               "star": 3,
+               "comments": "334 đánh giá"
+            }
+         },
+         {
+            "id":"2",
+            "tenSP":"CyberPhone",
+            "type":"Tech",
+            "gia": 25990000,
+            "hinhAnh":"../../img/product2.png",
+            "khoHang":11,
+            "rate": {
+               "star": 5,
+               "comments": "134 đánh giá"
+            }
+         },
+         {
+            "id":"3",
+            "tenSP":"CyberTablet",
+            "type":"Tech",
+            "gia": 15990000,
+            "hinhAnh":"../../img/product3.png",
+            "khoHang":24,
+            "rate": {
+               "star": 4,
+               "comments": "111 đánh giá"
+            }
+         },
+         {
+            "id":"4",
+            "tenSP":"CyberWatch",
+            "type":"Tech",
+            "gia":7990000,
+            "hinhAnh":"../../img/product4.png",
+            "khoHang":51,
+            "rate": {
+               "star": 5,
+               "comments": "129 đánh giá"
+            }
+         },
+         {
+            "id":"5",
+            "tenSP": "CyberBattery",
+            "type":"Tech",
+            "gia":1990000,
+            "hinhAnh":"../../img/product5.png",
+            "khoHang":41,
+            "rate": {
+               "star": 2,
+               "comments": "34 đánh giá"
+            }
+         },
+         {
+            "id":"6",
+            "tenSP":"CyberPods",
+            "type":"Tech",
+            "gia":4990000,
+            "hinhAnh":"../../img/product6.png",
+            "khoHang": 16,
+            "rate": {
+               "star": 4,
+               "comments": "124 đánh giá"
+            },
+            "status": "Hết hàng"
+         },
+         {
+            "id":"8",
+            "tenSP":"CyberAirB",
+            "type":"Tech",
+            "gia":6990000,
+            "hinhAnh":"https://cdn.tgdd.vn/Files/2021/10/28/1394064/tai-nghe-airb-pro-1-_1647x1334-800-resize.jpg",
+            "khoHang":151,
+            "rate": {
+               "star": 4,
+               "comments": "31 đánh giá"
+            }
+         },
+         {
+            "id":"9",
+            "tenSP":"CyberPC",
+            "type":"Tech",
+            "gia": 29990000,
+            "hinhAnh":"https://minhancomputer.com/media/product/4727_pc_gaming_i7_10700__gtx_1650__ram_16gb__ssd_250gb.jpg",
+            "khoHang": 0,
+            "rate": {
+               "star": 4,
+               "comments": "54 đánh giá"
+            }
+         }
+      ]
+}
