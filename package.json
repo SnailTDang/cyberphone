@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/SnailTDang/cyberphone/issues"
   },
-  "homepage": "https://github.com/SnailTDang/cyberphone#readme"
+  "homepage": "https://github.com/SnailTDang/cyberphone#readme",
+  "dependencies": {
+    "swiper": "^8.0.7"
+  }
 }

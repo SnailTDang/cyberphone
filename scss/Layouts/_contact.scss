@@ -1,0 +1,12 @@
+.header-contact {
+    padding: 10px 0;
+    background-color: $color-blue-1;
+    .contact-item {
+        a {
+            @include styleText($fs-1, $fw-2, $color-white-2);
+        }
+        .phone-num {
+            color: $color-yellow-1;
+        }
+    }
+}
