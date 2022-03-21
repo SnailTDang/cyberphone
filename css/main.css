@@ -632,6 +632,13 @@ p {
   z-index: 1040;
 }
 
+.headerPhone .navbar {
+  padding: 0;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+}
+
 .headerPhone .navbar-brand {
   font-size: 2.8rem;
   font-weight: 700;
@@ -643,11 +650,21 @@ p {
   max-width: 75px;
 }
 
-.headerPhone .navbar-nav .nav-item {
-  padding: 0 15px;
+.headerPhone .navbar-nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
-.headerPhone .navbar-nav .nav-item .nav-link {
+.headerPhone .navbar-nav .nav-item {
+  padding: 0 15px;
+  min-width: 90px;
+}
+
+.headerPhone .navbar-nav .nav-item .menu-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -665,7 +682,7 @@ p {
   transition: 0.2s;
 }
 
-.headerPhone .navbar-nav .nav-item .nav-link::after {
+.headerPhone .navbar-nav .nav-item .menu-link::after {
   content: "";
   width: 100%;
   height: 3px;
@@ -677,13 +694,43 @@ p {
   transition: 0.2s;
 }
 
-.headerPhone .navbar-nav .nav-item .nav-link:hover {
+.headerPhone .navbar-nav .nav-item .menu-link:hover {
   color: #2a73dd;
 }
 
-.headerPhone .navbar-nav .nav-item .nav-link:hover::after {
+.headerPhone .navbar-nav .nav-item .menu-link:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+.headerPhone .navbar-nav .nav-item .search {
+  position: relative;
+}
+
+.headerPhone .navbar-nav .nav-item .search input {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  padding: 1rem 0.75rem;
+  min-height: 16px;
+  outline: none;
+  border: 0;
+  background-color: #f5f5f5;
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+          flex: 1;
+}
+
+.headerPhone .navbar-nav .nav-item .search button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: #2196f3;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
 }
 
 .headerPhone .navbar-nav .active .nav-link {
@@ -693,6 +740,20 @@ p {
 .headerPhone .navbar-nav .active .nav-link::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+.menu-scroll {
+  height: 70px;
+}
+
+.menu-scroll .navbar-brand {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #2a73dd;
+}
+
+.menu-scroll .navbar-brand img {
+  max-width: 60px;
 }
 
 @media screen and (max-width: 992px) {
@@ -705,9 +766,11 @@ p {
 }
 
 .phoneCarousel {
-  background-image: url(../img/product-header-bg.jpg);
-  background-size: cover;
-  background-position: center bottom;
-  padding: 225px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.phoneCarousel .container-fluid {
+  padding: 0;
 }
 /*# sourceMappingURL=main.css.map */

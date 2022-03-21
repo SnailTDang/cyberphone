@@ -1,6 +1,7 @@
-.phoneCarousel{
-    background-image: url(../img/product-header-bg.jpg);
-    background-size: cover;
-    background-position: center bottom;
-    padding: $pd-2 0;
+.phoneCarousel {
+    overflow: hidden;
+    position: relative;
+    .container-fluid {
+        padding: 0;
+    }
 }
