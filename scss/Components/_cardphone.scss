@@ -1,12 +1,40 @@
 .cardPhone {
     @include sytleCardPhone($box-sd1, $color-white-1, none, $pd-1 - 5, $mg-1);
+    border: 1px solid transparent;
+    overflow: visible;
     img {
         box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
         border-radius: 8px;
         height: 230px;
-        transition: all 0.3s ease;
     }
-
+    .card-img {
+        position: relative;
+        transition: all 0.3s ease;
+        .discount {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 36px;
+            height: 40px;
+            text-align: center;
+            background-color: #e6623a;
+            p {
+                @include styleText($fs-1, $fw-1, $color-white-1);
+                margin-bottom: 0;
+            }
+        }
+        &::after {
+            content: "";
+            width: 0;
+            height: 0;
+            left: 0;
+            top: 40px;
+            position: absolute;
+            border-color: transparent #e6623a;
+            border-style: solid;
+            border-width: 0 18px 5px;
+        }
+    }
     .card-body {
         padding: 15px 0;
         .cardPhone__title {
@@ -17,6 +45,10 @@
         }
         .cardPhone__cost {
             @include styleText($fs-1 + 6, $fw-3, $color-blue-2);
+        }
+        .cardPhone__cost-old {
+            @include styleText($fs-2, $fw-2, $color-dark-2);
+            text-decoration: line-through;
         }
         .cardPhone__rating {
             align-items: center;
@@ -32,8 +64,10 @@
         text-align: center;
     }
     &:hover {
-        img {
-            transform: translateY(-15px);
+        border: $color-blue-2 1px solid;
+        z-index: 2;
+        .card-img {
+            transform: translateY(-10px);
         }
     }
 }

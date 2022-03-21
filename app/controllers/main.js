@@ -2,36 +2,68 @@ import ProductServices from "../services/ProductServices.js";
 import Products from "../models/Products.js";
 
 let proService = new ProductServices();
+let homeProducts = [];
 
-function getProducts() {
+function getHomeProducts() {
     // Các code xử lý lấy data từ API
     proService
         .getProductList()
         .then((response) => {
-            showProducts(response.data);
+            response.data.map((e) => {
+                let { id, tenSP, gia, hinhAnh, khoHang, rate, discount } = e;
+                let prod = new Products(
+                    id,
+                    tenSP,
+                    gia,
+                    hinhAnh,
+                    khoHang,
+                    rate,
+                    discount
+                );
+                prod.saleOff();
+                homeProducts.push(prod);
+            });
+            showProducts(homeProducts);
         })
         .catch(function (error) {
             console.log(error);
         });
 }
-function getPhuKien() {
+function getPhoneProduct() {
+    let phonelist = [];
     // Các code xử lý lấy data từ API
     proService
         .getProductList()
         .then((response) => {
-            console.log(response.data.phone);
-            let { phone, phuKien } = response.data;
-            showProducts(phuKien);
+            response.data.phonelist.map((e) => {
+                let { id, tenSP, gia, hinhAnh, khoHang, rate, discount } = e;
+                let prod = new Products(
+                    id,
+                    tenSP,
+                    gia,
+                    hinhAnh,
+                    khoHang,
+                    rate,
+                    discount
+                );
+                prod.saleOff();
+                phonelist.push(prod);
+            });
+            showProducts(phonelist);
         })
         .catch(function (error) {
             console.log(error);
         });
 }
 
-getProducts();
+window.getPhoneProduct = getPhoneProduct;
+
+getHomeProducts();
 
 function showProducts(mangSP) {
     let content = mangSP.map((e) => {
+        console.log(e);
+        // e.saleOff();
         let star = () => {
             let star = "";
             for (let i = 0; i < e.rate.star; i++) {
@@ -47,43 +79,57 @@ function showProducts(mangSP) {
             status = `<button class="btnPhone-shadow"><i class="fa fa-shopping-cart"></i>Mua hàng</button>`;
         } else {
             status = `
-              <div class="btnPhone-shadow sold-out">
-                Hết hàng
-              </div>`;
+            <button class="btnPhone-shadow sold-out">
+            Hết hàng
+            </button>`;
+        }
+        let discount = "";
+        if (e.discount > 0) {
+            discount = `
+            <div class="discount">
+                <p>${e.discount}%</p>
+                <p>OFF</p>
+            </div>`;
+        } else {
+            discount = "";
         }
         return `
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-          <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg">
-              <div class="card cardPhone">
-                  <img src="${e.hinhAnh}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <div class="justify-content-between">
-                          <div>
-                              <h3 class="cardPhone__title">${e.tenSP}</h3>
-                              <p class="cardPhone__text">Còn ${
-                                  e.khoHang
-                              } sản phẩm</p>
-                          </div>
-                          <div>
-                              <h3 class="cardPhone__cost">${e.gia.toLocaleString()} ₫</h3>
-                          </div>
-                          <div class="cardPhone__rating">
+            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <div class="card cardPhone">
+                    <div class="card-img">
+                        <img src="${e.hinhAnh}" class="card-img-top" alt="...">
+                        ${discount}
+                    </div>
+                    <div class="card-body">
+                        <div class="justify-content-between">
                             <div>
-                              ${star()}
+                                <h3 class="cardPhone__title">${e.tenSP}</h3>
+                                <p class="cardPhone__text">Còn ${
+                                    e.khoHang
+                                } sản phẩm</p>
                             </div>
-                            <span>${e.rate.comments}</span>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="cardphone-footer">
-                    <div class="justify-content-between">
-                        <div>
-                          ${status}
+                            <div>
+                                <h4 class="cardPhone__cost-old">${e.gia.toLocaleString()}₫</h4>
+                                <h3 class="cardPhone__cost">${e.giaKM.toLocaleString()}₫</h3>
+                            </div>
+                            <div class="cardPhone__rating">
+                                <div>
+                                ${star()}
+                                </div>
+                                <span>${e.rate.comments}</span>
+                            </div>
                         </div>
                     </div>
-                  </div>
-              </div>
-          </a>
+                    <div class="cardphone-footer">
+                        <div class="justify-content-between">
+                            <div>
+                            ${status}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
     `;
     });

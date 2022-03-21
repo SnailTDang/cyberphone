@@ -14,8 +14,17 @@
 }
 
 .btnPhone-shadow {
-    @include styleButton(#f5ac58, $pd-3 + 0.5, $pd-1, none);
+    @include styleButton($color-blue-2, $pd-3 + 0.5, $pd-1, none);
     @include styleText($fs-1, $fw-2, $color-white-1);
     transition: all 0.3s linear;
     box-shadow: 2px 2px 4px #e2ebfc, -2px -2px 4px #fff;
+    &:hover {
+        @include styleHoverButton($color-white-3, $color-blue-2, #f5ac58);
+    }
+}
+
+.sold-out {
+    &:hover {
+        @include styleHoverButton($color-white-1, transparent, #e6623a);
+    }
 }

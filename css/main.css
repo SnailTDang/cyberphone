@@ -457,7 +457,7 @@ p {
 }
 
 .btnPhone-shadow {
-  background: #f5ac58;
+  background: #2a73dd;
   padding: 13.5px 25px;
   border: none;
   border-radius: 8px;
@@ -470,6 +470,18 @@ p {
           box-shadow: 2px 2px 4px #e2ebfc, -2px -2px 4px #fff;
 }
 
+.btnPhone-shadow:hover {
+  color: #fff;
+  border-color: #2a73dd;
+  background: #f5ac58;
+}
+
+.sold-out:hover {
+  color: #f5f9fe;
+  border-color: transparent;
+  background: #e6623a;
+}
+
 .cardPhone {
   -webkit-box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
           box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
@@ -477,6 +489,8 @@ p {
   border: none;
   padding: 20px;
   margin-bottom: 30px;
+  border: 1px solid transparent;
+  overflow: visible;
 }
 
 .cardPhone img {
@@ -484,8 +498,41 @@ p {
           box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
   border-radius: 8px;
   height: 230px;
+}
+
+.cardPhone .card-img {
+  position: relative;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.cardPhone .card-img .discount {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 40px;
+  text-align: center;
+  background-color: #e6623a;
+}
+
+.cardPhone .card-img .discount p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #f5f9fe;
+  margin-bottom: 0;
+}
+
+.cardPhone .card-img::after {
+  content: "";
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 40px;
+  position: absolute;
+  border-color: transparent #e6623a;
+  border-style: solid;
+  border-width: 0 18px 5px;
 }
 
 .cardPhone .card-body {
@@ -508,6 +555,13 @@ p {
   color: #2a73dd;
 }
 
+.cardPhone .card-body .cardPhone__cost-old {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #121212;
+  text-decoration: line-through;
+}
+
 .cardPhone .card-body .cardPhone__rating {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -526,9 +580,14 @@ p {
   text-align: center;
 }
 
-.cardPhone:hover img {
-  -webkit-transform: translateY(-15px);
-          transform: translateY(-15px);
+.cardPhone:hover {
+  border: #2a73dd 1px solid;
+  z-index: 2;
+}
+
+.cardPhone:hover .card-img {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .sold-out {
