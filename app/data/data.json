@@ -1,85 +1,90 @@
 {
-   "data" : 
-   [
+   "data": [
       {
-         "id":"1",
-         "tenSP":"CyberBeats",
-         "brand": "Cyber",
-         "type":"Tech",
-         "gia": 8990000,
+         "id": "1",
+         "name": "VisionBeats",
+         "brand": "Vision",
+         "type": "access",
+         "cost": 8990000,
          "discount": 15,
-         "hinhAnh":"../../img/product1.png",
-         "khoHang":15,
+         "freeship": false,
+         "image": "../../img/product1.png",
+         "amount": 15,
          "rate": {
             "star": 3,
             "comments": "334 đánh giá"
          }
       },
       {
-         "id":"2",
-         "tenSP":"CyberPhone",
-         "brand": "Cyber",
-         "type":"Tech",
-         "gia": 25990000,
+         "id": "2",
+         "name": "VisionPhone",
+         "brand": "Vision",
+         "type": "phone",
+         "cost": 25990000,
          "discount": 15,
-         "hinhAnh":"../../img/product2.png",
-         "khoHang":11,
+         "freeship": true,
+         "image": "../../img/product2.png",
+         "amount": 11,
          "rate": {
             "star": 5,
             "comments": "134 đánh giá"
          }
       },
       {
-         "id":"3",
-         "tenSP":"CyberTablet",
-         "brand": "Cyber",
-         "type":"Tech",
-         "gia": 15990000,
+         "id": "3",
+         "name": "VisionTablet",
+         "brand": "tablet",
+         "type": "Tech",
+         "cost": 15990000,
          "discount": 15,
-         "hinhAnh":"../../img/product3.png",
-         "khoHang":24,
+         "freeship": true,
+         "image": "../../img/product3.png",
+         "amount": 24,
          "rate": {
             "star": 4,
             "comments": "111 đánh giá"
          }
       },
       {
-         "id":"4",
-         "tenSP":"CyberWatch",
-         "brand": "Cyber",
-         "type":"Tech",
-         "gia":7990000,
+         "id": "4",
+         "name": "VisionWatch",
+         "brand": "access",
+         "type": "Tech",
+         "cost": 7990000,
          "discount": 5,
-         "hinhAnh":"../../img/product4.png",
-         "khoHang":51,
+         "freeship": true,
+         "image": "../../img/product4.png",
+         "amount": 51,
          "rate": {
             "star": 5,
             "comments": "129 đánh giá"
          }
       },
       {
-         "id":"5",
-         "tenSP": "CyberBattery",
-         "brand": "Cyber",
-         "type":"Tech",
-         "gia":1990000,
+         "id": "5",
+         "name": "VisionBattery",
+         "brand": "access",
+         "type": "Tech",
+         "cost": 1990000,
          "discount": 25,
-         "hinhAnh":"../../img/product5.png",
-         "khoHang":41,
+         "freeship": true,
+         "image": "../../img/product5.png",
+         "amount": 41,
          "rate": {
             "star": 2,
             "comments": "34 đánh giá"
          }
       },
       {
-         "id":"6",
-         "tenSP":"CyberPods",
-         "brand": "Cyber",
-         "type":"Tech",
-         "gia":4990000,
+         "id": "6",
+         "name": "VisionPods",
+         "brand": "Vision",
+         "type": "access",
+         "cost": 4990000,
          "discount": 21,
-         "hinhAnh":"../../img/product6.png",
-         "khoHang": 20,
+         "freeship": true,
+         "image": "../../img/product6.png",
+         "amount": 20,
          "rate": {
             "star": 4,
             "comments": "124 đánh giá"
@@ -87,28 +92,30 @@
          "status": "Hết hàng"
       },
       {
-         "id":"7",
-         "tenSP":"CyberAirB",
-         "brand": "Cyber",
-         "type":"Tech",
-         "gia":6990000,
+         "id": "7",
+         "name": "VisionAirB",
+         "brand": "Vision",
+         "type": "access",
+         "cost": 6990000,
          "discount": 15,
-         "hinhAnh":"https://cdn.tgdd.vn/Files/2021/10/28/1394064/tai-nghe-airb-pro-1-_1647x1334-800-resize.jpg",
-         "khoHang":151,
+         "freeship": false,
+         "image": "https://cdn.tgdd.vn/Files/2021/10/28/1394064/tai-nghe-airb-pro-1-_1647x1334-800-resize.jpg",
+         "amount": 151,
          "rate": {
             "star": 4,
             "comments": "31 đánh giá"
          }
       },
       {
-         "id":"8",
-         "tenSP":"CyberPC",
-         "brand": "Cyber",
-         "type":"Tech",
-         "gia": 29990000,
+         "id": "8",
+         "name": "VisionPC",
+         "brand": "Vision",
+         "type": "desktop",
+         "cost": 29990000,
          "discount": 10,
-         "hinhAnh":"https://minhancomputer.com/media/product/4727_pc_gaming_i7_10700__gtx_1650__ram_16gb__ssd_250gb.jpg",
-         "khoHang": 0,
+         "freeship": true,
+         "image": "https://minhancomputer.com/media/product/4727_pc_gaming_i7_10700__gtx_1650__ram_16gb__ssd_250gb.jpg",
+         "amount": 0,
          "rate": {
             "star": 4,
             "comments": "54 đánh giá"

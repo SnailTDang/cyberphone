@@ -1,15 +1,17 @@
 export default class Products {
-    constructor(id, tenSP, giaSP, hinhAnh, daBan, rate, discount) {
+    constructor(id,name, cost, image, amount, rate, discount, freeShip,type) {
         this.id = id;
-        this.tenSP = tenSP;
-        this.gia = giaSP;
-        this.hinhAnh = hinhAnh;
-        this.khoHang = daBan;
+        this.name = name;
+        this.cost = cost;
+        this.image = image;
+        this.amount = amount;
         this.rate = rate;
         this.discount = discount;
-        this.giaKM = 0;
+        this.costDiscount = 0;
+        this.freeShip = freeShip;
+        this.type = type;
     }
     saleOff() {
-        this.giaKM = (this.gia * (100 - this.discount)) / 100;
+        this.costDiscount = (this.cost * (100 - this.discount)) / 100;
     }
 }

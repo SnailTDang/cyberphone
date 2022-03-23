@@ -3,5 +3,14 @@
     position: relative;
     .container-fluid {
         padding: 0;
+        .swiper-wrapper {
+            height: 566px;
+            .swiper-slide {
+                img {
+                    height: 100%;
+                    // object-fit: cover;
+                }
+            }
+        }
     }
 }
