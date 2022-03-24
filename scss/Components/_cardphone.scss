@@ -2,14 +2,17 @@
     @include sytleCardPhone($box-sd1, $color-white-1, none, $pd-1 - 5, $mg-1);
     border: 1px solid transparent;
     overflow: visible;
+    min-height: 527px;
     img {
         box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
         border-radius: 8px;
         height: 230px;
+        object-fit: contain;
     }
     .card-img {
         position: relative;
         transition: all 0.3s ease;
+        background-color: #fff;
         .discount {
             position: absolute;
             top: 0;
@@ -22,17 +25,17 @@
                 @include styleText($fs-1, $fw-1, $color-white-1);
                 margin-bottom: 0;
             }
-        }
-        &::after {
-            content: "";
-            width: 0;
-            height: 0;
-            left: 0;
-            top: 40px;
-            position: absolute;
-            border-color: transparent #e6623a;
-            border-style: solid;
-            border-width: 0 18px 5px;
+            &::after {
+                content: "";
+                width: 0;
+                height: 0;
+                left: 0;
+                top: 40px;
+                position: absolute;
+                border-color: transparent #e6623a;
+                border-style: solid;
+                border-width: 0 18px 5px;
+            }
         }
     }
     .card-body {

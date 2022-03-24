@@ -141,13 +141,12 @@ function getHomeProducts() {
 // }
 
 // window.getPhoneProduct = getPhoneProduct;
-
 getHomeProducts();
+
 
 function showProducts(mangSP) {
     let content = mangSP.map((e) => {
-        console.log(e);
-        // e.saleOff();
+        console.log(freeShip)
         let star = () => {
             let star = "";
             for (let i = 0; i < e.rate.star; i++) {
@@ -215,7 +214,7 @@ function showProducts(mangSP) {
                                 <div>
                                 ${star()}
                                 </div>
-                                <span>${e.rate.comments}</span>
+                                <span>${e.rate.comments} Đánh giá</span>
                             </div>
                         </div>
                     </div>
