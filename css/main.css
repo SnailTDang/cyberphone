@@ -546,6 +546,12 @@ p {
   font-size: 20px;
   font-weight: 700;
   color: #1d365e;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  max-width: unset;
+  min-width: unset;
 }
 
 .cardPhone .card-body .cardPhone__text {

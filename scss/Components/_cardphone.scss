@@ -42,6 +42,12 @@
         padding: 15px 0;
         .cardPhone__title {
             @include styleText($fs-1 + 6, $fw-3, $color-blue-1);
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            max-width: unset;
+            min-width: unset;
         }
         .cardPhone__text {
             color: #e6983a;

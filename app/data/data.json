@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "name": "VisionBeats",
+      "name": "Tai nghe chụp Bluetooth VisionBeats Black & Gray",
       "brand": "Vision",
       "type": "access",
       "cost": 8990000,
@@ -315,6 +315,81 @@
       "discount": "5",
       "freeship": true,
       "id": "LSllmQI"
+    },
+    {
+      "name": "Samsung Galaxy Tab S8",
+      "brand": "Samsung",
+      "type": "Tablet",
+      "cost": 20990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/247510/Samsung-Galaxy-tab-s8-black-thumb-600x600.jpg",
+      "amount": "29",
+      "rate": {
+        "star": 5,
+        "comments": 47
+      },
+      "discount": "10",
+      "freeship": true,
+      "id": "OxVkxj0"
+    },
+    {
+      "name": "Samsung Galaxy Tab S8+ ",
+      "brand": "Samsung",
+      "type": "Tablet",
+      "cost": 25990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/247512/Tab-S8+-Black-1-600x600.jpeg",
+      "amount": "10",
+      "rate": {
+        "star": 5,
+        "comments": 14
+      },
+      "discount": "0",
+      "freeship": true,
+      "id": "-5R7r3X"
+    },
+    {
+      "name": "Tai nghe Bluetooth True Wireless Mozard TS13",
+      "brand": "Mozard",
+      "type": "access",
+      "cost": 650000,
+      "image": "https://cdn.tgdd.vn/Products/Images/54/230363/tai-nghe-bluetooth-true-wireless-mozard-ts13-1-org.jpg",
+      "amount": "89",
+      "rate": {
+        "star": 4,
+        "comments": 165
+      },
+      "discount": "30",
+      "freeship": false,
+      "id": "-HEk19I"
+    },
+    {
+      "name": "Tai nghe Bluetooth True Wireless Sony WF-C500 ",
+      "brand": "Sony",
+      "type": "access",
+      "cost": 2290000,
+      "image": "https://cdn.tgdd.vn/Products/Images/54/255568/bluetooth-true-wireless-sony-wf-c500-cam-2.jpg",
+      "amount": "46",
+      "rate": {
+        "star": 5,
+        "comments": 67
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "KIELpFM"
+    },
+    {
+      "name": "iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU ",
+      "brand": "Apple",
+      "type": "desktop",
+      "cost": 39490000,
+      "image": "https://cdn.tgdd.vn/Products/Images/5698/238053/imac-24-icnh-2021-m1-thumb-xanh-duong-600x600.jpg",
+      "amount": "10",
+      "rate": {
+        "star": 5,
+        "comments": 9
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "zhBfj_b"
     }
   ]
 }
