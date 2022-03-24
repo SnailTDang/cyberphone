@@ -146,7 +146,6 @@ getHomeProducts();
 
 function showProducts(mangSP) {
     let content = mangSP.map((e) => {
-        console.log(e.freeShip)
         let star = () => {
             let star = "";
             for (let i = 0; i < e.rate.star; i++) {
@@ -175,6 +174,7 @@ function showProducts(mangSP) {
             </div>`;
         } else {
             discount = "";
+            e.cost = "";
         }
         let iconShip = "";
         if (e.freeShip) {
@@ -204,9 +204,9 @@ function showProducts(mangSP) {
                                 } sản phẩm</p>
                             </div>
                             <div>
-                                <h4 class="cardPhone__cost-old">${e.cost.toLocaleString()}₫</h4>
+                                <h4 class="cardPhone__cost-old">${e.cost.toLocaleString()}</h4>
                                 <h3 class="cardPhone__cost">
-                                    ${e.costDiscount.toLocaleString()}₫
+                                    ${e.costDiscount.toLocaleString()+"₫"}
                                     ${iconShip}
                                 </h3>
                             </div>

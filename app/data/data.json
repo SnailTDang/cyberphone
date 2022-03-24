@@ -223,7 +223,7 @@
         "comments": 4
       },
       "discount": "5",
-      "freeship": false,
+      "freeship": true,
       "id": "JXNwBcV"
     },
     {
@@ -240,6 +240,36 @@
       "discount": "5",
       "freeship": true,
       "id": "E0tsRXm"
+    },
+    {
+      "name": "Samsung Galaxy Watch 4 44mm ",
+      "brand": "Samsung",
+      "type": "access",
+      "cost": 4990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/7077/248753/samsung-galaxy-watch-4-44mm-1-1.jpg",
+      "amount": "51",
+      "rate": {
+        "star": 5,
+        "comments": 131
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "Ih_3oC3"
+    },
+    {
+      "name": "Apple Watch S6 40mm",
+      "brand": "Apple",
+      "type": "access",
+      "cost": 7990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/7077/229044/apple-watch-s6-40mm-vien-nhom-day-cao-su-red-do-cont-1-org-org.jpg",
+      "amount": "25",
+      "rate": {
+        "star": 5,
+        "comments": 97
+      },
+      "discount": "10",
+      "freeship": true,
+      "id": "1zNzlkf"
     }
   ]
 }

@@ -494,8 +494,8 @@ p {
 }
 
 .cardPhone img {
-  -webkit-box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
-          box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
+  -webkit-box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #e2ebfc;
+          box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #e2ebfc;
   border-radius: 8px;
   height: 230px;
   -o-object-fit: contain;
@@ -613,7 +613,7 @@ p {
 }
 
 .swiper {
-  height: 56px;
+  height: 60px;
 }
 
 .swiper .swiper-slide {
