@@ -12,7 +12,7 @@
         "comments": 226
       },
       "discount": "15",
-      "freeShip": true,
+      "freeship": true,
       "id": "1"
     },
     {
@@ -148,7 +148,7 @@
         "comments": 32
       },
       "discount": "5",
-      "freeShip": true,
+      "freeship": true,
       "id": "KqCY9Kg"
     },
     {
@@ -163,7 +163,7 @@
         "comments": 22
       },
       "discount": "29",
-      "freeShip": false,
+      "freeship": false,
       "id": "hjD0hgJ"
     },
     {
@@ -173,9 +173,12 @@
       "cost": 26990000,
       "image": "https://cdn.tgdd.vn/Products/Images/42/230529/s16/iphone-13-pro-max-silver-650x650.png",
       "amount": "11",
-      "rate": "",
+      "rate": {
+        "star": 5,
+        "comments": 134
+      },
       "discount": "5",
-      "freeShip": false,
+      "freeship": false,
       "id": "quHGUyN"
     },
     {
@@ -185,9 +188,12 @@
       "cost": 4990000,
       "image": "https://cdn.tgdd.vn/Products/Images/42/221820/xiaomi-redmi-note-9-pro-trang-1-org.jpg",
       "amount": "0",
-      "rate": "",
+      "rate": {
+        "star": 5,
+        "comments": 3
+      },
       "discount": "10",
-      "freeShip": true,
+      "freeship": true,
       "id": "xFOH3xL"
     },
     {
@@ -202,7 +208,7 @@
         "comments": 17
       },
       "discount": "0",
-      "freeShip": true,
+      "freeship": true,
       "id": "RhbXixH"
     },
     {
@@ -217,7 +223,7 @@
         "comments": 4
       },
       "discount": "5",
-      "freeShip": false,
+      "freeship": false,
       "id": "JXNwBcV"
     },
     {
@@ -232,7 +238,7 @@
         "comments": 14
       },
       "discount": "5",
-      "freeShip": true,
+      "freeship": true,
       "id": "E0tsRXm"
     }
   ]
