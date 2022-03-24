@@ -1,19 +1,19 @@
 {
   "data": [
     {
-      "id": "1",
       "name": "VisionBeats",
       "brand": "Vision",
       "type": "access",
       "cost": 8990000,
-      "discount": 15,
-      "freeship": false,
       "image": "../../img/product1.png",
-      "amount": 15,
+      "amount": "15",
       "rate": {
         "star": 3,
-        "comments": 334
-      }
+        "comments": 226
+      },
+      "discount": "15",
+      "freeShip": true,
+      "id": "1"
     },
     {
       "id": "2",
@@ -194,10 +194,13 @@
       "name": "Samsung Galaxy A53 5G 128GB",
       "brand": "Samsung",
       "type": "phone",
-      "cost": 9999000,
+      "cost": 9990000,
       "image": "https://cdn.tgdd.vn/2022/03/campaign/Blue-249x376-1.png",
       "amount": "5",
-      "rate": "",
+      "rate": {
+        "star": 4,
+        "comments": 17
+      },
       "discount": "0",
       "freeShip": true,
       "id": "RhbXixH"
@@ -206,12 +209,15 @@
       "name": "PC HP AIO Pro 200 G4 (2J861PA)",
       "brand": "HP",
       "type": "desktop",
-      "cost": 17690000,
+      "cost": 16990000,
       "image": "https://lh3.googleusercontent.com/klswK7ulUIUTyr7Ob02B2iPJFzeILYa7GZzLsdMkcrS-3ug3WmM3Si9OtD3hmUpo1f6YpvunVZW7yKv1YQ=w1000-rw",
       "amount": "5",
-      "rate": "",
+      "rate": {
+        "star": 5,
+        "comments": 4
+      },
       "discount": "5",
-      "freeShip": true,
+      "freeShip": false,
       "id": "JXNwBcV"
     },
     {

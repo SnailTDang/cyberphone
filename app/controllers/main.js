@@ -146,7 +146,7 @@ getHomeProducts();
 
 function showProducts(mangSP) {
     let content = mangSP.map((e) => {
-        console.log(freeShip)
+        console.log(e.freeShip)
         let star = () => {
             let star = "";
             for (let i = 0; i < e.rate.star; i++) {
