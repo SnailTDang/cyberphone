@@ -270,6 +270,51 @@
       "discount": "10",
       "freeship": true,
       "id": "1zNzlkf"
+    },
+    {
+      "name": "iPad Pro M1 11 inch WiFi Cellular 1TB",
+      "brand": "Apple",
+      "type": "Tablet",
+      "cost": 44590000,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/269329/ipad-pro-m1-11-inch-wifi-cellular-bac-1.jpeg",
+      "amount": "26",
+      "rate": {
+        "star": 5,
+        "comments": 69
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "gjT2Z00"
+    },
+    {
+      "name": "iPad Pro M1 12.9 inch WiFi Cellular 128GB",
+      "brand": "Apple",
+      "type": "Tablet",
+      "cost": 29990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/269329/pad-pro-m1-11-inch-wifi-cellular-1tb-2021-xam-thumb-200x200.jpeg",
+      "amount": "54",
+      "rate": {
+        "star": 5,
+        "comments": 32
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "Twv3eTm"
+    },
+    {
+      "name": "iPad Air 5 M1 Wifi Cellular 64GB ",
+      "brand": "Apple",
+      "type": "Tablet",
+      "cost": 20990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/274155/ipad-air-5-wifi-cellular-white-thumb-200x200.jpg",
+      "amount": "8",
+      "rate": {
+        "star": 5,
+        "comments": 15
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "LSllmQI"
     }
   ]
 }

@@ -167,6 +167,7 @@ function showProducts(mangSP) {
         }
         let discount = "";
         if (e.discount > 0) {
+            e.cost = e.cost.toLocaleString()+"đ"
             discount = `
             <div class="discount">
                 <p>${e.discount}%</p>
@@ -204,7 +205,7 @@ function showProducts(mangSP) {
                                 } sản phẩm</p>
                             </div>
                             <div>
-                                <h4 class="cardPhone__cost-old">${e.cost.toLocaleString()}</h4>
+                                <h4 class="cardPhone__cost-old">${e.cost}</h4>
                                 <h3 class="cardPhone__cost">
                                     ${e.costDiscount.toLocaleString()+"₫"}
                                     ${iconShip}
