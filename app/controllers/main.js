@@ -89,7 +89,7 @@ function getHomeProducts() {
                     rate,
                     discount,
                     freeship,
-                    type
+                    type,
                 } = e;
                 let prod = new Products(
                     id,
@@ -104,7 +104,7 @@ function getHomeProducts() {
                 );
                 prod.saleOff();
                 homeProducts.push(prod);
-                typeList.push(type)
+                typeList.push(type);
             });
             showProducts(homeProducts);
             typeList = Array.from(new Set(typeList));
@@ -143,7 +143,6 @@ function getHomeProducts() {
 // window.getPhoneProduct = getPhoneProduct;
 getHomeProducts();
 
-
 function showProducts(mangSP) {
     let content = mangSP.map((e) => {
         let star = () => {
@@ -167,7 +166,7 @@ function showProducts(mangSP) {
         }
         let discount = "";
         if (e.discount > 0) {
-            e.cost = e.cost.toLocaleString()+"đ"
+            e.cost = e.cost.toLocaleString() + "đ";
             discount = `
             <div class="discount">
                 <p>${e.discount}%</p>
@@ -207,7 +206,7 @@ function showProducts(mangSP) {
                             <div>
                                 <h4 class="cardPhone__cost-old">${e.cost}</h4>
                                 <h3 class="cardPhone__cost">
-                                    ${e.costDiscount.toLocaleString()+"₫"}
+                                    ${e.costDiscount.toLocaleString() + "₫"}
                                     ${iconShip}
                                 </h3>
                             </div>
@@ -237,15 +236,7 @@ function showProducts(mangSP) {
 function getProduct(id) {
     proService.getProduct(id).then((result) => {
         let { id, name, cost, image, amount, rate, discount } = result;
-        let prod = new Products(
-            id,
-            name,
-            cost,
-            image,
-            amount,
-            rate,
-            discount
-        );
+        let prod = new Products(id, name, cost, image, amount, rate, discount);
         console.log(prod);
         showDetails(prod);
     });
