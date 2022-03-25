@@ -540,6 +540,66 @@
             "discount": "10",
             "freeship": false,
             "id": "gO5SPEb"
+        },
+        {
+            "name": "Laptop Lenovo Ideapad 3 15IML05 i3 10110U/4GB/256GB/Win11 (81WB01DPVN)",
+            "brand": "Lenovo",
+            "type": "Laptop",
+            "cost": 11249000,
+            "image": "https://cdn.tgdd.vn/Products/Images/44/271782/lenovo-ideapad-3-15iml05-i3-10110u-4gb-256gb-win11-81wb01dpvn-600x600.jpg",
+            "amount": "8",
+            "rate": {
+                "star": 4,
+                "comments": 54
+            },
+            "discount": "10",
+            "freeship": true,
+            "id": "Kge72mN"
+        },
+        {
+            "name": "Laptop Lenovo Yoga Duet 7 13ITL6 i5 1135G7/8GB/512GB/Touch/Pen/Win10 (82MA000PVN)",
+            "brand": "Lenovo",
+            "type": "Laptop",
+            "cost": 28990000,
+            "image": "https://cdn.tgdd.vn/Products/Images/44/255562/lenovo-yoga-duet-7-13itl6-i5-82ma000pvn-1-1.jpg",
+            "amount": "12",
+            "rate": {
+                "star": 5,
+                "comments": 4
+            },
+            "discount": "5",
+            "freeship": true,
+            "id": "K8_tYbh"
+        },
+        {
+            "name": "Laptop Acer Nitro 5 Gaming AN515 57 5831 i5 11400H/8GB/512GB/6GB RTX3060/144Hz/Win10 (NH.QDGSV.003)",
+            "brand": "Acer",
+            "type": "Laptop",
+            "cost": 32990000,
+            "image": "https://cdn.tgdd.vn/Products/Images/44/247312/acer-nitro-5-gaming-an515-57-5831-i5-nhqdgsv003-600x600.jpg",
+            "amount": "2",
+            "rate": {
+                "star": 5,
+                "comments": 47
+            },
+            "discount": "10",
+            "freeship": false,
+            "id": "4zAWvVF"
+        },
+        {
+            "name": "Laptop Dell Gaming Alienware m15 R6 i7 11800H/32GB/1TB SSD/6GB RTX3060/165Hz/Office H&S/Win11 (P109F001DBL)",
+            "brand": "Dell",
+            "type": "Laptop",
+            "cost": 61990000,
+            "image": "https://cdn.tgdd.vn/Products/Images/44/271545/dell-gaming-alienware-m15-r6-i7-p109f001dbl-020322-112012-600x600.jpg",
+            "amount": "5",
+            "rate": {
+                "star": 5,
+                "comments": 4
+            },
+            "discount": "5",
+            "freeship": true,
+            "id": "MIg5hhC"
         }
     ]
 }

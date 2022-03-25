@@ -1,5 +1,6 @@
 import ProductServices from "../services/ProductServices.js";
 import Products from "../models/Products.js";
+import ObjectPro from "../models/ObjectProduct.js";
 
 const headerMenu = document.querySelector(".headerPhone");
 const menuItems = headerMenu.querySelectorAll(".menu-link");
@@ -73,6 +74,7 @@ const swiperCarou = new Swiper(".swiperCarousel", {
 let proService = new ProductServices();
 let homeProducts = [];
 let typeList = [];
+let sortProducts = [];
 
 function getHomeProducts() {
     // Các code xử lý lấy data từ API
@@ -106,42 +108,48 @@ function getHomeProducts() {
                 homeProducts.push(prod);
                 typeList.push(type);
             });
-            showProducts(homeProducts);
+            // showProducts(homeProducts);
             typeList = Array.from(new Set(typeList));
+            typeList.map((e) => {
+                let value = homeProducts.filter((prod) => {
+                    return prod.type == e;
+                });
+                let obj = new ObjectPro(e, value);
+                sortProducts.push(obj);
+            });
+            console.log(typeList);
+            getPhoneProduct("phone");
+            getPhoneProduct("access");
+            getPhoneProduct("Tablet");
+            getPhoneProduct("desktop");
         })
         .catch(function (error) {
             console.log(error);
         });
 }
-// function getPhoneProduct() {
-//     let phonelist = [];
-//     // Các code xử lý lấy data từ API
-//     proService
-//         .getProductList()
-//         .then((response) => {
-//             response.data.phonelist.map((e) => {
-//                 let { id, name, cost, image, amount, rate, discount } = e;
-//                 let prod = new Products(
-//                     id,
-//                     name,
-//                     cost,
-//                     image,
-//                     amount,
-//                     rate,
-//                     discount
-//                 );
-//                 prod.saleOff();
-//                 phonelist.push(prod);
-//             });
-//             showProducts(phonelist);
-//         })
-//         .catch(function (error) {
-//             console.log(error);
-//         });
-// }
+let getPhoneProduct = (type) => {
+    console.log(sortProducts);
+    let newList = [];
+    sortProducts.map((e) => {
+        if (e.name == type) {
+            newList = e.products;
+        }
+    });
+    showProducts(newList);
+    console.log(newList);
+};
 
-// window.getPhoneProduct = getPhoneProduct;
+let renderType = (typeList) => {
+    let content = typeList.map((e) => {});
+};
+
+window.getPhoneProduct = getPhoneProduct;
+
 getHomeProducts();
+
+function showAllProducts() {
+    
+}
 
 function showProducts(mangSP) {
     let content = mangSP.map((e) => {
@@ -164,9 +172,10 @@ function showProducts(mangSP) {
             Hết hàng
             </button>`;
         }
+        let price = 0;
         let discount = "";
         if (e.discount > 0) {
-            e.cost = e.cost.toLocaleString() + "đ";
+            price = e.cost.toLocaleString() + "đ";
             discount = `
             <div class="discount">
                 <p>${e.discount}%</p>
@@ -174,7 +183,7 @@ function showProducts(mangSP) {
             </div>`;
         } else {
             discount = "";
-            e.cost = "";
+            price = "";
         }
         let iconShip = "";
         if (e.freeShip) {
@@ -204,7 +213,7 @@ function showProducts(mangSP) {
                                 } sản phẩm</p>
                             </div>
                             <div>
-                                <h4 class="cardPhone__cost-old">${e.cost}</h4>
+                                <h4 class="cardPhone__cost-old">${price}</h4>
                                 <h3 class="cardPhone__cost">
                                     ${e.costDiscount.toLocaleString() + "₫"}
                                     ${iconShip}
