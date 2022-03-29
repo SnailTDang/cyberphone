@@ -5,6 +5,6 @@ export default class ObjectPro {
         this.count = 0;
     }
     countPros() {
-        this.count = this.products.lenght;
+        this.count = this.products.length;
     }
 }

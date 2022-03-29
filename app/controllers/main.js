@@ -1,80 +1,14 @@
 import ProductServices from "../services/ProductServices.js";
 import Products from "../models/Products.js";
 import ObjectPro from "../models/ObjectProduct.js";
-
-const headerMenu = document.querySelector(".headerPhone");
-const menuItems = headerMenu.querySelectorAll(".menu-link");
-
-window.addEventListener("scroll", function () {
-    if (
-        document.body.scrollTop > 150 ||
-        document.documentElement.scrollTop > 150
-    ) {
-        headerMenu.classList.add("menu-scroll");
-        for (let menuItem of menuItems) {
-            menuItem.querySelector("span").style.display = "none";
-        }
-    } else {
-        headerMenu.classList.remove("menu-scroll");
-        for (let menuItem of menuItems) {
-            menuItem.querySelector("span").style.display = "inline-block";
-        }
-    }
-});
-
-const swiper = new Swiper(".swiper", {
-    // Optional parameters
-    loop: true,
-    centeredSlides: true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-
-    // If we need pagination
-    pagination: {
-        el: ".swiper-pagination",
-    },
-
-    // Navigation arrows
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: ".swiper-scrollbar",
-    },
-});
-
-const swiperCarou = new Swiper(".swiperCarousel", {
-    // Optional parameters
-    loop: true,
-    centeredSlides: true,
-    autoplay: {
-        delay: 3800,
-        disableOnInteraction: false,
-    },
-
-    // If we need pagination
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: ".swiper-scrollbar",
-    },
-});
+import ObjectBrand from "../models/ObjectBrand.js";
 
 let proService = new ProductServices();
 let homeProducts = [];
 let typeList = [];
-let sortProducts = [];
+let brandList = [];
+let sortType = [];
+let sortBrand = [];
 
 function getHomeProducts() {
     // Các code xử lý lấy data từ API
@@ -85,6 +19,7 @@ function getHomeProducts() {
                 let {
                     id,
                     name,
+                    brand,
                     cost,
                     image,
                     amount,
@@ -96,6 +31,7 @@ function getHomeProducts() {
                 let prod = new Products(
                     id,
                     name,
+                    brand,
                     cost,
                     image,
                     amount,
@@ -107,50 +43,120 @@ function getHomeProducts() {
                 prod.saleOff();
                 homeProducts.push(prod);
                 typeList.push(type);
+                brandList.push(brand);
             });
             // showProducts(homeProducts);
             typeList = Array.from(new Set(typeList));
+            brandList = Array.from(new Set(brandList));
             typeList.map((e) => {
                 let value = homeProducts.filter((prod) => {
                     return prod.type == e;
                 });
                 let obj = new ObjectPro(e, value);
-                sortProducts.push(obj);
+                obj.countPros();
+                sortType.push(obj);
             });
-            console.log(typeList);
-            getPhoneProduct("phone");
-            getPhoneProduct("access");
-            getPhoneProduct("Tablet");
-            getPhoneProduct("desktop");
+
+            brandList.map((e) => {
+                let value = homeProducts.filter((prod) => {
+                    return prod.brand == e;
+                });
+                let obj = new ObjectBrand(e, value);
+                obj.countPros();
+                sortBrand.push(obj);
+            });
+            // showProducts(homeProducts);
+            // console.log(typeList);
+            // console.log(sortType);
+            // console.log(brandList);
+            // console.log(sortBrand);
+            showAllProducts(sortType);
+            // typeList.map((e) => {
+            //     getPhoneProduct(e);
+            // });
         })
         .catch(function (error) {
             console.log(error);
         });
 }
-let getPhoneProduct = (type) => {
-    console.log(sortProducts);
+
+let renderType = (typeList) => {
+    let content = typeList.map((e) => {
+        return `
+            <div class="row"></div>
+        `;
+    });
+};
+
+getHomeProducts();
+
+let getTypeProduct = (type) => {
     let newList = [];
-    sortProducts.map((e) => {
+    sortType.map((e) => {
         if (e.name == type) {
             newList = e.products;
         }
     });
-    showProducts(newList);
-    console.log(newList);
+    let content = `
+        <div class="type-name row">
+            <div class="col-3"><h2>${type.toUpperCase()}</h2></div>
+        </div>
+        <div class="type-products row">
+            ${showProducts(newList)}
+        </div>`;
+    document.querySelector("#productsList").innerHTML = content;
+};
+let getBrandProduct = (type) => {
+    let newList = [];
+    sortBrand.map((e) => {
+        if (e.name == type) {
+            newList = e.products;
+        }
+    });
+    let content = `
+        <div class="type-name row">
+            <div class="col-3"><h2>${type.toUpperCase()}</h2></div>
+        </div>
+        <div class="type-products row">
+            ${showProducts(newList)}
+        </div>`;
+    document.querySelector("#productsList").innerHTML = content;
 };
 
-let renderType = (typeList) => {
-    let content = typeList.map((e) => {});
-};
+window.getTypeProduct = getTypeProduct;
+window.getBrandProduct = getBrandProduct;
 
-window.getPhoneProduct = getPhoneProduct;
-
-getHomeProducts();
-
-function showAllProducts() {
-    
+function showAllProducts(array) {
+    let content = array.map((e) => {
+        let hightLight = "";
+        let i = 0;
+        do {
+            hightLight += `<a href="#" class="product-link" title="${e.products[i].name}"><p>${e.products[i].name}</p></a>`;
+            i++;
+        } while (i < 3);
+        let prod = [];
+        for (let j = 0; j < 4; j++) {
+            prod.push(e.products[j]);
+        }
+        return `
+        <div class="type-box">
+        <div class="type-name row">
+            <div class="col-3"><h2>${e.name.toUpperCase()}</h2></div>
+            <div class="type-tags col-9">
+                ${hightLight}
+                <a href="#productsList" class="product-link" onclick="getTypeProduct('${
+                    e.name
+                }')"><p>Xem tất cả ${e.count} sản phẩm</p></a>
+            </div>
+        </div>
+        <div class="type-products row">
+            ${showProducts(prod)}
+        </div>
+    </div>
+        `;
+    });
+    document.querySelector("#productsList").innerHTML = content.join("");
 }
-
 function showProducts(mangSP) {
     let content = mangSP.map((e) => {
         let star = () => {
@@ -239,7 +245,7 @@ function showProducts(mangSP) {
         </div>
     `;
     });
-    document.querySelector("#productsList").innerHTML = content.join("");
+    return content.join("");
 }
 
 function getProduct(id) {

@@ -19,7 +19,7 @@ body {
 }
 
 a:hover {
-  color: inherit;
+  color: initial;
   text-decoration: none;
 }
 
@@ -633,8 +633,6 @@ p {
 
 .headerPhone {
   background-color: #f5f9fe;
-  -webkit-box-shadow: 0 2px 4px #e2ebfc;
-          box-shadow: 0 2px 4px #e2ebfc;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
@@ -741,10 +739,6 @@ p {
           transform: scaleX(1);
 }
 
-.menu-scroll {
-  height: 70px;
-}
-
 .menu-scroll .navbar-brand {
   font-size: 2.1rem;
   font-weight: 700;
@@ -753,6 +747,28 @@ p {
 
 .menu-scroll .navbar-brand img {
   max-width: 60px;
+}
+
+.type {
+  background-color: #ff8447;
+}
+
+.type a {
+  display: block;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.type a:hover {
+  background-color: #e2ebfc;
+  color: #353536;
+}
+
+.active {
+  background-color: #e2ebfc !important;
+  color: #353536 !important;
 }
 
 @media screen and (max-width: 992px) {
@@ -779,5 +795,71 @@ p {
 
 .phoneCarousel .container-fluid .swiper-wrapper .swiper-slide img {
   height: 100%;
+}
+
+#productsList {
+  padding: 150px 0;
+}
+
+.product-link {
+  border: 1px solid #afafaf;
+  border-radius: 15px;
+  color: #333;
+  display: inline-block;
+  font-size: 13px;
+  margin-left: 10px;
+  padding: 10px 10px;
+}
+
+.product-link p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  max-width: 170px;
+  min-width: unset;
+  margin-bottom: 0;
+  font-size: 13px;
+  text-align: left;
+  line-height: 1.333;
+}
+
+.type-name {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+  background-color: #e7e7e7;
+}
+
+.type-name h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1d365e;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+.type-products {
+  padding: 20px 0 10px;
+}
+
+.type-tags {
+  text-align: right;
+}
+
+.type-item {
+  text-align: center;
+}
+
+.type-box {
+  padding: 35px 15px 0 10px;
+  margin: 15px 0;
+  background-color: #ffffff;
+  -webkit-box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #e2ebfc;
+          box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #e2ebfc;
+  border-radius: 20px;
+  overflow: hidden;
 }
 /*# sourceMappingURL=main.css.map */

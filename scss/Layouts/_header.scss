@@ -1,6 +1,5 @@
 .headerPhone {
     background-color: $color-white-1;
-    box-shadow: 0 2px 4px $color-white-2;
     position: sticky;
     top: 0px;
     width: 100%;
@@ -75,13 +74,32 @@
 }
 
 .menu-scroll {
-    height: 70px;
+    // height: 70px;
     .navbar-brand {
         @include styleText($fs-2 + 1, $fw-3, $color-blue-2);
         img {
             max-width: 60px;
         }
     }
+}
+
+.type {
+    background-color: #ff8447;
+    a {
+        display: block;
+        padding: 10px 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-white-3;
+        &:hover {
+            background-color: $color-white-2;
+            color: $color-dark-3;
+        }
+    }
+}
+.active {
+    background-color: $color-white-2 !important;
+    color: $color-dark-3 !important;
 }
 
 //reponsive

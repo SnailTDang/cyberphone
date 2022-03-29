@@ -1,7 +1,8 @@
 export default class Products {
-    constructor(id, name, cost, image, amount, rate, discount, freeship, type) {
+    constructor(id, name, brand, cost, image, amount, rate, discount, freeship, type) {
         this.id = id;
         this.name = name;
+        this.brand = brand;
         this.cost = cost;
         this.image = image;
         this.amount = amount;

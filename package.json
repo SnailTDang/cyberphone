@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/SnailTDang/cyberphone#readme",
   "dependencies": {
+    "bootstrap-icons": "^1.8.1",
     "swiper": "^8.0.7"
   }
 }

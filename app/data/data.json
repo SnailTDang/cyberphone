@@ -1,25 +1,10 @@
 {
     "data": [
         {
-            "name": "Tai nghe chụp Bluetooth VisionBeats Black & Gray",
-            "brand": "Vision",
-            "type": "access",
-            "cost": 8990000,
-            "image": "../../img/product1.png",
-            "amount": "15",
-            "rate": {
-                "star": 3,
-                "comments": 226
-            },
-            "discount": 15,
-            "freeship": true,
-            "id": "1"
-        },
-        {
             "id": "2",
             "name": "VisionPhone",
             "brand": "Vision",
-            "type": "phone",
+            "type": "Smartphone",
             "cost": 25990000,
             "discount": 15,
             "freeship": true,
@@ -63,7 +48,7 @@
         {
             "name": "VisionBattery",
             "brand": "Vision",
-            "type": "access",
+            "type": "Accessory",
             "cost": 1990000,
             "image": "../../img/product5.png",
             "amount": "41",
@@ -79,7 +64,7 @@
             "id": "6",
             "name": "VisionPods",
             "brand": "Vision",
-            "type": "access",
+            "type": "Accessory",
             "cost": 4990000,
             "discount": 21,
             "freeship": true,
@@ -95,7 +80,7 @@
             "id": "7",
             "name": "VisionAirB",
             "brand": "Vision",
-            "type": "access",
+            "type": "Accessory",
             "cost": 6990000,
             "discount": 15,
             "freeship": false,
@@ -110,7 +95,7 @@
             "id": "8",
             "name": "VisionPC",
             "brand": "Vision",
-            "type": "desktop",
+            "type": "Desktop",
             "cost": 29990000,
             "discount": 10,
             "freeship": true,
@@ -124,7 +109,7 @@
         {
             "name": "Vison Clock",
             "brand": "Vision",
-            "type": "access",
+            "type": "Accessory",
             "cost": 19900000,
             "discount": 10,
             "freeship": true,
@@ -139,7 +124,7 @@
         {
             "name": "Samsung Galaxy S20 Ultra",
             "brand": "Samsung",
-            "type": "phone",
+            "type": "Smartphone",
             "cost": 26990000,
             "image": "https://smartviets.com/template/plugins/timthumb.php?src=/upload/image/nh%20%C4%91%E1%BA%A1i%20di%E1%BB%87n/s20%20ultra%20tr%E1%BA%AFng.jpg&w=770&h=770&q=80",
             "amount": "0",
@@ -154,7 +139,7 @@
         {
             "name": "Xiaomi Smart Lamp 24V",
             "brand": "Xiaomi",
-            "type": "access",
+            "type": "Accessory",
             "cost": 499000,
             "image": "https://cdn-amz.fadoglobal.io/images/I/51Smh9MafXL.jpg",
             "amount": "3",
@@ -169,7 +154,7 @@
         {
             "name": "Apple Iphone 13 Pro Max 128GB",
             "brand": "Apple",
-            "type": "phone",
+            "type": "Smartphone",
             "cost": 26990000,
             "image": "https://cdn.tgdd.vn/Products/Images/42/230529/s16/iphone-13-pro-max-silver-650x650.png",
             "amount": "11",
@@ -184,7 +169,7 @@
         {
             "name": "Xiaomi Redmi Note 9 Pro",
             "brand": "Xiaomi",
-            "type": "phone",
+            "type": "Smartphone",
             "cost": 4990000,
             "image": "https://cdn.mobilecity.vn/mobilecity-vn/images/2020/11/w150/redmi-note-9-pro-5g-4-1.jpg",
             "amount": "0",
@@ -199,7 +184,7 @@
         {
             "name": "Samsung Galaxy A53 5G 128GB",
             "brand": "Samsung",
-            "type": "phone",
+            "type": "Smartphone",
             "cost": 9990000,
             "image": "https://cdn.tgdd.vn/2022/03/campaign/Blue-249x376-1.png",
             "amount": "5",
@@ -214,7 +199,7 @@
         {
             "name": "PC HP AIO Pro 200 G4 (2J861PA)",
             "brand": "HP",
-            "type": "desktop",
+            "type": "Desktop",
             "cost": 16990000,
             "image": "https://lh3.googleusercontent.com/klswK7ulUIUTyr7Ob02B2iPJFzeILYa7GZzLsdMkcrS-3ug3WmM3Si9OtD3hmUpo1f6YpvunVZW7yKv1YQ=w1000-rw",
             "amount": "5",
@@ -229,7 +214,7 @@
         {
             "name": "OPPO Reno6 Z 5G",
             "brand": "Oppo",
-            "type": "phone",
+            "type": "Smartphone",
             "cost": 9699000,
             "image": "https://cdn.tgdd.vn/Products/Images/42/239747/oppo-reno6-z-5g-aurora-1-600x600.jpg",
             "amount": "11",
@@ -349,7 +334,7 @@
         {
             "name": "Tai nghe Bluetooth True Wireless Mozard TS13",
             "brand": "Mozard",
-            "type": "access",
+            "type": "Accessory",
             "cost": 650000,
             "image": "https://cdn.tgdd.vn/Products/Images/54/230363/tai-nghe-bluetooth-true-wireless-mozard-ts13-1-org.jpg",
             "amount": "89",
@@ -364,7 +349,7 @@
         {
             "name": "Tai nghe Bluetooth True Wireless Sony WF-C500 ",
             "brand": "Sony",
-            "type": "access",
+            "type": "Accessory",
             "cost": 2290000,
             "image": "https://cdn.tgdd.vn/Products/Images/54/255568/bluetooth-true-wireless-sony-wf-c500-cam-2.jpg",
             "amount": "46",
@@ -379,7 +364,7 @@
         {
             "name": "iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU ",
             "brand": "Apple",
-            "type": "desktop",
+            "type": "Desktop",
             "cost": 39490000,
             "image": "https://cdn.tgdd.vn/Products/Images/5698/238053/imac-24-icnh-2021-m1-thumb-xanh-duong-600x600.jpg",
             "amount": "10",
@@ -394,7 +379,7 @@
         {
             "name": "OPPO Reno7 Z 5G",
             "brand": "Oppo",
-            "type": "phone",
+            "type": "Smartphone",
             "cost": 10490000,
             "image": "https://cdn.tgdd.vn/Products/Images/42/271717/oppo-reno7-z-5g-thumb-1-1-600x600.jpg",
             "amount": "0",
@@ -409,7 +394,7 @@
         {
             "name": "Samsung Galaxy S22 Ultra 5G",
             "brand": "Samsung",
-            "type": "phone",
+            "type": "Smartphone",
             "cost": 30990000,
             "image": "https://cdn.tgdd.vn/Products/Images/42/235838/Galaxy-S22-Ultra-Burgundy-600x600.jpg",
             "amount": "51",
@@ -424,7 +409,7 @@
         {
             "name": "Samsung Galaxy S22 5G",
             "brand": "Samsung",
-            "type": "phone",
+            "type": "Smartphone",
             "cost": 21990000,
             "image": "https://cdn.tgdd.vn/Products/Images/42/231110/Galaxy-S22-Black-600x600.jpg",
             "amount": "21",
@@ -439,7 +424,7 @@
         {
             "name": "Iphone 11",
             "brand": "Apple",
-            "type": "phone",
+            "type": "Smartphone",
             "cost": 16290000,
             "image": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-xi-do-600x600.jpg",
             "amount": "11",
@@ -454,7 +439,7 @@
         {
             "name": "Xiaomi Redmi Note 11S",
             "brand": "Xiaomi",
-            "type": "phone",
+            "type": "Smartphone",
             "cost": 6690000,
             "image": "https://cdn.tgdd.vn/Products/Images/42/267871/xiaomi-redmi-note-11s-trang-thumb-600x600.jpg",
             "amount": "36",
@@ -469,7 +454,7 @@
         {
             "name": "Samsung Galaxy S215G",
             "brand": "Samsung",
-            "type": "phone",
+            "type": "Smartphone",
             "cost": 20990000,
             "image": "https://cdn.tgdd.vn/Products/Images/42/226385/samsung-galaxy-s21-plus-bac-600x600-600x600.jpg",
             "amount": "21",
@@ -484,7 +469,7 @@
         {
             "name": "Samsung Galaxy Z Flip 3",
             "brand": "Samsung",
-            "type": "phone",
+            "type": "Smartphone",
             "cost": 21990000,
             "image": "https://cdn.tgdd.vn/Products/Images/42/229949/samsung-galaxy-z-flip-3-cream-1-600x600.jpg",
             "amount": "21",
@@ -499,7 +484,7 @@
         {
             "name": "Oppo Reno 4 Pro",
             "brand": "Oppo",
-            "type": "phone",
+            "type": "Smartphone",
             "cost": 10490000,
             "image": "https://cdn.tgdd.vn/Products/Images/42/223497/oppo-reno4-pro-trang-600x600.jpg",
             "amount": "54",
@@ -514,7 +499,7 @@
         {
             "name": "Oppo Reno 5 5G",
             "brand": "Oppo",
-            "type": "phone",
+            "type": "Smartphone",
             "cost": 10490000,
             "image": "https://cdn.tgdd.vn/Products/Images/42/233460/oppo-reno5-5g-thumb-600x600.jpg",
             "amount": "64",
@@ -529,7 +514,7 @@
         {
             "name": "Realme C25Y",
             "brand": "Realme",
-            "type": "phone",
+            "type": "Smartphone",
             "cost": 4690000,
             "image": "https://cdn.tgdd.vn/Products/Images/42/265313/realme-c25y-64gb-xanh-thumb-600x600.jpeg",
             "amount": "48",
@@ -600,6 +585,51 @@
             "discount": "5",
             "freeship": true,
             "id": "MIg5hhC"
+        },
+        {
+            "name": "Samsung Galaxy Watch 4 40mm",
+            "brand": "Samsung",
+            "type": "SmartWatch",
+            "cost": 6490000,
+            "image": "https://cdn.tgdd.vn/Products/Images/7077/248752/samsung-galaxy-watch-4-40mm-vang-hong-thumb-1-2-3-4-600x600.jpg",
+            "amount": "57",
+            "rate": {
+                "star": 4,
+                "comments": 14
+            },
+            "discount": "0",
+            "freeship": true,
+            "id": "FmLi5B4"
+        },
+        {
+            "name": "Asus S500SC i3 10105/4GB/256GB/Bàn phím & Chuột/Win11 (310105039W)",
+            "brand": "Assus",
+            "type": "Desktop",
+            "cost": 9990000,
+            "image": "https://cdn.tgdd.vn/Products/Images/5698/267718/asus-s500sc-i3-310105039w-600x600.jpg",
+            "amount": "23",
+            "rate": {
+                "star": 4,
+                "comments": 54
+            },
+            "discount": "10",
+            "freeship": false,
+            "id": "JGjesID"
+        },
+        {
+            "name": "Tai nghe chụp Bluetooth VisionBeats Black & Gray",
+            "brand": "Vision",
+            "type": "Accessory",
+            "cost": 8990000,
+            "image": "../../img/product1.png",
+            "amount": "15",
+            "rate": {
+                "star": 3,
+                "comments": 226
+            },
+            "discount": "25",
+            "freeship": true,
+            "id": "raF6siA"
         }
     ]
 }
