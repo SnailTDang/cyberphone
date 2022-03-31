@@ -1,635 +1,665 @@
 {
-    "data": [
-        {
-            "id": "2",
-            "name": "VisionPhone",
-            "brand": "Vision",
-            "type": "Smartphone",
-            "cost": 25990000,
-            "discount": 15,
-            "freeship": true,
-            "image": "../../img/product2.png",
-            "amount": 11,
-            "rate": {
-                "star": 5,
-                "comments": 133
-            }
-        },
-        {
-            "name": "VisionTablet",
-            "brand": "Vision",
-            "type": "Tablet",
-            "cost": 15990000,
-            "image": "../../img/product3.png",
-            "amount": 24,
-            "rate": {
-                "star": 4,
-                "comments": 101
-            },
-            "discount": 15,
-            "freeship": true,
-            "id": "3"
-        },
-        {
-            "name": "VisionWatch",
-            "brand": "Vision",
-            "type": "SmartWatch",
-            "cost": 7990000,
-            "image": "../../img/product4.png",
-            "amount": 51,
-            "rate": {
-                "star": 5,
-                "comments": 126
-            },
-            "discount": 5,
-            "freeship": true,
-            "id": "4"
-        },
-        {
-            "name": "VisionBattery",
-            "brand": "Vision",
-            "type": "Accessory",
-            "cost": 1990000,
-            "image": "../../img/product5.png",
-            "amount": "41",
-            "rate": {
-                "star": 2,
-                "comments": 32
-            },
-            "discount": "25",
-            "freeship": true,
-            "id": "5"
-        },
-        {
-            "id": "6",
-            "name": "VisionPods",
-            "brand": "Vision",
-            "type": "Accessory",
-            "cost": 4990000,
-            "discount": 21,
-            "freeship": true,
-            "image": "../../img/product6.png",
-            "amount": 20,
-            "rate": {
-                "star": 4,
-                "comments": 54
-            },
-            "status": "Hết hàng"
-        },
-        {
-            "id": "7",
-            "name": "VisionAirB",
-            "brand": "Vision",
-            "type": "Accessory",
-            "cost": 6990000,
-            "discount": 15,
-            "freeship": false,
-            "image": "https://cdn.tgdd.vn/Files/2021/10/28/1394064/tai-nghe-airb-pro-1-_1647x1334-800-resize.jpg",
-            "amount": 151,
-            "rate": {
-                "star": 4,
-                "comments": 44
-            }
-        },
-        {
-            "id": "8",
-            "name": "VisionPC",
-            "brand": "Vision",
-            "type": "Desktop",
-            "cost": 29990000,
-            "discount": 10,
-            "freeship": true,
-            "image": "https://minhancomputer.com/media/product/4727_pc_gaming_i7_10700__gtx_1650__ram_16gb__ssd_250gb.jpg",
-            "amount": 0,
-            "rate": {
-                "star": 4,
-                "comments": 57
-            }
-        },
-        {
-            "name": "Vison Clock",
-            "brand": "Vision",
-            "type": "Accessory",
-            "cost": 19900000,
-            "discount": 10,
-            "freeship": true,
-            "image": "https://gucongnghe.com/wp-content/uploads/2020/09/Smart-Clock-Essential-1-1024x624.jpg",
-            "amount": "101",
-            "rate": {
-                "star": 5,
-                "comments": 39
-            },
-            "id": "9"
-        },
-        {
-            "name": "Samsung Galaxy S20 Ultra",
-            "brand": "Samsung",
-            "type": "Smartphone",
-            "cost": 26990000,
-            "image": "https://smartviets.com/template/plugins/timthumb.php?src=/upload/image/nh%20%C4%91%E1%BA%A1i%20di%E1%BB%87n/s20%20ultra%20tr%E1%BA%AFng.jpg&w=770&h=770&q=80",
-            "amount": "0",
-            "rate": {
-                "star": 5,
-                "comments": 32
-            },
-            "discount": "5",
-            "freeship": true,
-            "id": "KqCY9Kg"
-        },
-        {
-            "name": "Xiaomi Smart Lamp 24V",
-            "brand": "Xiaomi",
-            "type": "Accessory",
-            "cost": 499000,
-            "image": "https://cdn-amz.fadoglobal.io/images/I/51Smh9MafXL.jpg",
-            "amount": "3",
-            "rate": {
-                "star": 4,
-                "comments": 22
-            },
-            "discount": "29",
-            "freeship": false,
-            "id": "hjD0hgJ"
-        },
-        {
-            "name": "Apple Iphone 13 Pro Max 128GB",
-            "brand": "Apple",
-            "type": "Smartphone",
-            "cost": 26990000,
-            "image": "https://cdn.tgdd.vn/Products/Images/42/230529/s16/iphone-13-pro-max-silver-650x650.png",
-            "amount": "11",
-            "rate": {
-                "star": 5,
-                "comments": 134
-            },
-            "discount": "5",
-            "freeship": false,
-            "id": "quHGUyN"
-        },
-        {
-            "name": "Xiaomi Redmi Note 9 Pro",
-            "brand": "Xiaomi",
-            "type": "Smartphone",
-            "cost": 4990000,
-            "image": "https://cdn.mobilecity.vn/mobilecity-vn/images/2020/11/w150/redmi-note-9-pro-5g-4-1.jpg",
-            "amount": "0",
-            "rate": {
-                "star": 5,
-                "comments": 3
-            },
-            "discount": "10",
-            "freeship": true,
-            "id": "xFOH3xL"
-        },
-        {
-            "name": "Samsung Galaxy A53 5G 128GB",
-            "brand": "Samsung",
-            "type": "Smartphone",
-            "cost": 9990000,
-            "image": "https://cdn.tgdd.vn/2022/03/campaign/Blue-249x376-1.png",
-            "amount": "5",
-            "rate": {
-                "star": 4,
-                "comments": 17
-            },
-            "discount": "0",
-            "freeship": true,
-            "id": "RhbXixH"
-        },
-        {
-            "name": "PC HP AIO Pro 200 G4 (2J861PA)",
-            "brand": "HP",
-            "type": "Desktop",
-            "cost": 16990000,
-            "image": "https://lh3.googleusercontent.com/klswK7ulUIUTyr7Ob02B2iPJFzeILYa7GZzLsdMkcrS-3ug3WmM3Si9OtD3hmUpo1f6YpvunVZW7yKv1YQ=w1000-rw",
-            "amount": "5",
-            "rate": {
-                "star": 5,
-                "comments": 4
-            },
-            "discount": "5",
-            "freeship": true,
-            "id": "JXNwBcV"
-        },
-        {
-            "name": "OPPO Reno6 Z 5G",
-            "brand": "Oppo",
-            "type": "Smartphone",
-            "cost": 9699000,
-            "image": "https://cdn.tgdd.vn/Products/Images/42/239747/oppo-reno6-z-5g-aurora-1-600x600.jpg",
-            "amount": "11",
-            "rate": {
-                "star": 4,
-                "comments": 14
-            },
-            "discount": "5",
-            "freeship": true,
-            "id": "E0tsRXm"
-        },
-        {
-            "name": "Samsung Galaxy Watch 4 44mm ",
-            "brand": "Samsung",
-            "type": "SmartWatch",
-            "cost": 4990000,
-            "image": "https://cdn.tgdd.vn/Products/Images/7077/248753/samsung-galaxy-watch-4-44mm-1-1.jpg",
-            "amount": "51",
-            "rate": {
-                "star": 5,
-                "comments": 131
-            },
-            "discount": "5",
-            "freeship": true,
-            "id": "Ih_3oC3"
-        },
-        {
-            "name": "Apple Watch S6 40mm",
-            "brand": "Apple",
-            "type": "SmartWatch",
-            "cost": 7990000,
-            "image": "https://cdn.tgdd.vn/Products/Images/7077/229044/apple-watch-s6-40mm-vien-nhom-day-cao-su-red-do-cont-1-org-org.jpg",
-            "amount": "25",
-            "rate": {
-                "star": 5,
-                "comments": 97
-            },
-            "discount": "10",
-            "freeship": true,
-            "id": "1zNzlkf"
-        },
-        {
-            "name": "iPad Pro M1 11 inch WiFi Cellular 1TB",
-            "brand": "Apple",
-            "type": "Tablet",
-            "cost": 44590000,
-            "image": "https://cdn.tgdd.vn/Products/Images/522/269329/ipad-pro-m1-11-inch-wifi-cellular-bac-1.jpeg",
-            "amount": "26",
-            "rate": {
-                "star": 5,
-                "comments": 69
-            },
-            "discount": "5",
-            "freeship": true,
-            "id": "gjT2Z00"
-        },
-        {
-            "name": "iPad Pro M1 12.9 inch WiFi Cellular 128GB",
-            "brand": "Apple",
-            "type": "Tablet",
-            "cost": 29990000,
-            "image": "https://cdn.tgdd.vn/Products/Images/522/269329/pad-pro-m1-11-inch-wifi-cellular-1tb-2021-xam-thumb-200x200.jpeg",
-            "amount": "54",
-            "rate": {
-                "star": 5,
-                "comments": 32
-            },
-            "discount": "5",
-            "freeship": true,
-            "id": "Twv3eTm"
-        },
-        {
-            "name": "iPad Air 5 M1 Wifi Cellular 64GB ",
-            "brand": "Apple",
-            "type": "Tablet",
-            "cost": 20990000,
-            "image": "https://cdn.tgdd.vn/Products/Images/522/274155/ipad-air-5-wifi-cellular-white-thumb-200x200.jpg",
-            "amount": "8",
-            "rate": {
-                "star": 5,
-                "comments": 15
-            },
-            "discount": "5",
-            "freeship": true,
-            "id": "LSllmQI"
-        },
-        {
-            "name": "Samsung Galaxy Tab S8",
-            "brand": "Samsung",
-            "type": "Tablet",
-            "cost": 20990000,
-            "image": "https://cdn.tgdd.vn/Products/Images/522/247510/Samsung-Galaxy-tab-s8-black-thumb-600x600.jpg",
-            "amount": "29",
-            "rate": {
-                "star": 5,
-                "comments": 47
-            },
-            "discount": "10",
-            "freeship": true,
-            "id": "OxVkxj0"
-        },
-        {
-            "name": "Samsung Galaxy Tab S8+ ",
-            "brand": "Samsung",
-            "type": "Tablet",
-            "cost": 25990000,
-            "image": "https://cdn.tgdd.vn/Products/Images/522/247512/Tab-S8+-Black-1-600x600.jpeg",
-            "amount": "10",
-            "rate": {
-                "star": 5,
-                "comments": 14
-            },
-            "discount": "0",
-            "freeship": true,
-            "id": "-5R7r3X"
-        },
-        {
-            "name": "Tai nghe Bluetooth True Wireless Mozard TS13",
-            "brand": "Mozard",
-            "type": "Accessory",
-            "cost": 650000,
-            "image": "https://cdn.tgdd.vn/Products/Images/54/230363/tai-nghe-bluetooth-true-wireless-mozard-ts13-1-org.jpg",
-            "amount": "89",
-            "rate": {
-                "star": 4,
-                "comments": 165
-            },
-            "discount": "30",
-            "freeship": false,
-            "id": "-HEk19I"
-        },
-        {
-            "name": "Tai nghe Bluetooth True Wireless Sony WF-C500 ",
-            "brand": "Sony",
-            "type": "Accessory",
-            "cost": 2290000,
-            "image": "https://cdn.tgdd.vn/Products/Images/54/255568/bluetooth-true-wireless-sony-wf-c500-cam-2.jpg",
-            "amount": "46",
-            "rate": {
-                "star": 5,
-                "comments": 67
-            },
-            "discount": "5",
-            "freeship": true,
-            "id": "KIELpFM"
-        },
-        {
-            "name": "iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU ",
-            "brand": "Apple",
-            "type": "Desktop",
-            "cost": 39490000,
-            "image": "https://cdn.tgdd.vn/Products/Images/5698/238053/imac-24-icnh-2021-m1-thumb-xanh-duong-600x600.jpg",
-            "amount": "10",
-            "rate": {
-                "star": 5,
-                "comments": 9
-            },
-            "discount": "5",
-            "freeship": true,
-            "id": "zhBfj_b"
-        },
-        {
-            "name": "OPPO Reno7 Z 5G",
-            "brand": "Oppo",
-            "type": "Smartphone",
-            "cost": 10490000,
-            "image": "https://cdn.tgdd.vn/Products/Images/42/271717/oppo-reno7-z-5g-thumb-1-1-600x600.jpg",
-            "amount": "0",
-            "rate": {
-                "star": 0,
-                "comments": 0
-            },
-            "discount": "0",
-            "freeship": true,
-            "id": "oXffj6p"
-        },
-        {
-            "name": "Samsung Galaxy S22 Ultra 5G",
-            "brand": "Samsung",
-            "type": "Smartphone",
-            "cost": 30990000,
-            "image": "https://cdn.tgdd.vn/Products/Images/42/235838/Galaxy-S22-Ultra-Burgundy-600x600.jpg",
-            "amount": "51",
-            "rate": {
-                "star": 5,
-                "comments": 100
-            },
-            "discount": "5",
-            "freeship": true,
-            "id": "WOQmHLf"
-        },
-        {
-            "name": "Samsung Galaxy S22 5G",
-            "brand": "Samsung",
-            "type": "Smartphone",
-            "cost": 21990000,
-            "image": "https://cdn.tgdd.vn/Products/Images/42/231110/Galaxy-S22-Black-600x600.jpg",
-            "amount": "21",
-            "rate": {
-                "star": 5,
-                "comments": 96
-            },
-            "discount": "5",
-            "freeship": true,
-            "id": "MfXH_L2"
-        },
-        {
-            "name": "Iphone 11",
-            "brand": "Apple",
-            "type": "Smartphone",
-            "cost": 16290000,
-            "image": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-xi-do-600x600.jpg",
-            "amount": "11",
-            "rate": {
-                "star": 5,
-                "comments": 10
-            },
-            "discount": "10",
-            "freeship": true,
-            "id": "s9H1oO5"
-        },
-        {
-            "name": "Xiaomi Redmi Note 11S",
-            "brand": "Xiaomi",
-            "type": "Smartphone",
-            "cost": 6690000,
-            "image": "https://cdn.tgdd.vn/Products/Images/42/267871/xiaomi-redmi-note-11s-trang-thumb-600x600.jpg",
-            "amount": "36",
-            "rate": {
-                "star": 4,
-                "comments": 320
-            },
-            "discount": "10",
-            "freeship": false,
-            "id": "18xrZ-M"
-        },
-        {
-            "name": "Samsung Galaxy S215G",
-            "brand": "Samsung",
-            "type": "Smartphone",
-            "cost": 20990000,
-            "image": "https://cdn.tgdd.vn/Products/Images/42/226385/samsung-galaxy-s21-plus-bac-600x600-600x600.jpg",
-            "amount": "21",
-            "rate": {
-                "star": 5,
-                "comments": 47
-            },
-            "discount": "5",
-            "freeship": true,
-            "id": "AYbK2fx"
-        },
-        {
-            "name": "Samsung Galaxy Z Flip 3",
-            "brand": "Samsung",
-            "type": "Smartphone",
-            "cost": 21990000,
-            "image": "https://cdn.tgdd.vn/Products/Images/42/229949/samsung-galaxy-z-flip-3-cream-1-600x600.jpg",
-            "amount": "21",
-            "rate": {
-                "star": 5,
-                "comments": 51
-            },
-            "discount": "5",
-            "freeship": true,
-            "id": "obaYfp-"
-        },
-        {
-            "name": "Oppo Reno 4 Pro",
-            "brand": "Oppo",
-            "type": "Smartphone",
-            "cost": 10490000,
-            "image": "https://cdn.tgdd.vn/Products/Images/42/223497/oppo-reno4-pro-trang-600x600.jpg",
-            "amount": "54",
-            "rate": {
-                "star": 4,
-                "comments": 79
-            },
-            "discount": "13",
-            "freeship": true,
-            "id": "Q6WpA5c"
-        },
-        {
-            "name": "Oppo Reno 5 5G",
-            "brand": "Oppo",
-            "type": "Smartphone",
-            "cost": 10490000,
-            "image": "https://cdn.tgdd.vn/Products/Images/42/233460/oppo-reno5-5g-thumb-600x600.jpg",
-            "amount": "64",
-            "rate": {
-                "star": 4,
-                "comments": 51
-            },
-            "discount": "30",
-            "freeship": false,
-            "id": "hi7mfsM"
-        },
-        {
-            "name": "Realme C25Y",
-            "brand": "Realme",
-            "type": "Smartphone",
-            "cost": 4690000,
-            "image": "https://cdn.tgdd.vn/Products/Images/42/265313/realme-c25y-64gb-xanh-thumb-600x600.jpeg",
-            "amount": "48",
-            "rate": {
-                "star": 3,
-                "comments": 68
-            },
-            "discount": "10",
-            "freeship": false,
-            "id": "gO5SPEb"
-        },
-        {
-            "name": "Laptop Lenovo Ideapad 3 15IML05 i3 10110U/4GB/256GB/Win11 (81WB01DPVN)",
-            "brand": "Lenovo",
-            "type": "Laptop",
-            "cost": 11249000,
-            "image": "https://cdn.tgdd.vn/Products/Images/44/271782/lenovo-ideapad-3-15iml05-i3-10110u-4gb-256gb-win11-81wb01dpvn-600x600.jpg",
-            "amount": "8",
-            "rate": {
-                "star": 4,
-                "comments": 54
-            },
-            "discount": "10",
-            "freeship": true,
-            "id": "Kge72mN"
-        },
-        {
-            "name": "Laptop Lenovo Yoga Duet 7 13ITL6 i5 1135G7/8GB/512GB/Touch/Pen/Win10 (82MA000PVN)",
-            "brand": "Lenovo",
-            "type": "Laptop",
-            "cost": 28990000,
-            "image": "https://cdn.tgdd.vn/Products/Images/44/255562/lenovo-yoga-duet-7-13itl6-i5-82ma000pvn-1-1.jpg",
-            "amount": "12",
-            "rate": {
-                "star": 5,
-                "comments": 4
-            },
-            "discount": "5",
-            "freeship": true,
-            "id": "K8_tYbh"
-        },
-        {
-            "name": "Laptop Acer Nitro 5 Gaming AN515 57 5831 i5 11400H/8GB/512GB/6GB RTX3060/144Hz/Win10 (NH.QDGSV.003)",
-            "brand": "Acer",
-            "type": "Laptop",
-            "cost": 32990000,
-            "image": "https://cdn.tgdd.vn/Products/Images/44/247312/acer-nitro-5-gaming-an515-57-5831-i5-nhqdgsv003-600x600.jpg",
-            "amount": "2",
-            "rate": {
-                "star": 5,
-                "comments": 47
-            },
-            "discount": "10",
-            "freeship": false,
-            "id": "4zAWvVF"
-        },
-        {
-            "name": "Laptop Dell Gaming Alienware m15 R6 i7 11800H/32GB/1TB SSD/6GB RTX3060/165Hz/Office H&S/Win11 (P109F001DBL)",
-            "brand": "Dell",
-            "type": "Laptop",
-            "cost": 61990000,
-            "image": "https://cdn.tgdd.vn/Products/Images/44/271545/dell-gaming-alienware-m15-r6-i7-p109f001dbl-020322-112012-600x600.jpg",
-            "amount": "5",
-            "rate": {
-                "star": 5,
-                "comments": 4
-            },
-            "discount": "5",
-            "freeship": true,
-            "id": "MIg5hhC"
-        },
-        {
-            "name": "Samsung Galaxy Watch 4 40mm",
-            "brand": "Samsung",
-            "type": "SmartWatch",
-            "cost": 6490000,
-            "image": "https://cdn.tgdd.vn/Products/Images/7077/248752/samsung-galaxy-watch-4-40mm-vang-hong-thumb-1-2-3-4-600x600.jpg",
-            "amount": "57",
-            "rate": {
-                "star": 4,
-                "comments": 14
-            },
-            "discount": "0",
-            "freeship": true,
-            "id": "FmLi5B4"
-        },
-        {
-            "name": "Asus S500SC i3 10105/4GB/256GB/Bàn phím & Chuột/Win11 (310105039W)",
-            "brand": "Assus",
-            "type": "Desktop",
-            "cost": 9990000,
-            "image": "https://cdn.tgdd.vn/Products/Images/5698/267718/asus-s500sc-i3-310105039w-600x600.jpg",
-            "amount": "23",
-            "rate": {
-                "star": 4,
-                "comments": 54
-            },
-            "discount": "10",
-            "freeship": false,
-            "id": "JGjesID"
-        },
-        {
-            "name": "Tai nghe chụp Bluetooth VisionBeats Black & Gray",
-            "brand": "Vision",
-            "type": "Accessory",
-            "cost": 8990000,
-            "image": "../../img/product1.png",
-            "amount": "15",
-            "rate": {
-                "star": 3,
-                "comments": 226
-            },
-            "discount": "25",
-            "freeship": true,
-            "id": "raF6siA"
-        }
-    ]
+  "data": [
+    {
+      "id": "2",
+      "name": "VisionPhone",
+      "brand": "Vision",
+      "type": "Smartphone",
+      "cost": 25990000,
+      "discount": 15,
+      "freeship": true,
+      "image": "../../img/product2.png",
+      "amount": 11,
+      "rate": {
+        "star": 5,
+        "comments": 133
+      }
+    },
+    {
+      "name": "VisionTablet",
+      "brand": "Vision",
+      "type": "Tablet",
+      "cost": 15990000,
+      "image": "../../img/product3.png",
+      "amount": 24,
+      "rate": {
+        "star": 4,
+        "comments": 101
+      },
+      "discount": 15,
+      "freeship": true,
+      "id": "3"
+    },
+    {
+      "name": "VisionWatch",
+      "brand": "Vision",
+      "type": "SmartWatch",
+      "cost": 7990000,
+      "image": "../../img/product4.png",
+      "amount": 51,
+      "rate": {
+        "star": 5,
+        "comments": 126
+      },
+      "discount": 5,
+      "freeship": true,
+      "id": "4"
+    },
+    {
+      "name": "VisionBattery",
+      "brand": "Vision",
+      "type": "Accessory",
+      "cost": 1990000,
+      "image": "../../img/product5.png",
+      "amount": "41",
+      "rate": {
+        "star": 2,
+        "comments": 32
+      },
+      "discount": "25",
+      "freeship": true,
+      "id": "5"
+    },
+    {
+      "id": "6",
+      "name": "VisionPods",
+      "brand": "Vision",
+      "type": "Accessory",
+      "cost": 4990000,
+      "discount": 21,
+      "freeship": true,
+      "image": "../../img/product6.png",
+      "amount": 20,
+      "rate": {
+        "star": 4,
+        "comments": 54
+      },
+      "status": "Hết hàng"
+    },
+    {
+      "id": "7",
+      "name": "VisionAirB",
+      "brand": "Vision",
+      "type": "Accessory",
+      "cost": 6990000,
+      "discount": 15,
+      "freeship": false,
+      "image": "https://cdn.tgdd.vn/Files/2021/10/28/1394064/tai-nghe-airb-pro-1-_1647x1334-800-resize.jpg",
+      "amount": 151,
+      "rate": {
+        "star": 4,
+        "comments": 44
+      }
+    },
+    {
+      "id": "8",
+      "name": "VisionPC",
+      "brand": "Vision",
+      "type": "Desktop",
+      "cost": 29990000,
+      "discount": 10,
+      "freeship": true,
+      "image": "https://minhancomputer.com/media/product/4727_pc_gaming_i7_10700__gtx_1650__ram_16gb__ssd_250gb.jpg",
+      "amount": 0,
+      "rate": {
+        "star": 4,
+        "comments": 57
+      }
+    },
+    {
+      "name": "Vison Clock",
+      "brand": "Vision",
+      "type": "Accessory",
+      "cost": 19900000,
+      "discount": 10,
+      "freeship": true,
+      "image": "https://gucongnghe.com/wp-content/uploads/2020/09/Smart-Clock-Essential-1-1024x624.jpg",
+      "amount": "101",
+      "rate": {
+        "star": 5,
+        "comments": 39
+      },
+      "id": "9"
+    },
+    {
+      "name": "Samsung Galaxy S20 Ultra",
+      "brand": "Samsung",
+      "type": "Smartphone",
+      "cost": 26990000,
+      "image": "https://smartviets.com/template/plugins/timthumb.php?src=/upload/image/nh%20%C4%91%E1%BA%A1i%20di%E1%BB%87n/s20%20ultra%20tr%E1%BA%AFng.jpg&w=770&h=770&q=80",
+      "amount": "0",
+      "rate": {
+        "star": 5,
+        "comments": 32
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "KqCY9Kg"
+    },
+    {
+      "name": "Xiaomi Smart Lamp 24V",
+      "brand": "Xiaomi",
+      "type": "Accessory",
+      "cost": 499000,
+      "image": "https://cdn-amz.fadoglobal.io/images/I/51Smh9MafXL.jpg",
+      "amount": "3",
+      "rate": {
+        "star": 4,
+        "comments": 22
+      },
+      "discount": "29",
+      "freeship": false,
+      "id": "hjD0hgJ"
+    },
+    {
+      "name": "Apple Iphone 13 Pro Max 128GB",
+      "brand": "Apple",
+      "type": "Smartphone",
+      "cost": 26990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/230529/s16/iphone-13-pro-max-silver-650x650.png",
+      "amount": "11",
+      "rate": {
+        "star": 5,
+        "comments": 134
+      },
+      "discount": "5",
+      "freeship": false,
+      "id": "quHGUyN"
+    },
+    {
+      "name": "Xiaomi Redmi Note 9 Pro",
+      "brand": "Xiaomi",
+      "type": "Smartphone",
+      "cost": 4990000,
+      "image": "https://cdn.mobilecity.vn/mobilecity-vn/images/2020/11/w150/redmi-note-9-pro-5g-4-1.jpg",
+      "amount": "0",
+      "rate": {
+        "star": 5,
+        "comments": 3
+      },
+      "discount": "10",
+      "freeship": true,
+      "id": "xFOH3xL"
+    },
+    {
+      "name": "Samsung Galaxy A53 5G 128GB",
+      "brand": "Samsung",
+      "type": "Smartphone",
+      "cost": 9990000,
+      "image": "https://cdn.tgdd.vn/2022/03/campaign/Blue-249x376-1.png",
+      "amount": "5",
+      "rate": {
+        "star": 4,
+        "comments": 17
+      },
+      "discount": "0",
+      "freeship": true,
+      "id": "RhbXixH"
+    },
+    {
+      "name": "PC HP AIO Pro 200 G4 (2J861PA)",
+      "brand": "HP",
+      "type": "Desktop",
+      "cost": 16990000,
+      "image": "https://lh3.googleusercontent.com/klswK7ulUIUTyr7Ob02B2iPJFzeILYa7GZzLsdMkcrS-3ug3WmM3Si9OtD3hmUpo1f6YpvunVZW7yKv1YQ=w1000-rw",
+      "amount": "5",
+      "rate": {
+        "star": 5,
+        "comments": 4
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "JXNwBcV"
+    },
+    {
+      "name": "OPPO Reno6 Z 5G",
+      "brand": "Oppo",
+      "type": "Smartphone",
+      "cost": 9699000,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/239747/oppo-reno6-z-5g-aurora-1-600x600.jpg",
+      "amount": "11",
+      "rate": {
+        "star": 4,
+        "comments": 14
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "E0tsRXm"
+    },
+    {
+      "name": "Samsung Galaxy Watch 4 44mm ",
+      "brand": "Samsung",
+      "type": "SmartWatch",
+      "cost": 4990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/7077/248753/samsung-galaxy-watch-4-44mm-1-1.jpg",
+      "amount": "51",
+      "rate": {
+        "star": 5,
+        "comments": 131
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "Ih_3oC3"
+    },
+    {
+      "name": "Apple Watch S6 40mm",
+      "brand": "Apple",
+      "type": "SmartWatch",
+      "cost": 7990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/7077/229044/apple-watch-s6-40mm-vien-nhom-day-cao-su-red-do-cont-1-org-org.jpg",
+      "amount": "25",
+      "rate": {
+        "star": 5,
+        "comments": 97
+      },
+      "discount": "10",
+      "freeship": true,
+      "id": "1zNzlkf"
+    },
+    {
+      "name": "iPad Pro M1 11 inch WiFi Cellular 1TB",
+      "brand": "Apple",
+      "type": "Tablet",
+      "cost": 44590000,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/269329/ipad-pro-m1-11-inch-wifi-cellular-bac-1.jpeg",
+      "amount": "26",
+      "rate": {
+        "star": 5,
+        "comments": 69
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "gjT2Z00"
+    },
+    {
+      "name": "iPad Pro M1 12.9 inch WiFi Cellular 128GB",
+      "brand": "Apple",
+      "type": "Tablet",
+      "cost": 29990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/269329/pad-pro-m1-11-inch-wifi-cellular-1tb-2021-xam-thumb-200x200.jpeg",
+      "amount": "54",
+      "rate": {
+        "star": 5,
+        "comments": 32
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "Twv3eTm"
+    },
+    {
+      "name": "iPad Air 5 M1 Wifi Cellular 64GB ",
+      "brand": "Apple",
+      "type": "Tablet",
+      "cost": 20990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/274155/ipad-air-5-wifi-cellular-white-thumb-200x200.jpg",
+      "amount": "8",
+      "rate": {
+        "star": 5,
+        "comments": 15
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "LSllmQI"
+    },
+    {
+      "name": "Samsung Galaxy Tab S8",
+      "brand": "Samsung",
+      "type": "Tablet",
+      "cost": 20990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/247510/Samsung-Galaxy-tab-s8-black-thumb-600x600.jpg",
+      "amount": "29",
+      "rate": {
+        "star": 5,
+        "comments": 47
+      },
+      "discount": "10",
+      "freeship": true,
+      "id": "OxVkxj0"
+    },
+    {
+      "name": "Samsung Galaxy Tab S8+ ",
+      "brand": "Samsung",
+      "type": "Tablet",
+      "cost": 25990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/247512/Tab-S8+-Black-1-600x600.jpeg",
+      "amount": "10",
+      "rate": {
+        "star": 5,
+        "comments": 14
+      },
+      "discount": "0",
+      "freeship": true,
+      "id": "-5R7r3X"
+    },
+    {
+      "name": "Tai nghe Bluetooth True Wireless Mozard TS13",
+      "brand": "Mozard",
+      "type": "Accessory",
+      "cost": 650000,
+      "image": "https://cdn.tgdd.vn/Products/Images/54/230363/tai-nghe-bluetooth-true-wireless-mozard-ts13-1-org.jpg",
+      "amount": "89",
+      "rate": {
+        "star": 4,
+        "comments": 165
+      },
+      "discount": "30",
+      "freeship": false,
+      "id": "-HEk19I"
+    },
+    {
+      "name": "Tai nghe Bluetooth True Wireless Sony WF-C500 ",
+      "brand": "Sony",
+      "type": "Accessory",
+      "cost": 2290000,
+      "image": "https://cdn.tgdd.vn/Products/Images/54/255568/bluetooth-true-wireless-sony-wf-c500-cam-2.jpg",
+      "amount": "46",
+      "rate": {
+        "star": 5,
+        "comments": 67
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "KIELpFM"
+    },
+    {
+      "name": "iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU ",
+      "brand": "Apple",
+      "type": "Desktop",
+      "cost": 39490000,
+      "image": "https://cdn.tgdd.vn/Products/Images/5698/238053/imac-24-icnh-2021-m1-thumb-xanh-duong-600x600.jpg",
+      "amount": "10",
+      "rate": {
+        "star": 5,
+        "comments": 9
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "zhBfj_b"
+    },
+    {
+      "name": "OPPO Reno7 Z 5G",
+      "brand": "Oppo",
+      "type": "Smartphone",
+      "cost": 10490000,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/271717/oppo-reno7-z-5g-thumb-1-1-600x600.jpg",
+      "amount": "0",
+      "rate": {
+        "star": 0,
+        "comments": 0
+      },
+      "discount": "0",
+      "freeship": true,
+      "id": "oXffj6p"
+    },
+    {
+      "name": "Samsung Galaxy S22 Ultra 5G",
+      "brand": "Samsung",
+      "type": "Smartphone",
+      "cost": 30990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/235838/Galaxy-S22-Ultra-Burgundy-600x600.jpg",
+      "amount": "51",
+      "rate": {
+        "star": 5,
+        "comments": 100
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "WOQmHLf"
+    },
+    {
+      "name": "Samsung Galaxy S22 5G",
+      "brand": "Samsung",
+      "type": "Smartphone",
+      "cost": 21990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/231110/Galaxy-S22-Black-600x600.jpg",
+      "amount": "21",
+      "rate": {
+        "star": 5,
+        "comments": 96
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "MfXH_L2"
+    },
+    {
+      "name": "Iphone 11",
+      "brand": "Apple",
+      "type": "Smartphone",
+      "cost": 16290000,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-xi-do-600x600.jpg",
+      "amount": "11",
+      "rate": {
+        "star": 5,
+        "comments": 10
+      },
+      "discount": "10",
+      "freeship": true,
+      "id": "s9H1oO5"
+    },
+    {
+      "name": "Xiaomi Redmi Note 11S",
+      "brand": "Xiaomi",
+      "type": "Smartphone",
+      "cost": 6690000,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/267871/xiaomi-redmi-note-11s-trang-thumb-600x600.jpg",
+      "amount": "36",
+      "rate": {
+        "star": 4,
+        "comments": 320
+      },
+      "discount": "10",
+      "freeship": false,
+      "id": "18xrZ-M"
+    },
+    {
+      "name": "Samsung Galaxy S215G",
+      "brand": "Samsung",
+      "type": "Smartphone",
+      "cost": 20990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/226385/samsung-galaxy-s21-plus-bac-600x600-600x600.jpg",
+      "amount": "21",
+      "rate": {
+        "star": 5,
+        "comments": 47
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "AYbK2fx"
+    },
+    {
+      "name": "Samsung Galaxy Z Flip 3",
+      "brand": "Samsung",
+      "type": "Smartphone",
+      "cost": 21990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/229949/samsung-galaxy-z-flip-3-cream-1-600x600.jpg",
+      "amount": "21",
+      "rate": {
+        "star": 5,
+        "comments": 51
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "obaYfp-"
+    },
+    {
+      "name": "Oppo Reno 4 Pro",
+      "brand": "Oppo",
+      "type": "Smartphone",
+      "cost": 10490000,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/223497/oppo-reno4-pro-trang-600x600.jpg",
+      "amount": "54",
+      "rate": {
+        "star": 4,
+        "comments": 79
+      },
+      "discount": "13",
+      "freeship": true,
+      "id": "Q6WpA5c"
+    },
+    {
+      "name": "Oppo Reno 5 5G",
+      "brand": "Oppo",
+      "type": "Smartphone",
+      "cost": 10490000,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/233460/oppo-reno5-5g-thumb-600x600.jpg",
+      "amount": "64",
+      "rate": {
+        "star": 4,
+        "comments": 51
+      },
+      "discount": "30",
+      "freeship": false,
+      "id": "hi7mfsM"
+    },
+    {
+      "name": "Realme C25Y",
+      "brand": "Realme",
+      "type": "Smartphone",
+      "cost": 4690000,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/265313/realme-c25y-64gb-xanh-thumb-600x600.jpeg",
+      "amount": "48",
+      "rate": {
+        "star": 3,
+        "comments": 68
+      },
+      "discount": "10",
+      "freeship": false,
+      "id": "gO5SPEb"
+    },
+    {
+      "name": "Laptop Lenovo Ideapad 3 15IML05 i3 10110U/4GB/256GB/Win11 (81WB01DPVN)",
+      "brand": "Lenovo",
+      "type": "Laptop",
+      "cost": 11249000,
+      "image": "https://cdn.tgdd.vn/Products/Images/44/271782/lenovo-ideapad-3-15iml05-i3-10110u-4gb-256gb-win11-81wb01dpvn-600x600.jpg",
+      "amount": "8",
+      "rate": {
+        "star": 4,
+        "comments": 54
+      },
+      "discount": "10",
+      "freeship": true,
+      "id": "Kge72mN"
+    },
+    {
+      "name": "Laptop Lenovo Yoga Duet 7 13ITL6 i5 1135G7/8GB/512GB/Touch/Pen/Win10 (82MA000PVN)",
+      "brand": "Lenovo",
+      "type": "Laptop",
+      "cost": 28990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/44/255562/lenovo-yoga-duet-7-13itl6-i5-82ma000pvn-1-1.jpg",
+      "amount": "12",
+      "rate": {
+        "star": 5,
+        "comments": 4
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "K8_tYbh"
+    },
+    {
+      "name": "Laptop Acer Nitro 5 Gaming AN515 57 5831 i5 11400H/8GB/512GB/6GB RTX3060/144Hz/Win10 (NH.QDGSV.003)",
+      "brand": "Acer",
+      "type": "Laptop",
+      "cost": 32990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/44/247312/acer-nitro-5-gaming-an515-57-5831-i5-nhqdgsv003-600x600.jpg",
+      "amount": "2",
+      "rate": {
+        "star": 5,
+        "comments": 47
+      },
+      "discount": "10",
+      "freeship": false,
+      "id": "4zAWvVF"
+    },
+    {
+      "name": "Laptop Dell Gaming Alienware m15 R6 i7 11800H/32GB/1TB SSD/6GB RTX3060/165Hz/Office H&S/Win11 (P109F001DBL)",
+      "brand": "Dell",
+      "type": "Laptop",
+      "cost": 61990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/44/271545/dell-gaming-alienware-m15-r6-i7-p109f001dbl-020322-112012-600x600.jpg",
+      "amount": "5",
+      "rate": {
+        "star": 5,
+        "comments": 4
+      },
+      "discount": "5",
+      "freeship": true,
+      "id": "MIg5hhC"
+    },
+    {
+      "name": "Samsung Galaxy Watch 4 40mm",
+      "brand": "Samsung",
+      "type": "SmartWatch",
+      "cost": 6490000,
+      "image": "https://cdn.tgdd.vn/Products/Images/7077/248752/samsung-galaxy-watch-4-40mm-vang-hong-thumb-1-2-3-4-600x600.jpg",
+      "amount": "57",
+      "rate": {
+        "star": 4,
+        "comments": 14
+      },
+      "discount": "0",
+      "freeship": true,
+      "id": "FmLi5B4"
+    },
+    {
+      "name": "Asus S500SC i3 10105/4GB/256GB/Bàn phím & Chuột/Win11 (310105039W)",
+      "brand": "Assus",
+      "type": "Desktop",
+      "cost": 9990000,
+      "image": "https://cdn.tgdd.vn/Products/Images/5698/267718/asus-s500sc-i3-310105039w-600x600.jpg",
+      "amount": "23",
+      "rate": {
+        "star": 4,
+        "comments": 54
+      },
+      "discount": "10",
+      "freeship": false,
+      "id": "JGjesID"
+    },
+    {
+      "name": "Tai nghe chụp Bluetooth VisionBeats Black & Gray",
+      "brand": "Vision",
+      "type": "Accessory",
+      "cost": 8990000,
+      "image": "../../img/product1.png",
+      "amount": "15",
+      "rate": {
+        "star": 3,
+        "comments": 226
+      },
+      "discount": "25",
+      "freeship": true,
+      "id": "raF6siA"
+    },
+    {
+      "name": "Laptop Apple Macbook Pro 2018 13.3\" MR9U2 (13.3\"/Core i5/8GB/HD/macOS/1.4 kg)",
+      "brand": "Apple",
+      "type": "Laptop",
+      "cost": 44390000,
+      "image": "https://lh3.googleusercontent.com/qgVwPKOgCXFJjAO-HB7Su5OPg7sBv4pJj9hTJxdvuz7GlWzA4gVaIC19oasGWcjIUgbqwZBpH1_OkTjyj_M=w500-rw",
+      "amount": "4",
+      "rate": {
+        "star": 5,
+        "comments": 12
+      },
+      "discount": "10",
+      "freeship": true,
+      "id": "VBwLbBd"
+    },
+    {
+      "name": "Laptop Apple MacBook Pro 2018 13.3inch MR9R2 (13.3inch/Core i5/8GB/Iris Plus 650/macOS)",
+      "brand": "Apple",
+      "type": "Laptop",
+      "cost": 49890000,
+      "image": "https://lh3.googleusercontent.com/9eLN7Yv5USoT6IKyJ6iMIFpJwYfEDj2qqBPU9AQWcEIitp1Hy5vUskvqNBsfFNg1ShLopOeOjOSSXQuuEtQv=w500-rw",
+      "amount": "5",
+      "rate": {
+        "star": 5,
+        "comments": 11
+      },
+      "discount": "10",
+      "freeship": true,
+      "id": "uUBWMbd"
+    }
+  ]
 }
