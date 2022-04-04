@@ -33,7 +33,7 @@
     h2 {
         @include styleText($fs-3 - 0.3, $fw-2, $color-blue-1);
         margin-bottom: 0;
-        margin-left: 20px;
+        display: inline;
     }
 }
 
@@ -56,4 +56,11 @@
     box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #e2ebfc;
     border-radius: 20px;
     overflow: hidden;
+}
+
+.home-link h2 {
+    @include styleText($fs-3 - 0.3, $fw-2, $color-blue-4);
+    margin-bottom: 0;
+    margin-left: 20px;
+    text-decoration: underline;
 }

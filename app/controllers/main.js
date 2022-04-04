@@ -65,30 +65,22 @@ function getHomeProducts() {
                 obj.countPros();
                 sortBrand.push(obj);
             });
-            // showProducts(homeProducts);
-            // console.log(typeList);
-            // console.log(sortType);
-            // console.log(brandList);
-            // console.log(sortBrand);
             showAllProducts(sortType);
-            // typeList.map((e) => {
-            //     getPhoneProduct(e);
-            // });
         })
         .catch(function (error) {
             console.log(error);
         });
 }
 
-let renderType = (typeList) => {
-    let content = typeList.map((e) => {
-        return `
-            <div class="row"></div>
-        `;
-    });
-};
-
 getHomeProducts();
+window.getHomeProducts = getHomeProducts;
+let backHome = () => {
+    getHomeProducts();
+    for (let type of menuType) {
+        type.classList.remove("active");
+    }
+};
+window.backHome = backHome;
 
 let getTypeProduct = (type) => {
     let newList = [];
@@ -97,13 +89,22 @@ let getTypeProduct = (type) => {
             newList = e.products;
         }
     });
-    let content = `
-        <div class="type-name row">
-            <div class="col-3"><h2>${type.toUpperCase()}</h2></div>
-        </div>
-        <div class="type-products row">
-            ${showProducts(newList)}
-        </div>`;
+    let content = `                
+        <div class="type-box">
+            <div class="type-name row">
+                <div class="col-5">
+                    <div class="d-flex">
+                        <a href="#productsList" onclick="backHome()" class="home-link">
+                            <h2>PRODUCTS</h2><span>&nbsp</span><span>&nbsp</span>
+                        </a>
+                        <h2>  &gt; ${type.toUpperCase()}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="type-products row">
+                ${showProducts(newList)}
+            </div>
+        <div/>`;
     document.querySelector("#productsList").innerHTML = content;
 };
 let getBrandProduct = (type) => {
@@ -113,13 +114,22 @@ let getBrandProduct = (type) => {
             newList = e.products;
         }
     });
-    let content = `
+    let content = `   
+    <div class="type-box">
         <div class="type-name row">
-            <div class="col-3"><h2>${type.toUpperCase()}</h2></div>
-        </div>
+            <div class="col-5">
+                <div class="d-flex">
+                    <a href="#productsList" onclick="backHome()" class="home-link">
+                        <h2>PRODUCTS</h2><span>&nbsp</span><span>&nbsp</span>
+                    </a>
+                    <h2>  &gt; ${type.toUpperCase()}</h2>
+                </div>
+            </div>
+        </div>                                  
         <div class="type-products row">
             ${showProducts(newList)}
-        </div>`;
+        </div>
+    <div/>`;
     document.querySelector("#productsList").innerHTML = content;
 };
 
