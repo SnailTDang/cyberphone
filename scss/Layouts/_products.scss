@@ -45,10 +45,6 @@
     text-align: right;
 }
 
-.type-item {
-    text-align: center;
-}
-
 .type-box {
     padding: 35px 15px 0 10px;
     margin: 15px 0;
@@ -64,3 +60,15 @@
     margin-left: 20px;
     text-decoration: underline;
 }
+.warring {
+    @include styleText($fs-1, $fw-1, rgb(211, 34, 34));
+    display: block;
+    margin-top: 5px;
+}
+
+@include responsive("exSmall") {
+    .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+} ;

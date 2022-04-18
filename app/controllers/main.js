@@ -2,13 +2,53 @@ import ProductServices from "../services/ProductServices.js";
 import Products from "../models/Products.js";
 import ObjectPro from "../models/ObjectProduct.js";
 import ObjectBrand from "../models/ObjectBrand.js";
+import LoginServices from "../services/LoginServices.js";
+import UserType from "../models/UserType.js";
+
+
 
 let proService = new ProductServices();
+let loginService = new LoginServices();
+let userActive = {};
 let homeProducts = [];
 let typeList = [];
 let brandList = [];
 let sortType = [];
 let sortBrand = [];
+let cartPro = [];
+
+function getUserArr() {
+
+
+    return userArr;
+}
+
+let loginForm = () => {
+    let acc = document.querySelector("#username").value;
+    let pass = document.querySelector("#password").value;
+    let userArr = []
+    loginService.getUserList()
+        .then(response => {
+            userArr = [...response.data];
+            let userMatch = userArr.find(user => {
+                return user.account === acc && user.password === pass;
+            })
+            if (userMatch) {
+                userActive = { ...userMatch }
+                showUserLogin(userActive);
+                document.querySelector(".bd-example-modal-md .close").click();
+                console.log(userActive)
+            } else {
+                document.querySelector("#warring-login").innerHTML =
+                    "Tên đăng nhập hoặc mật khẩu không đúng!"
+            }
+        })
+        .catch(error => {
+            console.log(error)
+        })
+}
+
+window.loginForm = loginForm;
 
 function getHomeProducts() {
     // Các code xử lý lấy data từ API
@@ -74,6 +114,7 @@ function getHomeProducts() {
 
 getHomeProducts();
 window.getHomeProducts = getHomeProducts;
+
 let backHome = () => {
     getHomeProducts();
     for (let type of menuType) {
@@ -92,7 +133,7 @@ let getTypeProduct = (type) => {
     let content = `                
         <div class="type-box">
             <div class="type-name row">
-                <div class="col-5">
+                <div class="col">
                     <div class="d-flex">
                         <a href="#productsList" onclick="backHome()" class="home-link">
                             <h2>PRODUCTS</h2><span>&nbsp</span><span>&nbsp</span>
@@ -117,7 +158,7 @@ let getBrandProduct = (type) => {
     let content = `   
     <div class="type-box">
         <div class="type-name row">
-            <div class="col-5">
+            <div class="col">
                 <div class="d-flex">
                     <a href="#productsList" onclick="backHome()" class="home-link">
                         <h2>PRODUCTS</h2><span>&nbsp</span><span>&nbsp</span>
@@ -150,19 +191,18 @@ function showAllProducts(array) {
         }
         return `
         <div class="type-box">
-        <div class="type-name row">
-            <div class="col-3"><h2>${e.name.toUpperCase()}</h2></div>
-            <div class="type-tags col-9">
-                ${hightLight}
-                <a href="#productsList" class="product-link" onclick="getTypeProduct('${
-                    e.name
-                }')"><p>Xem tất cả ${e.count} sản phẩm</p></a>
+            <div class="type-name row">
+                <div class="col-3"><h2>${e.name.toUpperCase()}</h2></div>
+                <div class="type-tags col-9">
+                    ${hightLight}
+                    <a href="#productsList" class="product-link" onclick="getTypeProduct('${e.name
+            }')"><p>Xem tất cả ${e.count} sản phẩm</p></a>
+                </div>
+            </div>
+            <div class="type-products row">
+                ${showProducts(prod)}
             </div>
         </div>
-        <div class="type-products row">
-            ${showProducts(prod)}
-        </div>
-    </div>
         `;
     });
     document.querySelector("#productsList").innerHTML = content.join("");
@@ -202,7 +242,7 @@ function showProducts(mangSP) {
             price = "";
         }
         let iconShip = "";
-        if (e.freeShip) {
+        if (e.freeship) {
             iconShip = `
             <svg fill="none" viewBox="0 0 24 24" size="24" class="css-9w5ue6" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.2437 8.8V10.077H10.5287C10.6548 10.077 10.7384 10.0429 10.7939 9.98729C10.8495 9.93171 10.8837 9.84817 10.8837 9.722V9.155C10.8837 9.02883 10.8495 8.94529 10.7939 8.88971C10.7384 8.83413 10.6548 8.8 10.5287 8.8H10.2437Z" fill="#30CD60"></path>
@@ -213,8 +253,8 @@ function showProducts(mangSP) {
             iconShip = "";
         }
         return `
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <a href="javascript:void(0)" data-toggle="modal" data-target=".bd-example-modal-lg">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <a href="javascript:void(0)" data-toggle="modal" data-target=".bd-example-modal-xl">
                 <div class="card cardPhone">
                     <div class="card-img">
                         <img src="${e.image}" class="card-img-top" alt="...">
@@ -224,9 +264,8 @@ function showProducts(mangSP) {
                         <div class="justify-content-between">
                             <div>
                                 <h3 class="cardPhone__title">${e.name}</h3>
-                                <p class="cardPhone__text">Còn ${
-                                    e.amount
-                                } sản phẩm</p>
+                                <p class="cardPhone__text">Còn ${e.amount
+            } sản phẩm</p>
                             </div>
                             <div>
                                 <h4 class="cardPhone__cost-old">${price}</h4>
@@ -258,6 +297,54 @@ function showProducts(mangSP) {
     return content.join("");
 }
 
+function showUserLogin(user) {
+    let account = `
+    <ul class="sub-nav-list" style="text-align:left">
+        <li>
+            <a href="#">
+                <i class="fa fa-user-circle"></i>
+                <span>Thông tin tài khoản</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-clipboard-list"></i>
+                <span>Quản lí đơn hàng</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-map-marked-alt"></i>
+                <span>Sổ địa chỉ</span>
+            </a>
+        </li>
+        <button class="btn btn-info">Đăng xuất</button>
+    </ul>
+    `
+    let noti = `
+        <ul class="sub-nav-list" style="text-align:left">
+        ${user.notica.map((e) => {
+        return `
+                <li>
+                    <a href="#">
+                        <span>${e.content}</span>
+                    </a>
+                </li>
+                `
+    }).join("")}
+        </ul>
+    `
+    if (user.notica.length > 0) {
+        let notiCount = document.createElement("div");
+        notiCount.className = "count-noti";
+        notiCount.innerHTML = user.notica.length;
+        document.querySelector("#noti-item").append(notiCount);
+        document.querySelector("#notification").innerHTML = noti;
+    }
+    document.querySelector("#fullname-account").innerHTML = user.name;
+    document.querySelector("#user-login").innerHTML = account;
+}
+
 function getProduct(id) {
     proService.getProduct(id).then((result) => {
         let { id, name, cost, image, amount, rate, discount } = result;
@@ -272,3 +359,114 @@ function showDetails(product) {
 
     `;
 }
+
+document.querySelector("#login-modal-button").addEventListener("click", () => {
+    document.querySelector(".bd-example-modal-md").innerHTML =
+        `
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <div class="register">
+                    <button class="btn btn-info">Đăng nhập</button>
+                    <button class="btn btn-success">Đăng ký</button>
+                </div>
+                <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                >
+                    X
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="container">
+                    <div
+                        id="login-row"
+                        class="row justify-content-center align-items-center"
+                    >
+                        <div id="login-column" class="col">
+                            <div id="login-box" class="col-md-12">
+                                <form
+                                    id="login-form"
+                                    class="form"
+                                    action="javascript:void(0)"
+                                >
+                                    <h3 class="text-center text-info">
+                                        Login
+                                    </h3>
+                                    <div class="form-group">
+                                        <label
+                                            for="username"
+                                            class="text-info"
+                                            >Username:</label
+                                        >
+                                        <input
+                                            type="text"
+                                            name="username"
+                                            id="username"
+                                            class="form-control"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label
+                                            for="password"
+                                            class="text-info"
+                                            >Password:</label
+                                        >
+                                        <input
+                                            type="password"
+                                            name="password"
+                                            id="password"
+                                            class="form-control"
+                                        />
+                                        <span
+                                            class="warring"
+                                            id="warring-login"
+                                        ></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label
+                                            for="remember-me"
+                                            class="text-info"
+                                            ><span>Remember me</span
+                                            >&nbsp;<span
+                                                ><input
+                                                    id="remember-me"
+                                                    name="remember-me"
+                                                    type="checkbox" /></span></label
+                                        ><br />
+                                        <button
+                                            name="submit"
+                                            class="btn btn-info btn-md"
+                                            onclick="loginForm()"
+                                        >
+                                            Login
+                                        </button>
+                                    </div>
+                                    <div
+                                        id="register-link"
+                                        class="text-right"
+                                    >
+                                        <a href="#" class="text-info"
+                                            >Register here</a
+                                        >
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+    `
+});
+

@@ -162,20 +162,54 @@
                             <div class="nav-item">
                                 <a class="menu-link" href="javascript:void(0)">
                                     <i class="fas fa-user-circle"></i>
-                                    <span>Admin</span>
+                                    <span id="fullname-account">Đăng nhập</span>
                                 </a>
+                                <div class="sub-nav" id="user-login">
+                                    <ul class="list-subnav">
+                                        <li><span>Bạn chưa đăng nhập</span></li>
+                                        <li>
+                                            <button
+                                                class="btn btn-info"
+                                                data-toggle="modal"
+                                                data-target=".bd-example-modal-md"
+                                                id="login-modal-button"
+                                            >
+                                                Đăng Nhập
+                                            </button>
+                                        </li>
+                                        <li></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="nav-item">
+                            <div class="nav-item" id="noti-item">
                                 <a class="menu-link" href="javascript:void(0)">
                                     <i class="fas fa-bell"></i>
                                     <span>Thông báo</span>
                                 </a>
+                                <div class="sub-nav" id="notification">
+                                    <div class="emty-content">
+                                        <img
+                                            src="https://shopfront-cdn.tekoapis.com/static/e536f0592aa3c8b1.png"
+                                            alt=""
+                                        />
+                                        <p>Bạn chưa có thông báo mới</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="nav-item">
                                 <a class="menu-link" href="javascript:void(0)">
                                     <i class="fas fa-cart-plus"></i>
                                     <span>Giỏ hàng</span>
                                 </a>
+                                <div class="sub-nav" id="cart">
+                                    <div class="emty-content">
+                                        <img
+                                            src="../../img/emty-box.png"
+                                            alt=""
+                                        />
+                                        <p>Bạn chưa có sản phẩm nào</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -191,7 +225,7 @@
                                         onclick="getTypeProduct('Smartphone')"
                                     >
                                         <i class="fa fa-mobile-alt"></i>
-                                        <span>Smartphone</span>
+                                        <p>Smartphone</p>
                                     </a>
                                 </div>
                             </div>
@@ -203,7 +237,7 @@
                                         onclick="getTypeProduct('Tablet')"
                                     >
                                         <i class="fa fa-tablet-alt"></i>
-                                        <span>Tablet</span>
+                                        <p>Tablet</p>
                                     </a>
                                 </div>
                             </div>
@@ -215,7 +249,7 @@
                                         onclick="getTypeProduct('Laptop')"
                                     >
                                         <i class="fa fa-laptop"></i>
-                                        <span>Laptop</span>
+                                        <p>Laptop</p>
                                     </a>
                                 </div>
                             </div>
@@ -227,7 +261,7 @@
                                         onclick="getTypeProduct('Desktop')"
                                     >
                                         <i class="fa fa-desktop"></i>
-                                        <span>Desktop/PC</span>
+                                        <p>Desktop/PC</p>
                                     </a>
                                 </div>
                             </div>
@@ -239,7 +273,7 @@
                                         onclick="getTypeProduct('SmartWatch')"
                                     >
                                         <i class="bi bi-smartwatch"></i>
-                                        <span>SmartWatch</span>
+                                        <p>SmartWatch</p>
                                     </a>
                                 </div>
                             </div>
@@ -251,7 +285,7 @@
                                         onclick="getTypeProduct('Accessory')"
                                     >
                                         <i class="bi bi-headphones"></i>
-                                        <span>Accessory</span>
+                                        <p>Accessory</p>
                                     </a>
                                 </div>
                             </div>
@@ -392,13 +426,13 @@
             </section>
             <footer></footer>
             <div
-                class="modal fade bd-example-modal-lg"
+                class="modal fade bd-example-modal-xl"
                 tabindex="-1"
                 role="dialog"
                 aria-labelledby="myLargeModalLabel"
                 aria-hidden="true"
             >
-                <div class="modal-dialog modal-lg">
+                <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <!-- Modal Header -->
                         <div class="modal-header">
@@ -425,6 +459,13 @@
                     </div>
                 </div>
             </div>
+            <div
+                class="modal fade bd-example-modal-md"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="myLargeModalLabel"
+                aria-hidden="true"
+            ></div>
         </div>
         <script
             src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

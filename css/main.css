@@ -391,6 +391,7 @@ template {
 
 ul {
   list-style-type: none;
+  margin-bottom: 0;
 }
 
 #main {
@@ -433,7 +434,7 @@ ul {
 }
 
 p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 .phoneBTN-white {
@@ -668,8 +669,17 @@ p {
 }
 
 .headerPhone .navbar-nav .nav-item {
+  text-align: center;
   padding: 0 15px;
   min-width: 110px;
+  position: relative;
+}
+
+.headerPhone .navbar-nav .nav-item:hover .sub-nav {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .headerPhone .navbar-nav .nav-item .menu-link {
@@ -739,6 +749,70 @@ p {
           transform: scaleX(1);
 }
 
+.sub-nav {
+  position: absolute;
+  top: 105%;
+  right: 0;
+  min-width: 300px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  z-index: 99;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transform-origin: 80% 0;
+          transform-origin: 80% 0;
+  -webkit-box-shadow: 5px 5px 10px #a3a3a3;
+          box-shadow: 5px 5px 10px #a3a3a3;
+}
+
+.sub-nav p {
+  margin-top: 10px;
+}
+
+.sub-nav:after {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 46px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ff8447;
+}
+
+.sub-nav:before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  width: 100%;
+  height: 10px;
+}
+
+.sub-nav .sub-nav-list li a {
+  display: block;
+  padding: 10px;
+}
+
+.sub-nav .sub-nav-list li a:hover {
+  background-color: #ebe7e7;
+}
+
+.sub-nav .sub-nav-list button {
+  margin-top: 10px;
+}
+
+.menu-scroll {
+  -webkit-animation: 0.5s hidenMenu ease-in;
+  animation: 0.5s hidenMenu linear;
+}
+
 .menu-scroll .navbar-brand {
   font-size: 2.1rem;
   font-weight: 700;
@@ -753,7 +827,8 @@ p {
   background-color: #ff8447;
 }
 
-.type a {
+.type .type-link {
+  text-align: center;
   display: block;
   padding: 10px 0;
   font-size: 16px;
@@ -761,7 +836,11 @@ p {
   color: #fff;
 }
 
-.type a:hover {
+.type .type-link p {
+  display: inline-block;
+}
+
+.type .type-link:hover {
   background-color: #e2ebfc;
   color: #353536;
 }
@@ -777,6 +856,52 @@ p {
   }
   .headerPhone .navbar-nav .nav-item {
     text-align: center;
+  }
+  .headerPhone .type .type-link p {
+    display: none;
+  }
+}
+
+.count-noti {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  right: 25%;
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .headerPhone .navbar-brand {
+    font-size: 2.3rem;
+  }
+}
+
+@-webkit-keyframes hidenMenu {
+  from {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes hidenMenu {
+  from {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -849,10 +974,6 @@ p {
   text-align: right;
 }
 
-.type-item {
-  text-align: center;
-}
-
 .type-box {
   padding: 35px 15px 0 10px;
   margin: 15px 0;
@@ -870,5 +991,22 @@ p {
   margin-bottom: 0;
   margin-left: 20px;
   text-decoration: underline;
+}
+
+.warring {
+  font-size: 14px;
+  font-weight: 400;
+  color: #d32222;
+  display: block;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 415px) {
+  .col-6 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
