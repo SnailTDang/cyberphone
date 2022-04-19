@@ -17,43 +17,6 @@ let sortType = [];
 let sortBrand = [];
 let cartPro = [];
 
-function getUserArr() {
-
-
-    return userArr;
-}
-
-let userInput = () => {
-    let acc = document.querySelector("#username").value;
-    let pass = document.querySelector("#password").value;
-    let newUser = { account: acc, password: pass }
-    loginForm(newUser)
-}
-
-let loginForm = (userInfo) => {
-    let userArr = []
-    loginService.getUserList()
-        .then(response => {
-            userArr = [...response.data];
-            let userMatch = userArr.find(user => {
-                return user.account === userInfo.account && user.password === userInfo.password;
-            })
-            if (userMatch) {
-                userActive = { ...userMatch }
-                showUserLogin(userActive);
-                document.querySelector(".bd-example-modal-md .close").click();
-                setLocalStorage(userActive)
-            } else {
-                document.querySelector("#warring-login").innerHTML =
-                    "Tên đăng nhập hoặc mật khẩu không đúng!"
-            }
-        })
-        .catch(error => {
-            console.log(error)
-        })
-}
-
-window.userInput = userInput;
 
 function getHomeProducts() {
     // Các code xử lý lấy data từ API
@@ -328,7 +291,7 @@ function showUserLogin(user) {
     `
     let noti = `
         <ul class="sub-nav-list" style="text-align:left">
-        ${user.notica.map((e) => {
+        ${user.notica.list.map((e) => {
         return `
                 <li>
                     <a href="#">
@@ -339,31 +302,38 @@ function showUserLogin(user) {
     }).join("")}
         </ul>
     `
-    if (user.notica.length > 0) {
+    if (user.notica.list.length > 0) {
         let notiCount = document.createElement("div");
         notiCount.className = "count-noti";
-        notiCount.innerHTML = user.notica.length;
+        notiCount.innerHTML = user.notica.list.length;
         document.querySelector("#noti-item").append(notiCount);
         document.querySelector("#notification").innerHTML = noti;
+        if (user.notica.seen) {
+            notiCount.style.display = "none";
+        } else {
+            document.querySelector("#noti-item").setAttribute("onmouseover", `seenNotica(${user.id})`);
+        }
     }
     document.querySelector("#fullname-account").innerHTML = user.name;
     document.querySelector("#user-login").innerHTML = account;
 }
 
-function getProduct(id) {
-    proService.getProduct(id).then((result) => {
-        let { id, name, cost, image, amount, rate, discount } = result;
-        let prod = new Products(id, name, cost, image, amount, rate, discount);
-        console.log(prod);
-        showDetails(prod);
-    });
-}
 
-function showDetails(product) {
-    return `
 
-    `;
-}
+// function getProduct(id) {
+//     proService.getProduct(id).then((result) => {
+//         let { id, name, cost, image, amount, rate, discount } = result;
+//         let prod = new Products(id, name, cost, image, amount, rate, discount);
+//         console.log(prod);
+//         showDetails(prod);
+//     });
+// }
+
+// function showDetails(product) {
+//     return `
+
+//     `;
+// }
 
 document.querySelector("#login-modal-button").addEventListener("click", () => {
     document.querySelector(".bd-example-modal-md").innerHTML =
@@ -474,6 +444,55 @@ document.querySelector("#login-modal-button").addEventListener("click", () => {
     </div>
     `
 });
+
+function seenNotica(id) {
+    let newUser = { ...userActive };
+    newUser.notica.seen = true;
+    document.querySelector(".count-noti").style.display = "none";
+    document.querySelector("#noti-item").removeAttribute("onmouseover");
+    loginService.updateSeen(id, newUser)
+        .then(response => {
+            showUserLogin(newUser)
+            console.log(response)
+        })
+        .catch(error => {
+            console.log(error)
+        })
+}
+
+window.seenNotica = seenNotica;
+
+// LOGIN
+
+let userInput = () => {
+    let acc = document.querySelector("#username").value;
+    let pass = document.querySelector("#password").value;
+    let newUser = { account: acc, password: pass }
+    loginForm(newUser)
+}
+
+let loginForm = (userInfo) => {
+    loginService.getUserList()
+        .then(response => {
+            let userMatch = response.data.find(user => {
+                return user.account === userInfo.account && user.password === userInfo.password;
+            })
+            if (userMatch) {
+                userActive = { ...userMatch }
+                showUserLogin(userActive);
+                document.querySelector(".bd-example-modal-md .close").click();
+                setLocalStorage(userActive)
+            } else {
+                document.querySelector("#warring-login").innerHTML =
+                    "Tên đăng nhập hoặc mật khẩu không đúng!"
+            }
+        })
+        .catch(error => {
+            console.log(error)
+        })
+}
+
+window.userInput = userInput;
 
 let logOut = () => {
     localStorage.removeItem("User");

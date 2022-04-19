@@ -12,10 +12,17 @@ export default class LoginServices {
             data: user
         });
     }
-    getProduct(id) {
+    getUser(id) {
         return axios({
             method: "get",
-            url: `https://6214ccb089fad53b1f1f676b.mockapi.io/Products/${id}`,
+            url: `https://6214ccb089fad53b1f1f676b.mockapi.io/User/${id}`,
+        });
+    }
+    updateSeen(id, user) {
+        return axios({
+            method: 'PUT',
+            url: `https://6214ccb089fad53b1f1f676b.mockapi.io/User/${id}`,
+            data: user
         });
     }
 }
