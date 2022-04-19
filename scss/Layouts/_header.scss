@@ -207,6 +207,20 @@
     color: #fff;
 }
 
+.stealthy {
+    left: 0;
+    margin: 0;
+    max-height: 1px;
+    max-width: 1px;
+    opacity: 0;
+    outline: none;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
 @include responsive("medium") {
     .headerPhone {
         .navbar-brand {

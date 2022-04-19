@@ -877,6 +877,20 @@ p {
   color: #fff;
 }
 
+.stealthy {
+  left: 0;
+  margin: 0;
+  max-height: 1px;
+  max-width: 1px;
+  opacity: 0;
+  outline: none;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
 @media screen and (max-width: 768px) {
   .headerPhone .navbar-brand {
     font-size: 2.3rem;

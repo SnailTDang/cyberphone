@@ -23,21 +23,26 @@ function getUserArr() {
     return userArr;
 }
 
-let loginForm = () => {
+let userInput = () => {
     let acc = document.querySelector("#username").value;
     let pass = document.querySelector("#password").value;
+    let newUser = { account: acc, password: pass }
+    loginForm(newUser)
+}
+
+let loginForm = (userInfo) => {
     let userArr = []
     loginService.getUserList()
         .then(response => {
             userArr = [...response.data];
             let userMatch = userArr.find(user => {
-                return user.account === acc && user.password === pass;
+                return user.account === userInfo.account && user.password === userInfo.password;
             })
             if (userMatch) {
                 userActive = { ...userMatch }
                 showUserLogin(userActive);
                 document.querySelector(".bd-example-modal-md .close").click();
-                console.log(userActive)
+                setLocalStorage(userActive)
             } else {
                 document.querySelector("#warring-login").innerHTML =
                     "Tên đăng nhập hoặc mật khẩu không đúng!"
@@ -48,7 +53,7 @@ let loginForm = () => {
         })
 }
 
-window.loginForm = loginForm;
+window.userInput = userInput;
 
 function getHomeProducts() {
     // Các code xử lý lấy data từ API
@@ -318,7 +323,7 @@ function showUserLogin(user) {
                 <span>Sổ địa chỉ</span>
             </a>
         </li>
-        <button class="btn btn-info">Đăng xuất</button>
+        <button class="btn btn-info" onclick="logOut()">Đăng xuất</button>
     </ul>
     `
     let noti = `
@@ -440,7 +445,7 @@ document.querySelector("#login-modal-button").addEventListener("click", () => {
                                         <button
                                             name="submit"
                                             class="btn btn-info btn-md"
-                                            onclick="loginForm()"
+                                            onclick="userInput()"
                                         >
                                             Login
                                         </button>
@@ -470,3 +475,22 @@ document.querySelector("#login-modal-button").addEventListener("click", () => {
     `
 });
 
+let logOut = () => {
+    localStorage.removeItem("User");
+    location.reload();
+}
+
+window.logOut = logOut;
+
+function setLocalStorage(user) {
+    localStorage.setItem("User", JSON.stringify(user));
+}
+
+function loginAuto() {
+    if (localStorage.getItem("User")) {
+        let userLocal = JSON.parse(localStorage.getItem("User"))
+        loginForm(userLocal)
+    }
+}
+
+loginAuto()
