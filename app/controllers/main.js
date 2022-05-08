@@ -4,6 +4,10 @@ import ObjectPro from "../models/ObjectProduct.js";
 import ObjectBrand from "../models/ObjectBrand.js";
 import LoginServices from "../services/LoginServices.js";
 import UserType from "../models/UserType.js";
+import modalSlide from "./sliderModal.js"
+import CartProducts from "../models/CartProducts.js"
+import Cart from "../models/Cart.js";
+
 
 
 
@@ -15,7 +19,7 @@ let typeList = [];
 let brandList = [];
 let sortType = [];
 let sortBrand = [];
-let cartPro = [];
+// let cart = [];
 
 
 function getHomeProducts() {
@@ -23,7 +27,7 @@ function getHomeProducts() {
     proService
         .getProductList()
         .then((response) => {
-            response.data.map((e) => {
+            response.data.map((item) => {
                 let {
                     id,
                     name,
@@ -35,7 +39,7 @@ function getHomeProducts() {
                     discount,
                     freeship,
                     type,
-                } = e;
+                } = item;
                 let prod = new Products(
                     id,
                     name,
@@ -84,10 +88,11 @@ getHomeProducts();
 window.getHomeProducts = getHomeProducts;
 
 let backHome = () => {
-    getHomeProducts();
-    for (let type of menuType) {
-        type.classList.remove("active");
-    }
+    // getHomeProducts();
+    // for (let type of menuType) {
+    //     type.classList.remove("active");
+    // }
+    window.location.reload(`${window.location.href}/#`)
 };
 window.backHome = backHome;
 
@@ -99,22 +104,24 @@ let getTypeProduct = (type) => {
         }
     });
     let content = `                
-        <div class="type-box">
-            <div class="type-name row">
-                <div class="col">
-                    <div class="d-flex">
-                        <a href="#productsList" onclick="backHome()" class="home-link">
-                            <h2>PRODUCTS</h2><span>&nbsp</span><span>&nbsp</span>
-                        </a>
-                        <h2>  &gt; ${type.toUpperCase()}</h2>
-                    </div>
-                </div>
+    <div class="container">
+    <div class="type-box">
+    <div class="type-name row">
+        <div class="col">
+            <div class="d-flex">
+                <a href="javascript:void(0)" class="home-link" onclick="backHome()">
+                    <h2>PRODUCTS</h2><span>&nbsp</span><span>&nbsp</span>
+                </a>
+                <h2>  &gt; ${type.toUpperCase()}</h2>
             </div>
-            <div class="type-products row">
-                ${showProducts(newList)}
-            </div>
-        <div/>`;
-    document.querySelector("#productsList").innerHTML = content;
+        </div>
+    </div>                                  
+    <div class="type-products row">
+        ${showProducts(newList)}
+    </div>
+<div/>
+    </div>   `;
+    document.querySelector("#inner-content").innerHTML = content;
 };
 let getBrandProduct = (type) => {
     let newList = [];
@@ -124,11 +131,12 @@ let getBrandProduct = (type) => {
         }
     });
     let content = `   
-    <div class="type-box">
+        <div class="container">
+        <div class="type-box">
         <div class="type-name row">
             <div class="col">
                 <div class="d-flex">
-                    <a href="#productsList" onclick="backHome()" class="home-link">
+                    <a href="javascript:void(0)" onclick="backHome()" class="home-link">
                         <h2>PRODUCTS</h2><span>&nbsp</span><span>&nbsp</span>
                     </a>
                     <h2>  &gt; ${type.toUpperCase()}</h2>
@@ -138,8 +146,10 @@ let getBrandProduct = (type) => {
         <div class="type-products row">
             ${showProducts(newList)}
         </div>
-    <div/>`;
-    document.querySelector("#productsList").innerHTML = content;
+    <div/>
+        </div>    
+    `;
+    document.querySelector("#inner-content").innerHTML = content;
 };
 
 window.getTypeProduct = getTypeProduct;
@@ -163,7 +173,7 @@ function showAllProducts(array) {
                 <div class="col-3"><h2>${e.name.toUpperCase()}</h2></div>
                 <div class="type-tags col-9">
                     ${hightLight}
-                    <a href="#productsList" class="product-link" onclick="getTypeProduct('${e.name
+                    <a href="#" class="product-link" onclick="getTypeProduct('${e.name
             }')"><p>Xem tất cả ${e.count} sản phẩm</p></a>
                 </div>
             </div>
@@ -189,7 +199,7 @@ function showProducts(mangSP) {
         };
         let status = "";
         if (e.amount > 0) {
-            status = `<button class="btnPhone-shadow"><i class="fa fa-shopping-cart"></i>Mua hàng</button>`;
+            status = `<button class="btnPhone-shadow" ><i class="fa fa-shopping-cart" ></i>Mua hàng</button>`;
         } else {
             status = `
             <button class="btnPhone-shadow sold-out">
@@ -222,7 +232,7 @@ function showProducts(mangSP) {
         }
         return `
         <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <a href="javascript:void(0)" data-toggle="modal" data-target=".bd-example-modal-xl">
+            <a href="javascript:void(0)" data-toggle="modal" data-target=".bd-example-modal-xl" onclick="getProduct('${e.id}')">
                 <div class="card cardPhone">
                     <div class="card-img">
                         <img src="${e.image}" class="card-img-top" alt="...">
@@ -232,8 +242,7 @@ function showProducts(mangSP) {
                         <div class="justify-content-between">
                             <div>
                                 <h3 class="cardPhone__title">${e.name}</h3>
-                                <p class="cardPhone__text">Còn ${e.amount
-            } sản phẩm</p>
+                                <p class="cardPhone__text">Còn ${e.amount} sản phẩm</p>
                             </div>
                             <div>
                                 <h4 class="cardPhone__cost-old">${price}</h4>
@@ -320,20 +329,129 @@ function showUserLogin(user) {
 
 
 
-// function getProduct(id) {
-//     proService.getProduct(id).then((result) => {
-//         let { id, name, cost, image, amount, rate, discount } = result;
-//         let prod = new Products(id, name, cost, image, amount, rate, discount);
-//         console.log(prod);
-//         showDetails(prod);
-//     });
-// }
+function getProduct(id) {
+    proService.getProduct(id)
+        .then((result) => {
+            let prod = result.data
+            let content = showDetails(prod);
+            document.querySelector(".modal-xl .modal-content").innerHTML = "";
+            return content
+        })
+        .then(content => {
+            document.querySelector(".modal-xl .modal-content").innerHTML = content
+            modalSlide()
+        })
+        // .then()
+        .catch(error => console.log(error));
+}
 
-// function showDetails(product) {
-//     return `
+window.getProduct = getProduct;
 
-//     `;
-// }
+function showDetails(product) {
+    let { id, name, cost, discount } = product;
+    // let proAdd = new CartProducts(id, name, cost, discount, 1);
+    let imgLoop = ''
+    for (let i = 0; i < 8; i++) {
+        imgLoop += `
+        <div class="swiper-slide">
+            <img
+                src="${product.image}"
+            />
+        </div>
+        `
+    }
+    return (
+        `
+        <div class="modal-header">
+            <h4 class="modal-title">${product.name}</h4>
+            <button type="button" class="close" data-dismiss="modal">
+                X
+            </button>
+        </div>
+        <div class="modal-body">
+        <div class="row">
+        <div class="col-5">
+            <div class="swiper mySwiper2">
+                <div
+                    class="swiper-wrapper swiper-wrapper-modal"
+                >
+                    ${imgLoop}
+                </div>
+                <div
+                    class="swiper-button-next next2"
+                ></div>
+                <div
+                    class="swiper-button-prev prev2"
+                ></div>
+            </div>
+            <div
+                thumbsSlider=""
+                class="swiper mySwiper"
+            >
+                <div
+                    class="swiper-wrapper swiper-wrapper-modal"
+                >
+                    ${imgLoop}
+                </div>
+            </div>
+        </div>
+        <div class="col-7">
+            <table class="table">
+            <thead>
+            <tr>
+                <th scope="col" style="width: 40%">Cấu hình</th>
+                <th scope="col">Chi tiết</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="table-dark">
+                <th scope="row">Màn hình</th>
+                <td>${product.config.display}</td>
+            </tr>
+            <tr>
+                <th scope="row">Hệ điều hành</th>
+                <td>${product.config.os}</td>
+            </tr>
+            <tr class="table-active">
+                <th scope="row">Camera sau</th>
+                <td>${product.config.camera.after}</td>
+            </tr>
+            <tr class="table-secondary">
+                <th scope="row">Camera trước</th>
+                <td>${product.config.camera.before}</td>
+            </tr>
+            <tr class="table-success">
+                <th scope="row">Chip</th>
+                <td>${product.config.chipset}</td>
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">RAM</th>
+                <td>${product.config.ram}</td>
+            </tr>
+            <tr class="table-warning">
+                <th scope="row">Bộ nhớ trong</th>
+                <td>${product.config.rom}</td>
+            </tr>
+            <tr class="table-primary">
+                <th scope="row">Pin, sạc</th>
+                <td>${product.config.pin}</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="button-add">
+            <button class="btn btn-success" onclick="addToCart('${product.id}')">ADD TO CART</button>
+        </div>
+        </div>
+        </div>
+        <div class="modal-footer">
+                            <button class="btn btn-danger" data-dismiss="modal">
+                                Close
+                            </button>
+                        </div>
+        </div>
+        `
+    );
+}
 
 document.querySelector("#login-modal-button").addEventListener("click", () => {
     document.querySelector(".bd-example-modal-md").innerHTML =
@@ -446,14 +564,13 @@ document.querySelector("#login-modal-button").addEventListener("click", () => {
 });
 
 function seenNotica(id) {
-    let newUser = { ...userActive };
+    let newUser = JSON.parse(localStorage.getItem("User"));
     newUser.notica.seen = true;
     document.querySelector(".count-noti").style.display = "none";
     document.querySelector("#noti-item").removeAttribute("onmouseover");
-    loginService.updateSeen(id, newUser)
+    loginService.updateUser(id, newUser)
         .then(response => {
             showUserLogin(newUser)
-            console.log(response)
         })
         .catch(error => {
             console.log(error)
@@ -461,6 +578,152 @@ function seenNotica(id) {
 }
 
 window.seenNotica = seenNotica;
+
+function searchProduct() {
+    let nameFind = document.querySelector("#search-product").value.trim();
+    let products = []
+    proService.getProductList()
+        .then(result => {
+            let response = result.data.filter(item => {
+                return item.name.toLowerCase().indexOf(nameFind.toLowerCase()) !== -1;
+            })
+            return response;
+        })
+        .then(response => {
+            response.map(item => {
+                let {
+                    id,
+                    name,
+                    brand,
+                    cost,
+                    image,
+                    amount,
+                    rate,
+                    discount,
+                    freeship,
+                    type,
+                } = item;
+                let prod = new Products(
+                    id,
+                    name,
+                    brand,
+                    cost,
+                    image,
+                    amount,
+                    rate,
+                    discount,
+                    freeship,
+                    type
+                );
+                prod.saleOff()
+                products.push(prod)
+            })
+            let outPutFind = `<div class="col"><h2>KHÔNG CÓ SẢN PHẨM PHÙ HỢP</h2></div>`;
+            if (products.length > 0 && nameFind != '') {
+                outPutFind = `${showProducts(products)}`
+            }
+            let content = `                
+                <div class="container">
+                    <div class="type-box">
+                    <div class="type-name row">
+                        <div class="col">
+                            <div class="d-flex">
+                                <a href="javascript:void(0)" onclick="backHome()" class="home-link">
+                                    <h2>PRODUCTS</h2><span>&nbsp</span><span>&nbsp</span>
+                                </a>
+                                <h2>  &gt; ${nameFind.toUpperCase()}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type-products row">
+                        ${outPutFind}
+                    </div>
+                <div/>
+                </div>
+            `;
+            document.querySelectorAll(".type-link").forEach(item => {
+                item.classList.remove('active')
+            })
+            document.querySelector("#inner-content").innerHTML = content
+        })
+        .catch(error => {
+            console.log(error)
+        })
+
+}
+
+window.searchProduct = searchProduct
+
+const addToCart = (idPro) => {
+    let userLocal = JSON.parse(localStorage.getItem("User"))
+    let cart = userLocal.cart.products;
+    let prod = homeProducts.find(item => {
+        return item.id === idPro
+    })
+    let { id, name, image, cost, discount } = prod;
+    let indFind = 0;
+    let isFind = false
+    cart.forEach((item, index) => {
+        if (item.id === idPro) {
+            isFind = true
+            indFind = index;
+        } else {
+            indFind = false
+        }
+    })
+    console.log(indFind)
+    if (isFind) {
+        cart[indFind].amount += 1;
+        cart[indFind].total += cart[indFind].total
+        // cart.push(prodFind);
+        let newCart = new Cart(cart);
+        newCart.totalCart();
+        userLocal.cart = newCart;
+        console.log(newCart)
+    } else {
+        let amount = 1;
+        let proToCart = new CartProducts(id, name, image, cost, discount, amount);
+        cart.push(proToCart);
+        let newCart = new Cart(cart);
+        newCart.totalCart();
+        userLocal.cart = newCart;
+        console.log(newCart)
+    }
+    setLocalStorage('User', userLocal)
+    renderCart(userLocal.cart.products)
+}
+
+const renderCart = (cart) => {
+    console.log(cart)
+    if (cart.length > 0) {
+        let content = `
+    <h4>CART</h4>
+        <table class="table">
+        <tbody>
+            ${cart.map(item => {
+            return `
+                    <tr>
+                        <td style="width:15%;">
+                            <img src="${item.image}">
+                        </td>
+                        <td ><p class="cart-product-name">${item.name}</p></td>
+                        <td>${item.amount}</td>
+                        <td>${item.total.toLocaleString()}đ</td>
+                    </tr>
+                `
+        }).join("")}
+        </tbody>
+    </table>
+    `;
+        document.querySelector("#cart").innerHTML = content
+    }
+
+}
+
+// renderCart(JSON.parse(localStorage.getItem("User")).cart.products)
+
+window.addToCart = addToCart
+
 
 // LOGIN
 
@@ -471,6 +734,24 @@ let userInput = () => {
     loginForm(newUser)
 }
 
+let rand = function () {
+    return Math.random().toString(36).substring(2); // remove `0.`
+};
+
+let newToken = () => {
+    return rand() + rand();
+}
+
+function updateToken(id, user) {
+    loginService.updateUser(id, user)
+        .then(response => {
+            // setLocalStorage(user)
+        })
+        .catch(error => {
+            console.log(error)
+        })
+}
+
 let loginForm = (userInfo) => {
     loginService.getUserList()
         .then(response => {
@@ -478,10 +759,16 @@ let loginForm = (userInfo) => {
                 return user.account === userInfo.account && user.password === userInfo.password;
             })
             if (userMatch) {
-                userActive = { ...userMatch }
+                let token = newToken();
+                let { id, account, name, cart, notica } = userMatch
+                userActive = new UserType(id, account, name, cart, notica, token)
+                userMatch = { ...userMatch, token: token }
                 showUserLogin(userActive);
+                updateToken(userActive.id, userMatch)
                 document.querySelector(".bd-example-modal-md .close").click();
-                setLocalStorage(userActive)
+                setLocalStorage('User', userActive);
+                renderCart(userActive.cart.products);
+                // location.reload();
             } else {
                 document.querySelector("#warring-login").innerHTML =
                     "Tên đăng nhập hoặc mật khẩu không đúng!"
@@ -501,14 +788,34 @@ let logOut = () => {
 
 window.logOut = logOut;
 
-function setLocalStorage(user) {
-    localStorage.setItem("User", JSON.stringify(user));
+function setLocalStorage(key, user) {
+    localStorage.setItem(`${key}`, JSON.stringify(user));
+    loginService.updateUser(user.id, user)
+        .then(result => {
+            // console.log(result)
+        })
+        .catch(error => {
+            console.log(error)
+        })
 }
 
 function loginAuto() {
     if (localStorage.getItem("User")) {
         let userLocal = JSON.parse(localStorage.getItem("User"))
-        loginForm(userLocal)
+        // loginForm(userLocal)
+        loginService.getUserList()
+            .then(response => {
+                let userMatch = response.data.find(user => {
+                    return userLocal.token === user.token;
+                })
+                if (userMatch) {
+                    let { id, account, name, cart, notica, token } = userMatch
+                    let userActive = new UserType(id, account, name, cart, notica, token)
+                    setLocalStorage('User', userActive)
+                    showUserLogin(userActive);
+                    renderCart(userActive.cart.products);
+                }
+            })
     }
 }
 

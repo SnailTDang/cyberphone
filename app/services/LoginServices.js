@@ -18,7 +18,7 @@ export default class LoginServices {
             url: `https://6214ccb089fad53b1f1f676b.mockapi.io/User/${id}`,
         });
     }
-    updateSeen(id, user) {
+    updateUser(id, user) {
         return axios({
             method: 'PUT',
             url: `https://6214ccb089fad53b1f1f676b.mockapi.io/User/${id}`,
@@ -26,3 +26,7 @@ export default class LoginServices {
         });
     }
 }
+
+
+
+

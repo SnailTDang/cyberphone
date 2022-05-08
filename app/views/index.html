@@ -31,7 +31,7 @@
         />
         <link
             rel="stylesheet"
-            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
         />
         <link
             rel="stylesheet"
@@ -42,7 +42,7 @@
 
     <body>
         <div class="wrapper">
-            <div class="swiper">
+            <div class="swiper-header">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img
@@ -141,6 +141,8 @@
                                         type="text"
                                         class="search-input"
                                         placeholder="Nhập từ khóa"
+                                        id="search-product"
+                                        onchange="searchProduct()"
                                     />
                                     <button class="btn">
                                         <i class="fa fa-search"></i>
@@ -163,53 +165,59 @@
                                 <a class="menu-link" href="javascript:void(0)">
                                     <i class="fas fa-user-circle"></i>
                                     <span id="fullname-account">Đăng nhập</span>
+                                    <div class="sub-nav" id="user-login">
+                                        <ul class="list-subnav">
+                                            <li>
+                                                <span>Bạn chưa đăng nhập</span>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    class="btn btn-info"
+                                                    data-toggle="modal"
+                                                    data-target=".bd-example-modal-md"
+                                                    id="login-modal-button"
+                                                >
+                                                    Đăng Nhập
+                                                </button>
+                                            </li>
+                                            <li></li>
+                                        </ul>
+                                    </div>
                                 </a>
-                                <div class="sub-nav" id="user-login">
-                                    <ul class="list-subnav">
-                                        <li><span>Bạn chưa đăng nhập</span></li>
-                                        <li>
-                                            <button
-                                                class="btn btn-info"
-                                                data-toggle="modal"
-                                                data-target=".bd-example-modal-md"
-                                                id="login-modal-button"
-                                            >
-                                                Đăng Nhập
-                                            </button>
-                                        </li>
-                                        <li></li>
-                                    </ul>
-                                </div>
                             </div>
-                            <div class="nav-item" id="noti-item">
-                                <a class="menu-link" href="javascript:void(0)">
+                            <div class="nav-item">
+                                <a
+                                    class="menu-link"
+                                    id="noti-item"
+                                    href="javascript:void(0)"
+                                >
                                     <i class="fas fa-bell"></i>
                                     <span>Thông báo</span>
-                                </a>
-                                <div class="sub-nav" id="notification">
-                                    <div class="emty-content">
-                                        <img
-                                            src="https://shopfront-cdn.tekoapis.com/static/e536f0592aa3c8b1.png"
-                                            alt=""
-                                        />
-                                        <p>Bạn chưa có thông báo mới</p>
+                                    <div class="sub-nav" id="notification">
+                                        <div class="emty-content">
+                                            <img
+                                                src="https://shopfront-cdn.tekoapis.com/static/e536f0592aa3c8b1.png"
+                                                alt=""
+                                            />
+                                            <p>Bạn chưa có thông báo mới</p>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="nav-item">
                                 <a class="menu-link" href="javascript:void(0)">
                                     <i class="fas fa-cart-plus"></i>
                                     <span>Giỏ hàng</span>
-                                </a>
-                                <div class="sub-nav" id="cart">
-                                    <div class="emty-content">
-                                        <img
-                                            src="../../img/emty-box.png"
-                                            alt=""
-                                        />
-                                        <p>Bạn chưa có sản phẩm nào</p>
+                                    <div class="sub-nav" id="cart">
+                                        <div class="emty-content">
+                                            <img
+                                                src="../../img/emty-box.png"
+                                                alt=""
+                                            />
+                                            <p>Bạn chưa có sản phẩm nào</p>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -220,7 +228,7 @@
                             <div class="col-2">
                                 <div class="type-item">
                                     <a
-                                        href="#productsList"
+                                        href="#"
                                         class="type-link"
                                         onclick="getTypeProduct('Smartphone')"
                                     >
@@ -232,7 +240,7 @@
                             <div class="col-2">
                                 <div class="type-item">
                                     <a
-                                        href="#productsList"
+                                        href="#"
                                         class="type-link"
                                         onclick="getTypeProduct('Tablet')"
                                     >
@@ -244,7 +252,7 @@
                             <div class="col-2">
                                 <div class="type-item">
                                     <a
-                                        href="#productsList"
+                                        href="#"
                                         class="type-link"
                                         onclick="getTypeProduct('Laptop')"
                                     >
@@ -256,7 +264,7 @@
                             <div class="col-2">
                                 <div class="type-item">
                                     <a
-                                        href="#productsList"
+                                        href="#"
                                         class="type-link"
                                         onclick="getTypeProduct('Desktop')"
                                     >
@@ -268,7 +276,7 @@
                             <div class="col-2">
                                 <div class="type-item">
                                     <a
-                                        href="#productsList"
+                                        href="#"
                                         class="type-link"
                                         onclick="getTypeProduct('SmartWatch')"
                                     >
@@ -280,7 +288,7 @@
                             <div class="col-2">
                                 <div class="type-item">
                                     <a
-                                        href="#productsList"
+                                        href="#"
                                         class="type-link"
                                         onclick="getTypeProduct('Accessory')"
                                     >
@@ -293,137 +301,177 @@
                     </div>
                 </div>
             </header>
-            <section class="phoneCarousel">
-                <div class="container-fluid">
-                    <div class="swiperCarousel">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img
-                                    src="https://lh3.googleusercontent.com/U57Rawn4XqpOZZuI78-Fe1PJXJ3vABL1VRVqjdlGGDGZVzESWoafsW28DJD0BeGTcVAdcdvY1Oaj-2-imNNgX8UL9mZp318A=rw-w1920"
-                                    alt=""
-                                />
+            <div id="inner-content">
+                <section class="phoneCarousel">
+                    <div class="container-fluid">
+                        <div class="swiperCarousel">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://lh3.googleusercontent.com/U57Rawn4XqpOZZuI78-Fe1PJXJ3vABL1VRVqjdlGGDGZVzESWoafsW28DJD0BeGTcVAdcdvY1Oaj-2-imNNgX8UL9mZp318A=rw-w1920"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://lh3.googleusercontent.com/g3N7SZllL41MCDEE9qZu4-6AjDNwCXVlUMb0PVCetUSSI8DBROlRuCPT-jmTWNDIX9bJoqAUjqJlIvZ0nc8hUzj6-nu1uWJS6A=rw-w1920"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://lh3.googleusercontent.com/XMrjDlfsYFQhmgpTiHeaSt5oexCO0DrkZIHSvubswJtJKi4_253SPbfz3ATunKPS6DBjMnWzZWRRC0QdxDsE4U4lTFYhxRws=rw-w1920"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://lh3.googleusercontent.com/BBtDusJxkM8GKxoFe1WjHsQaFkiumLV-QTug7bQycPvWPUhCTNJBbiIpJrTtupDg1Bpl6AIpZy4UFIstoBDR21WCACobCS4=rw-w1920"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://lh3.googleusercontent.com/gYQKUJ1Is4_Yc5gYXA-_-qTA3fMp7gZ4mM9nxW96nhaf_zF1ThC0EPCgN7OKT5g51NMGMVdLeJE6xo5G2Ay7m1Jaw6sxf2xp=rw-w1920"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://philong.com.vn/media/banner/01_Marf7931051f524b62b2903cfee93ba2f17.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://philong.com.vn/media/banner/11_Febacea8640a2415abe84d2dbff64fbe79d.jpg"
+                                        alt=""
+                                    />
+                                </div>
                             </div>
-                            <div class="swiper-slide">
-                                <img
-                                    src="https://lh3.googleusercontent.com/g3N7SZllL41MCDEE9qZu4-6AjDNwCXVlUMb0PVCetUSSI8DBROlRuCPT-jmTWNDIX9bJoqAUjqJlIvZ0nc8hUzj6-nu1uWJS6A=rw-w1920"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="swiper-slide">
-                                <img
-                                    src="https://lh3.googleusercontent.com/XMrjDlfsYFQhmgpTiHeaSt5oexCO0DrkZIHSvubswJtJKi4_253SPbfz3ATunKPS6DBjMnWzZWRRC0QdxDsE4U4lTFYhxRws=rw-w1920"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="swiper-slide">
-                                <img
-                                    src="https://lh3.googleusercontent.com/BBtDusJxkM8GKxoFe1WjHsQaFkiumLV-QTug7bQycPvWPUhCTNJBbiIpJrTtupDg1Bpl6AIpZy4UFIstoBDR21WCACobCS4=rw-w1920"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="swiper-slide">
-                                <img
-                                    src="https://lh3.googleusercontent.com/gYQKUJ1Is4_Yc5gYXA-_-qTA3fMp7gZ4mM9nxW96nhaf_zF1ThC0EPCgN7OKT5g51NMGMVdLeJE6xo5G2Ay7m1Jaw6sxf2xp=rw-w1920"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="swiper-slide">
-                                <img
-                                    src="https://philong.com.vn/media/banner/01_Marf7931051f524b62b2903cfee93ba2f17.jpg"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="swiper-slide">
-                                <img
-                                    src="https://philong.com.vn/media/banner/11_Febacea8640a2415abe84d2dbff64fbe79d.jpg"
-                                    alt=""
-                                />
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                        <!-- Add Arrows -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                </div>
-            </section>
-            <section class="products">
-                <div class="container brand-logo">
-                    <div class="row">
-                        <div class="col-2">
-                            <div class="brand-item">
-                                <a
-                                    href="#productsList"
-                                    class="brand-link"
-                                    onclick="getBrandProduct('Vision')"
-                                >
-                                    <div class="brand-img">
-                                        <img src="/img/Brandlogo.png" alt="" />
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="brand-item">
-                                <a href="#productsList" class="brand-link">
-                                    <div class="brand-img">
-                                        <img
-                                            src="https://cdn-5c1e5264f911c8176096d364.closte.com/wp-content/uploads/2020/04/apple-inc-.jpg"
-                                            alt=""
-                                        />
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="brand-item">
-                                <a href="#productsList" class="brand-link">
-                                    <div class="brand-img">
-                                        <img src="/img/Brandlogo.png" alt="" />
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="brand-item">
-                                <a href="#productsList" class="brand-link">
-                                    <div class="brand-img">
-                                        <img src="/img/Brandlogo.png" alt="" />
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="brand-item">
-                                <a href="#productsList" class="brand-link">
-                                    <div class="brand-img">
-                                        <img src="/img/Brandlogo.png" alt="" />
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="brand-item">
-                                <a href="#productsList" class="brand-link">
-                                    <div class="brand-img">
-                                        <img src="/img/Brandlogo.png" alt="" />
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="brand-item">
-                                <a href="#productsList" class="brand-link">
-                                    <div class="brand-img">
-                                        <img src="/img/Brandlogo.png" alt="" />
-                                    </div>
-                                </a>
-                            </div>
+                            <div class="swiper-pagination"></div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
                     </div>
-                </div>
-                <div class="container" id="productsList"></div>
-            </section>
+                </section>
+                <section class="products">
+                    <div class="container brand-logo">
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="brand-item">
+                                    <a
+                                        href="#"
+                                        class="brand-link"
+                                        onclick="getBrandProduct('Vision')"
+                                    >
+                                        <div class="brand-img">
+                                            <img
+                                                src="/img/Brandlogo.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="brand-item">
+                                    <a
+                                        href="#"
+                                        class="brand-link"
+                                        onclick="getBrandProduct('Apple')"
+                                    >
+                                        <div class="brand-img">
+                                            <img
+                                                src="https://gstatic.gearvn.com/2021/08/hYY5dAy9-1-1.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="brand-item">
+                                    <a
+                                        href="#"
+                                        class="brand-link"
+                                        onclick="getBrandProduct('Samsung')"
+                                    >
+                                        <div class="brand-img">
+                                            <img
+                                                src="https://gstatic.gearvn.com/2021/08/samsung.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="brand-item">
+                                    <a
+                                        href="#"
+                                        class="brand-link"
+                                        onclick="getBrandProduct('Assus')"
+                                    >
+                                        <div class="brand-img">
+                                            <img
+                                                src="https://gstatic.gearvn.com/2021/08/asus.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="brand-item">
+                                    <a
+                                        href="#"
+                                        class="brand-link"
+                                        onclick="getBrandProduct('Acer')"
+                                    >
+                                        <div class="brand-img">
+                                            <img
+                                                src="https://gstatic.gearvn.com/2021/08/acer.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="brand-item">
+                                    <a
+                                        href="#"
+                                        class="brand-link"
+                                        onclick="getBrandProduct('Sony')"
+                                    >
+                                        <div class="brand-img">
+                                            <img
+                                                src="https://gstatic.gearvn.com/2021/08/Sony-2.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="brand-item">
+                                    <a href="#" class="brand-link">
+                                        <div class="brand-img">
+                                            <img
+                                                src="https://cdn.tgdd.vn/Brand/1/logo-xiaomi-220x48-5.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container" id="productsList"></div>
+                </section>
+            </div>
             <footer></footer>
             <div
                 class="modal fade bd-example-modal-xl"
@@ -433,30 +481,7 @@
                 aria-hidden="true"
             >
                 <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="modal-title">Thông tin người dùng</h4>
-                            <button
-                                type="button"
-                                class="close"
-                                data-dismiss="modal"
-                            >
-                                X
-                            </button>
-                        </div>
-                        <!-- Modal body -->
-                        <div class="modal-body"></div>
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button
-                                class="btn btn-success"
-                                onclick="addNewMember()"
-                            >
-                                Thêm người dùng
-                            </button>
-                        </div>
-                    </div>
+                    <div class="modal-content"></div>
                 </div>
             </div>
             <div
@@ -478,8 +503,9 @@
             crossorigin="anonymous"
         ></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-        <script type="module" src="../controllers/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="../controllers/effect.js"></script>
+        <script type="module" src="../controllers/main.js"></script>
     </body>
 </html>

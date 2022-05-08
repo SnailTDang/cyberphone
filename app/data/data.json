@@ -4,6 +4,18 @@
       "id": "2",
       "name": "VisionPhone",
       "brand": "Vision",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Smartphone",
       "cost": 25990000,
       "discount": 15,
@@ -18,6 +30,18 @@
     {
       "name": "VisionTablet",
       "brand": "Vision",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Tablet",
       "cost": 15990000,
       "image": "../../img/product3.png",
@@ -33,6 +57,18 @@
     {
       "name": "VisionWatch",
       "brand": "Vision",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "SmartWatch",
       "cost": 7990000,
       "image": "../../img/product4.png",
@@ -48,6 +84,18 @@
     {
       "name": "VisionBattery",
       "brand": "Vision",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Accessory",
       "cost": 1990000,
       "image": "../../img/product5.png",
@@ -64,6 +112,18 @@
       "id": "6",
       "name": "VisionPods",
       "brand": "Vision",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Accessory",
       "cost": 4990000,
       "discount": 21,
@@ -80,6 +140,18 @@
       "id": "7",
       "name": "VisionAirB",
       "brand": "Vision",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Accessory",
       "cost": 6990000,
       "discount": 15,
@@ -95,6 +167,18 @@
       "id": "8",
       "name": "VisionPC",
       "brand": "Vision",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Desktop",
       "cost": 29990000,
       "discount": 10,
@@ -109,6 +193,18 @@
     {
       "name": "Vison Clock",
       "brand": "Vision",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Accessory",
       "cost": 19900000,
       "discount": 10,
@@ -124,6 +220,18 @@
     {
       "name": "Samsung Galaxy S20 Ultra",
       "brand": "Samsung",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Smartphone",
       "cost": 26990000,
       "image": "https://smartviets.com/template/plugins/timthumb.php?src=/upload/image/nh%20%C4%91%E1%BA%A1i%20di%E1%BB%87n/s20%20ultra%20tr%E1%BA%AFng.jpg&w=770&h=770&q=80",
@@ -139,6 +247,18 @@
     {
       "name": "Xiaomi Smart Lamp 24V",
       "brand": "Xiaomi",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Accessory",
       "cost": 499000,
       "image": "https://cdn-amz.fadoglobal.io/images/I/51Smh9MafXL.jpg",
@@ -154,6 +274,18 @@
     {
       "name": "Apple Iphone 13 Pro Max 128GB",
       "brand": "Apple",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Smartphone",
       "cost": 26990000,
       "image": "https://cdn.tgdd.vn/Products/Images/42/230529/s16/iphone-13-pro-max-silver-650x650.png",
@@ -169,9 +301,21 @@
     {
       "name": "Xiaomi Redmi Note 9 Pro",
       "brand": "Xiaomi",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Smartphone",
       "cost": 4990000,
-      "image": "https://cdn.mobilecity.vn/mobilecity-vn/images/2020/11/w150/redmi-note-9-pro-5g-4-1.jpg",
+      "image": "https://cdn.tgdd.vn/Products/Images/42/230767/xiaomi-redmi-note-9-pro-5g-280620-110607-600x600.jpg",
       "amount": "0",
       "rate": {
         "star": 5,
@@ -184,6 +328,18 @@
     {
       "name": "Samsung Galaxy A53 5G 128GB",
       "brand": "Samsung",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Smartphone",
       "cost": 9990000,
       "image": "https://cdn.tgdd.vn/2022/03/campaign/Blue-249x376-1.png",
@@ -199,6 +355,18 @@
     {
       "name": "PC HP AIO Pro 200 G4 (2J861PA)",
       "brand": "HP",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Desktop",
       "cost": 16990000,
       "image": "https://lh3.googleusercontent.com/klswK7ulUIUTyr7Ob02B2iPJFzeILYa7GZzLsdMkcrS-3ug3WmM3Si9OtD3hmUpo1f6YpvunVZW7yKv1YQ=w1000-rw",
@@ -214,6 +382,18 @@
     {
       "name": "OPPO Reno6 Z 5G",
       "brand": "Oppo",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Smartphone",
       "cost": 9699000,
       "image": "https://cdn.tgdd.vn/Products/Images/42/239747/oppo-reno6-z-5g-aurora-1-600x600.jpg",
@@ -229,6 +409,18 @@
     {
       "name": "Samsung Galaxy Watch 4 44mm ",
       "brand": "Samsung",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "SmartWatch",
       "cost": 4990000,
       "image": "https://cdn.tgdd.vn/Products/Images/7077/248753/samsung-galaxy-watch-4-44mm-1-1.jpg",
@@ -244,6 +436,18 @@
     {
       "name": "Apple Watch S6 40mm",
       "brand": "Apple",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "SmartWatch",
       "cost": 7990000,
       "image": "https://cdn.tgdd.vn/Products/Images/7077/229044/apple-watch-s6-40mm-vien-nhom-day-cao-su-red-do-cont-1-org-org.jpg",
@@ -259,6 +463,18 @@
     {
       "name": "iPad Pro M1 11 inch WiFi Cellular 1TB",
       "brand": "Apple",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Tablet",
       "cost": 44590000,
       "image": "https://cdn.tgdd.vn/Products/Images/522/269329/ipad-pro-m1-11-inch-wifi-cellular-bac-1.jpeg",
@@ -274,9 +490,21 @@
     {
       "name": "iPad Pro M1 12.9 inch WiFi Cellular 128GB",
       "brand": "Apple",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Tablet",
       "cost": 29990000,
-      "image": "https://cdn.tgdd.vn/Products/Images/522/269329/pad-pro-m1-11-inch-wifi-cellular-1tb-2021-xam-thumb-200x200.jpeg",
+      "image": "https://cdn.ankhang.vn/media/product/19488_",
       "amount": "54",
       "rate": {
         "star": 5,
@@ -289,9 +517,21 @@
     {
       "name": "iPad Air 5 M1 Wifi Cellular 64GB ",
       "brand": "Apple",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Tablet",
       "cost": 20990000,
-      "image": "https://cdn.tgdd.vn/Products/Images/522/274155/ipad-air-5-wifi-cellular-white-thumb-200x200.jpg",
+      "image": "https://cdn.tgdd.vn/Products/Images/522/248096/ipad-air-5-wifi-blue-thumb-600x600.jpg",
       "amount": "8",
       "rate": {
         "star": 5,
@@ -304,6 +544,18 @@
     {
       "name": "Samsung Galaxy Tab S8",
       "brand": "Samsung",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Tablet",
       "cost": 20990000,
       "image": "https://cdn.tgdd.vn/Products/Images/522/247510/Samsung-Galaxy-tab-s8-black-thumb-600x600.jpg",
@@ -319,6 +571,18 @@
     {
       "name": "Samsung Galaxy Tab S8+ ",
       "brand": "Samsung",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Tablet",
       "cost": 25990000,
       "image": "https://cdn.tgdd.vn/Products/Images/522/247512/Tab-S8+-Black-1-600x600.jpeg",
@@ -334,6 +598,18 @@
     {
       "name": "Tai nghe Bluetooth True Wireless Mozard TS13",
       "brand": "Mozard",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Accessory",
       "cost": 650000,
       "image": "https://cdn.tgdd.vn/Products/Images/54/230363/tai-nghe-bluetooth-true-wireless-mozard-ts13-1-org.jpg",
@@ -349,6 +625,18 @@
     {
       "name": "Tai nghe Bluetooth True Wireless Sony WF-C500 ",
       "brand": "Sony",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Accessory",
       "cost": 2290000,
       "image": "https://cdn.tgdd.vn/Products/Images/54/255568/bluetooth-true-wireless-sony-wf-c500-cam-2.jpg",
@@ -364,6 +652,18 @@
     {
       "name": "iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU ",
       "brand": "Apple",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Desktop",
       "cost": 39490000,
       "image": "https://cdn.tgdd.vn/Products/Images/5698/238053/imac-24-icnh-2021-m1-thumb-xanh-duong-600x600.jpg",
@@ -379,6 +679,18 @@
     {
       "name": "OPPO Reno7 Z 5G",
       "brand": "Oppo",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Smartphone",
       "cost": 10490000,
       "image": "https://cdn.tgdd.vn/Products/Images/42/271717/oppo-reno7-z-5g-thumb-1-1-600x600.jpg",
@@ -394,6 +706,18 @@
     {
       "name": "Samsung Galaxy S22 Ultra 5G",
       "brand": "Samsung",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Smartphone",
       "cost": 30990000,
       "image": "https://cdn.tgdd.vn/Products/Images/42/235838/Galaxy-S22-Ultra-Burgundy-600x600.jpg",
@@ -409,6 +733,18 @@
     {
       "name": "Samsung Galaxy S22 5G",
       "brand": "Samsung",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Smartphone",
       "cost": 21990000,
       "image": "https://cdn.tgdd.vn/Products/Images/42/231110/Galaxy-S22-Black-600x600.jpg",
@@ -424,6 +760,18 @@
     {
       "name": "Iphone 11",
       "brand": "Apple",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Smartphone",
       "cost": 16290000,
       "image": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-xi-do-600x600.jpg",
@@ -439,6 +787,18 @@
     {
       "name": "Xiaomi Redmi Note 11S",
       "brand": "Xiaomi",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Smartphone",
       "cost": 6690000,
       "image": "https://cdn.tgdd.vn/Products/Images/42/267871/xiaomi-redmi-note-11s-trang-thumb-600x600.jpg",
@@ -454,6 +814,18 @@
     {
       "name": "Samsung Galaxy S215G",
       "brand": "Samsung",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Smartphone",
       "cost": 20990000,
       "image": "https://cdn.tgdd.vn/Products/Images/42/226385/samsung-galaxy-s21-plus-bac-600x600-600x600.jpg",
@@ -469,6 +841,18 @@
     {
       "name": "Samsung Galaxy Z Flip 3",
       "brand": "Samsung",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Smartphone",
       "cost": 21990000,
       "image": "https://cdn.tgdd.vn/Products/Images/42/229949/samsung-galaxy-z-flip-3-cream-1-600x600.jpg",
@@ -484,6 +868,18 @@
     {
       "name": "Oppo Reno 4 Pro",
       "brand": "Oppo",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Smartphone",
       "cost": 10490000,
       "image": "https://cdn.tgdd.vn/Products/Images/42/223497/oppo-reno4-pro-trang-600x600.jpg",
@@ -499,6 +895,18 @@
     {
       "name": "Oppo Reno 5 5G",
       "brand": "Oppo",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Smartphone",
       "cost": 10490000,
       "image": "https://cdn.tgdd.vn/Products/Images/42/233460/oppo-reno5-5g-thumb-600x600.jpg",
@@ -514,6 +922,18 @@
     {
       "name": "Realme C25Y",
       "brand": "Realme",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Smartphone",
       "cost": 4690000,
       "image": "https://cdn.tgdd.vn/Products/Images/42/265313/realme-c25y-64gb-xanh-thumb-600x600.jpeg",
@@ -529,6 +949,18 @@
     {
       "name": "Laptop Lenovo Ideapad 3 15IML05 i3 10110U/4GB/256GB/Win11 (81WB01DPVN)",
       "brand": "Lenovo",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Laptop",
       "cost": 11249000,
       "image": "https://cdn.tgdd.vn/Products/Images/44/271782/lenovo-ideapad-3-15iml05-i3-10110u-4gb-256gb-win11-81wb01dpvn-600x600.jpg",
@@ -544,6 +976,18 @@
     {
       "name": "Laptop Lenovo Yoga Duet 7 13ITL6 i5 1135G7/8GB/512GB/Touch/Pen/Win10 (82MA000PVN)",
       "brand": "Lenovo",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Laptop",
       "cost": 28990000,
       "image": "https://cdn.tgdd.vn/Products/Images/44/255562/lenovo-yoga-duet-7-13itl6-i5-82ma000pvn-1-1.jpg",
@@ -559,6 +1003,18 @@
     {
       "name": "Laptop Acer Nitro 5 Gaming AN515 57 5831 i5 11400H/8GB/512GB/6GB RTX3060/144Hz/Win10 (NH.QDGSV.003)",
       "brand": "Acer",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Laptop",
       "cost": 32990000,
       "image": "https://cdn.tgdd.vn/Products/Images/44/247312/acer-nitro-5-gaming-an515-57-5831-i5-nhqdgsv003-600x600.jpg",
@@ -574,6 +1030,18 @@
     {
       "name": "Laptop Dell Gaming Alienware m15 R6 i7 11800H/32GB/1TB SSD/6GB RTX3060/165Hz/Office H&S/Win11 (P109F001DBL)",
       "brand": "Dell",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Laptop",
       "cost": 61990000,
       "image": "https://cdn.tgdd.vn/Products/Images/44/271545/dell-gaming-alienware-m15-r6-i7-p109f001dbl-020322-112012-600x600.jpg",
@@ -589,6 +1057,18 @@
     {
       "name": "Samsung Galaxy Watch 4 40mm",
       "brand": "Samsung",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "SmartWatch",
       "cost": 6490000,
       "image": "https://cdn.tgdd.vn/Products/Images/7077/248752/samsung-galaxy-watch-4-40mm-vang-hong-thumb-1-2-3-4-600x600.jpg",
@@ -604,6 +1084,18 @@
     {
       "name": "Asus S500SC i3 10105/4GB/256GB/Bàn phím & Chuột/Win11 (310105039W)",
       "brand": "Assus",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Desktop",
       "cost": 9990000,
       "image": "https://cdn.tgdd.vn/Products/Images/5698/267718/asus-s500sc-i3-310105039w-600x600.jpg",
@@ -619,6 +1111,18 @@
     {
       "name": "Tai nghe chụp Bluetooth VisionBeats Black & Gray",
       "brand": "Vision",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Accessory",
       "cost": 8990000,
       "image": "../../img/product1.png",
@@ -634,6 +1138,18 @@
     {
       "name": "Laptop Apple Macbook Pro 2018 13.3\" MR9U2 (13.3\"/Core i5/8GB/HD/macOS/1.4 kg)",
       "brand": "Apple",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Laptop",
       "cost": 44390000,
       "image": "https://lh3.googleusercontent.com/qgVwPKOgCXFJjAO-HB7Su5OPg7sBv4pJj9hTJxdvuz7GlWzA4gVaIC19oasGWcjIUgbqwZBpH1_OkTjyj_M=w500-rw",
@@ -649,6 +1165,18 @@
     {
       "name": "Laptop Apple MacBook Pro 2018 13.3inch MR9R2 (13.3inch/Core i5/8GB/Iris Plus 650/macOS)",
       "brand": "Apple",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
       "type": "Laptop",
       "cost": 49890000,
       "image": "https://lh3.googleusercontent.com/9eLN7Yv5USoT6IKyJ6iMIFpJwYfEDj2qqBPU9AQWcEIitp1Hy5vUskvqNBsfFNg1ShLopOeOjOSSXQuuEtQv=w500-rw",
@@ -660,6 +1188,217 @@
       "discount": "10",
       "freeship": true,
       "id": "uUBWMbd"
+    },
+    {
+      "name": "Laptop Acer Aspire 3 A315 58 59LY",
+      "brand": "Acer",
+      "config": {
+        "display": "6.2icnh",
+        "os": "Android",
+        "camera": {
+          "before": "12MP",
+          "after": "48MP"
+        },
+        "chipset": "Snapdragon M1",
+        "ram": "8GB",
+        "rom": "128GB",
+        "pin": "4800mAh, 18W"
+      },
+      "type": "Laptop",
+      "cost": 16990000,
+      "discount": "10",
+      "freeship": true,
+      "image": "https://product.hstatic.net/1000026716/product/2_7dd2baf3bf8a4a67a50f98dd55e18bb2.jpg",
+      "amount": "3",
+      "rate": {
+        "star": 4,
+        "comments": 21
+      },
+      "id": "NaN"
+    }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "account": "admin",
+      "password": "admin",
+      "name": "name 1",
+      "cart": [],
+      "notica": {
+        "list": [
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          }
+        ],
+        "seen": true
+      },
+      "token": "4f87ihwm5rjo5l6hjx8jnc"
+    },
+    {
+      "id": "2",
+      "account": "admin1",
+      "password": "admin",
+      "name": "name 2",
+      "cart": [],
+      "notica": {
+        "list": [
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          }
+        ],
+        "seen": false
+      },
+      "token": "ca6bjbdkzhuhhng0raczi9"
+    },
+    {
+      "id": "6",
+      "account": "admin2",
+      "password": "admin",
+      "name": "name 1",
+      "cart": [],
+      "notica": {
+        "list": [
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          }
+        ],
+        "seen": true
+      },
+      "token": "yywzt1qd0ljd0s1t5gbanu"
+    },
+    {
+      "id": "3",
+      "account": "admin3",
+      "name": "name 1",
+      "cart": [],
+      "notica": {
+        "list": [
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          }
+        ],
+        "seen": false
+      },
+      "token": "nucphio9nfemtvg4364lo",
+      "password": "admin"
+    },
+    {
+      "id": "4",
+      "account": "admin4",
+      "name": "name 1",
+      "cart": [],
+      "notica": {
+        "list": [
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          }
+        ],
+        "seen": true
+      },
+      "token": "gm1bsidgwt4ful4l5gw0p",
+      "password": "admin"
+    },
+    {
+      "id": "5",
+      "account": "admin5",
+      "name": "name 1",
+      "cart": [],
+      "notica": {
+        "list": [
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          },
+          {
+            "link": "#",
+            "content": "Bạn có 1 mã giảm giá của nhãn hàng Apple"
+          }
+        ],
+        "seen": false
+      },
+      "token": "crbu73vj90jz5pocufsdr",
+      "password": "admin"
     }
   ]
 }

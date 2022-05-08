@@ -24,14 +24,8 @@
             padding: 0 15px;
             min-width: 110px;
             position: relative;
-            &:hover {
-                .sub-nav {
-                    visibility: visible;
-                    opacity: 1;
-                    transform: scale(1);
-                }
-            }
             .menu-link {
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -44,6 +38,12 @@
                 }
                 &:hover {
                     color: $color-blue-2;
+                    .sub-nav {
+                        visibility: visible;
+                        opacity: 1;
+                        transform: scale(1);
+                        @include styleText($fs-1, $fw-1, $color-dark-1);
+                    }
                 }
             }
             .search {
@@ -85,7 +85,7 @@
 .sub-nav {
     position: absolute;
     top: 105%;
-    right: 0;
+    right: -15px;
     min-width: 300px;
     background-color: #fff;
     padding: 15px;
@@ -131,6 +131,19 @@
             margin-top: 10px;
         }
     }
+}
+
+#cart {
+    min-width: 450px;
+}
+
+.cart-product-name {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    max-width: unset;
+    min-width: unset;
 }
 
 .menu-scroll {

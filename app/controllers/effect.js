@@ -2,7 +2,6 @@ const headerMenu = document.querySelector(".headerPhone");
 const menuItems = headerMenu.querySelectorAll(".menu-link");
 
 const menuType = document.querySelectorAll(".type-link");
-console.log(menuType);
 
 menuType.forEach((e) => {
     e.addEventListener("click", () => {
@@ -30,7 +29,7 @@ window.addEventListener("scroll", function () {
     }
 });
 
-const swiper = new Swiper(".swiper", {
+const swiperHeader = new Swiper(".swiper-header", {
     // Optional parameters
     loop: true,
     centeredSlides: true,
@@ -105,3 +104,5 @@ const swiperBrand = new Swiper(".swiperBrand", {
         el: ".swiper-scrollbar",
     },
 });
+
+
