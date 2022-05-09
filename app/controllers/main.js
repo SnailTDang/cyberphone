@@ -77,6 +77,9 @@ function getHomeProducts() {
                 obj.countPros();
                 sortBrand.push(obj);
             });
+            return sortType
+        })
+        .then(sortType => {
             showAllProducts(sortType);
         })
         .catch(function (error) {
@@ -330,11 +333,11 @@ function showUserLogin(user) {
 
 
 function getProduct(id) {
+    // document.querySelector(".modal-xl .modal-content").innerHTML = "";
     proService.getProduct(id)
         .then((result) => {
             let prod = result.data
             let content = showDetails(prod);
-            document.querySelector(".modal-xl .modal-content").innerHTML = "";
             return content
         })
         .then(content => {
@@ -364,13 +367,13 @@ function showDetails(product) {
         `
         <div class="modal-header">
             <h4 class="modal-title">${product.name}</h4>
-            <button type="button" class="close" data-dismiss="modal">
+            <button type="button" class="close" data-dismiss="modal" >
                 X
             </button>
         </div>
         <div class="modal-body">
         <div class="row">
-        <div class="col-5">
+        <div class="col col-lg-5">
             <div class="swiper mySwiper2">
                 <div
                     class="swiper-wrapper swiper-wrapper-modal"
@@ -395,7 +398,7 @@ function showDetails(product) {
                 </div>
             </div>
         </div>
-        <div class="col-7">
+        <div class="col col-lg-7">
             <table class="table">
             <thead>
             <tr>
@@ -444,7 +447,7 @@ function showDetails(product) {
         </div>
         </div>
         <div class="modal-footer">
-                            <button class="btn btn-danger" data-dismiss="modal">
+                            <button class="btn btn-danger" data-dismiss="modal" >
                                 Close
                             </button>
                         </div>
@@ -454,10 +457,8 @@ function showDetails(product) {
 }
 
 document.querySelector("#login-modal-button").addEventListener("click", () => {
-    document.querySelector(".bd-example-modal-md").innerHTML =
+    document.querySelector(".modal-md .modal-content").innerHTML =
         `
-    <div class="modal-dialog">
-        <div class="modal-content">
             <!-- Modal Header -->
             <div class="modal-header">
                 <div class="register">
@@ -468,6 +469,7 @@ document.querySelector("#login-modal-button").addEventListener("click", () => {
                     type="button"
                     class="close"
                     data-dismiss="modal"
+                    
                 >
                     X
                 </button>
@@ -556,11 +558,9 @@ document.querySelector("#login-modal-button").addEventListener("click", () => {
             <div class="modal-footer">
                 <button class="btn btn-danger" data-dismiss="modal">
                     Close
+                    
                 </button>
-            </div>
-        </div>
-    </div>
-    `
+            </div>`
 });
 
 function seenNotica(id) {
@@ -664,23 +664,19 @@ const addToCart = (idPro) => {
         let { id, name, image, cost, discount } = prod;
         let indFind = 0;
         let isFind = false
-        cart.forEach((item, index) => {
-            if (item.id === idPro) {
-                isFind = true
-                indFind = index;
-            } else {
-                indFind = index
-            }
+        let proFind = cart.find((item, index) => {
+            indFind = index
+            return item.id == idPro
         })
-        console.log(isFind, indFind)
-        if (isFind) {
+        // console.log(Boolean(proFind))
+        if (proFind) {
             cart[indFind].amount += 1;
-            cart[indFind].total += cart[indFind].total
+            cart[indFind].total += cart[indFind].costDiscount
             // cart.push(prodFind);
             let newCart = new Cart(cart);
             newCart.totalCart();
             userLocal.cart = newCart;
-            console.log(newCart)
+            // console.log(cart[indFind])
         } else {
             let amount = 1;
             let proToCart = new CartProducts(id, name, image, cost, discount, amount);
@@ -688,8 +684,9 @@ const addToCart = (idPro) => {
             let newCart = new Cart(cart);
             newCart.totalCart();
             userLocal.cart = newCart;
-            console.log(newCart)
+            // console.log(proToCart)
         }
+        showAlertAdd(prod)
         setLocalStorage('User', userLocal)
         renderCart(userLocal.cart.products)
     } else {
@@ -699,37 +696,284 @@ const addToCart = (idPro) => {
 }
 
 const renderCart = (cart) => {
-    console.log(cart)
+    let content = '';
     if (cart.length > 0) {
-        let content = `
+        let total = 0;
+        let amount = 0;
+        content = `
     <h4>CART</h4>
         <div class="cart-content">
         <table class="table">
         <tbody>
             ${cart.map(item => {
+            total += item.total
+            amount += item.amount
             return `
                     <tr>
-                        <td style="width:auto;">
-                            <img src="${item.image} "width:50px;"">
+                        <td style="width: 20%">
+                            <img src="${item.image}">
                         </td>
-                        <td ><p class="cart-product-name">${item.name}</p></td>
+                        <td ><span class="cart-product-name">${item.name}</span></td>
                         <td>${item.amount}</td>
                         <td>${item.total.toLocaleString()}đ</td>
                     </tr>
                 `
         }).join("")}
+            
         </tbody>
     </table>
         </div>
+        <table class="table">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-xl" onclick="renderCartDetail()">XEM GIỎ HÀNG</button></td>
+            </tr>
+        </table>
     `;
-        document.querySelector("#cart").innerHTML = content
+    } else {
+        content = `
+        <div class="emty-content">
+            <img src="../../img/emty-box.png" alt="">
+            <p>Bạn chưa có sản phẩm nào</p>
+        </div>
+        `
     }
-
+    document.querySelector("#cart").innerHTML = content;
 }
+
+const renderCartDetail = () => {
+    let cart = JSON.parse(localStorage.getItem("User")).cart.products
+    let content = '';
+    // console.log(cart)
+    if (cart.length > 0) {
+        let total = 0;
+        let amount = 0;
+        content = `
+        <div class="modal-header">
+            <h4 class="modal-title">GIỎ HÀNG</h4>
+            <button type="button" class="close" data-dismiss="modal">
+                X
+            </button>
+        </div>
+        <div class="modal-body">
+        <div class="cart-table">
+        <table class="table">
+            <thead style="text-align: center">
+                <th>Hình ảnh</th>
+                <th>Tên sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+                <th>Thành tiền</th>
+                <th></th>
+            </thead>
+        </table>
+        <div class="cart-content">
+            <table class="table">
+            <tbody>
+                ${cart.map(item => {
+            total += item.total
+            amount += item.amount
+            return `
+                        <tr>
+                            <td style="width:10%;">
+                                <img src="${item.image}">
+                            </td>
+                            <td style="width:35%;"><p class="cart-product-name">${item.name}</p></td>
+                            <td style="width:20%; text-align: center">
+                                <button class="btn btn-danger" onclick="changeAmount(${-1}, '${item.id}')">-</button>
+                                <span style="padding: 0 10px">${item.amount}</span>
+                                <button class="btn btn-primary" onclick="changeAmount(${1}, '${item.id}')">+</button>
+                            </td>
+                            <td  style="width:15%; text-align: center">
+                            ${item.costDiscount.toLocaleString()}đ
+                            </td>
+                            <td  style="width:20%; text-align: center">
+                            ${item.total.toLocaleString()}đ
+                            </td>
+                            <td>
+                                <button class="btn btn-danger" onclick="deleteProduct('${item.id}')">XÓA</button>
+                            </td>
+                        </tr>
+                    `
+        }).join("")}
+            </tbody>  
+        </table>
+    </div> 
+    <table class="table">
+            <tfoot>
+                <tr>
+                    <td style="width: 10%; text-align: center"></td>
+                    <td style="width: 33%; text-align: center">
+                        <strong>TỔNG CỘNG</strong>
+                    </td>
+                    <td style="width: 15%; text-align: center">
+                        <strong>${amount}</strong>
+                    </td>
+                    <td style="width: 15%; text-align: center"></td>
+                    <td style=" text-align: center">
+                        <h5><strong>${total.toLocaleString()}đ</strong></h5>
+                    </td>
+                    <td style="width: 5%; text-align: center"></td>
+                </tr>
+            </tfoot>
+        </table>
+        </div>
+        <div class="modal-footer">
+                            <button class="btn btn-danger" data-dismiss="modal">
+                                Close
+                            </button>
+                        </div>
+        </div>
+    `;
+    } else {
+        content = `
+        <div class="modal-header" >
+            <h4 class="modal-title">GIỎ HÀNG</h4>
+            <button type="button" class="close" data-dismiss="modal">
+                X
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="cart-content">
+                <table class="table">
+                    <thead style="text-align: center">
+                        <th>Hình ảnh</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Đơn giá</th>
+                        <th>Thành tiền</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><h5 class="text-danger">KHÔNG CÓ SẢN PHẨM TRONG GIỎ HÀNG</h5></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>    
+        <div class="modal-footer">
+            <button class="btn btn-danger" data-dismiss="modal">
+                Close
+            </button>
+        </div>
+        `
+    }
+    document.querySelector(".modal-xl .modal-content").innerHTML = content
+}
+
+let changeAmount = (num, idPro) => {
+    let number = Number(num);
+    let userLocal = JSON.parse(localStorage.getItem("User"))
+    let cart = userLocal.cart.products;
+    let indFind = 0;
+    let prod = cart.find((item, index) => {
+        indFind = index
+        return item.id === idPro
+    })
+    if (number === -1 && cart[indFind].amount === 1) {
+        // console.log(indFind)
+        alertDelProduct(idPro)
+    } else {
+        cart[indFind].amount += number;
+        cart[indFind].total += (number * cart[indFind].costDiscount);
+        userLocal.cart = new Cart(cart)
+        userLocal.cart.totalCart()
+        setLocalStorage('User', userLocal)
+        renderCart(userLocal.cart.products)
+        renderCartDetail()
+    }
+}
+
+let deleteProduct = (idPro) => {
+    let userLocal = JSON.parse(localStorage.getItem("User"))
+    let cart = userLocal.cart.products;
+    let indFind = 0;
+    let prod = cart.find((item, index) => {
+        indFind = index
+        return item.id === idPro
+    })
+    if (prod) {
+        cart.splice(indFind, 1);
+        userLocal.cart = new Cart(cart)
+        userLocal.cart.totalCart()
+        setLocalStorage('User', userLocal)
+        renderCart(userLocal.cart.products)
+        renderCartDetail()
+        // $('.bd-example-modal-md').modal('toggle');
+        $('.modal-md .close').click()
+    }
+}
+
+// let resetModal = () => {
+//     document.querySelectorAll('.modal').forEach(e => {
+//         e.innerHTML = ""
+//         console.log(e)
+//     })
+//     console.log(document.querySelectorAll('.modal'))
+// }
+
+// window.resetModal = resetModal
+
+let showAlertAdd = (prod) => {
+    document.querySelector('.modal-md .modal-content').innerHTML = `
+        <div
+        class="alert alert-success alert-dismissible fade show"
+        role="alert"
+        id="alert-add"
+        >
+            <span>Đã thêm</span>
+            <strong>${prod.name}</strong> 
+            <span>vào giỏ hàng</span>
+            <button
+                type="button"
+                class="close"
+                data-dismiss="alert"
+                aria-label="Close"
+            >
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>`
+    $('.bd-example-modal-md').modal('toggle');
+    setTimeout(function () {
+        $('.bd-example-modal-md').modal('hide');
+        ;
+    }, 1000);
+}
+
+let alertDelProduct = (id) => {
+    let content = `
+        
+        <div class="alert-cart">
+            <button type="button" class="close" data-dismiss="modal">
+                    X
+            </button>
+            <div class="alert alert-danger">
+            <h4 style="text-align: center"><strong>Bạn có muốn xóa sản phẩm này?</strong></h4>
+            </div>
+            <div class="button-alert">
+                <button class="btn btn-info" onclick="deleteProduct('${id}')">Xóa</button>
+                <button class="btn btn-danger" data-dismiss="modal" >
+                    Close
+                </button>
+            </div>
+        </div>
+    `
+    document.querySelector('.modal-md .modal-content').innerHTML = content;
+    $('.bd-example-modal-md').modal('toggle');
+}
+
+window.deleteProduct = deleteProduct;
+
+window.changeAmount = changeAmount;
+
+window.renderCartDetail = renderCartDetail;
 
 // renderCart(JSON.parse(localStorage.getItem("User")).cart.products)
 
-window.addToCart = addToCart
+window.addToCart = addToCart;
 
 
 // LOGIN

@@ -1,3 +1,21 @@
 .swiper-wrapper-modal {
     margin-top: 20px !important;
 }
+
+.alert-cart {
+    padding: 15px;
+    background-color: $color-blue-3;
+}
+.cart-table {
+    table {
+        margin-bottom: 0;
+        img {
+            width: 70px;
+            height: 70px;
+        }
+    }
+}
+.cart-content {
+    max-height: 60vh;
+    overflow-y: scroll;
+}
