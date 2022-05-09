@@ -793,7 +793,7 @@ const renderCartDetail = () => {
                             ${item.total.toLocaleString()}đ
                             </td>
                             <td>
-                                <button class="btn btn-danger" onclick="deleteProduct('${item.id}')">XÓA</button>
+                                <button class="btn btn-danger" onclick="alertDelProduct('${item.id}')">XÓA</button>
                             </td>
                         </tr>
                     `
@@ -964,6 +964,8 @@ let alertDelProduct = (id) => {
     document.querySelector('.modal-md .modal-content').innerHTML = content;
     $('.bd-example-modal-md').modal('toggle');
 }
+
+window.alertDelProduct = alertDelProduct;
 
 window.deleteProduct = deleteProduct;
 
