@@ -817,6 +817,11 @@ p {
   min-width: 450px;
 }
 
+#cart .cart-content {
+  max-height: 450px;
+  overflow-y: scroll;
+}
+
 .cart-product-name {
   overflow: hidden;
   display: -webkit-box;

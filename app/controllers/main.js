@@ -656,41 +656,46 @@ window.searchProduct = searchProduct
 
 const addToCart = (idPro) => {
     let userLocal = JSON.parse(localStorage.getItem("User"))
-    let cart = userLocal.cart.products;
-    let prod = homeProducts.find(item => {
-        return item.id === idPro
-    })
-    let { id, name, image, cost, discount } = prod;
-    let indFind = 0;
-    let isFind = false
-    cart.forEach((item, index) => {
-        if (item.id === idPro) {
-            isFind = true
-            indFind = index;
+    if (userLocal) {
+        let cart = userLocal.cart.products;
+        let prod = homeProducts.find(item => {
+            return item.id === idPro
+        })
+        let { id, name, image, cost, discount } = prod;
+        let indFind = 0;
+        let isFind = false
+        cart.forEach((item, index) => {
+            if (item.id === idPro) {
+                isFind = true
+                indFind = index;
+            } else {
+                indFind = index
+            }
+        })
+        console.log(isFind, indFind)
+        if (isFind) {
+            cart[indFind].amount += 1;
+            cart[indFind].total += cart[indFind].total
+            // cart.push(prodFind);
+            let newCart = new Cart(cart);
+            newCart.totalCart();
+            userLocal.cart = newCart;
+            console.log(newCart)
         } else {
-            indFind = false
+            let amount = 1;
+            let proToCart = new CartProducts(id, name, image, cost, discount, amount);
+            cart.push(proToCart);
+            let newCart = new Cart(cart);
+            newCart.totalCart();
+            userLocal.cart = newCart;
+            console.log(newCart)
         }
-    })
-    console.log(indFind)
-    if (isFind) {
-        cart[indFind].amount += 1;
-        cart[indFind].total += cart[indFind].total
-        // cart.push(prodFind);
-        let newCart = new Cart(cart);
-        newCart.totalCart();
-        userLocal.cart = newCart;
-        console.log(newCart)
+        setLocalStorage('User', userLocal)
+        renderCart(userLocal.cart.products)
     } else {
-        let amount = 1;
-        let proToCart = new CartProducts(id, name, image, cost, discount, amount);
-        cart.push(proToCart);
-        let newCart = new Cart(cart);
-        newCart.totalCart();
-        userLocal.cart = newCart;
-        console.log(newCart)
+        document.querySelector(".bd-example-modal-xl .close").click();
+        document.querySelector("#login-modal-button").click();
     }
-    setLocalStorage('User', userLocal)
-    renderCart(userLocal.cart.products)
 }
 
 const renderCart = (cart) => {
@@ -698,13 +703,14 @@ const renderCart = (cart) => {
     if (cart.length > 0) {
         let content = `
     <h4>CART</h4>
+        <div class="cart-content">
         <table class="table">
         <tbody>
             ${cart.map(item => {
             return `
                     <tr>
-                        <td style="width:15%;">
-                            <img src="${item.image}">
+                        <td style="width:auto;">
+                            <img src="${item.image} "width:50px;"">
                         </td>
                         <td ><p class="cart-product-name">${item.name}</p></td>
                         <td>${item.amount}</td>
@@ -714,6 +720,7 @@ const renderCart = (cart) => {
         }).join("")}
         </tbody>
     </table>
+        </div>
     `;
         document.querySelector("#cart").innerHTML = content
     }

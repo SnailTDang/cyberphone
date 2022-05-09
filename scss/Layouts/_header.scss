@@ -135,6 +135,10 @@
 
 #cart {
     min-width: 450px;
+    .cart-content {
+        max-height: 450px;
+        overflow-y: scroll;
+    }
 }
 
 .cart-product-name {
