@@ -235,7 +235,7 @@ function showProducts(mangSP) {
         }
         return `
         <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <a href="javascript:void(0)" data-toggle="modal" data-target=".bd-example-modal-xl" onclick="getProduct('${e.id}')">
+            <a href="javascript:void(0)" onclick="getProduct('${e.id}')">
                 <div class="card cardPhone">
                     <div class="card-img">
                         <img src="${e.image}" class="card-img-top" alt="...">
@@ -341,7 +341,8 @@ function getProduct(id) {
             return content
         })
         .then(content => {
-            document.querySelector(".modal-xl .modal-content").innerHTML = content
+            document.querySelector(".modal-xl .modal-content").innerHTML = content;
+            $('.bd-example-modal-xl').modal('toggle');
             modalSlide()
         })
         // .then()
