@@ -7,6 +7,7 @@ import UserType from "../models/UserType.js";
 import modalSlide from "./sliderModal.js"
 import CartProducts from "../models/CartProducts.js"
 import Cart from "../models/Cart.js";
+import scrollMenu from './scrollMenu.js'
 
 
 
@@ -1071,6 +1072,7 @@ function loginAuto() {
                 }
             })
     }
+    scrollMenu()
 }
 
 loginAuto()

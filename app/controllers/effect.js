@@ -12,23 +12,6 @@ menuType.forEach((e) => {
     });
 });
 
-window.addEventListener("scroll", function () {
-    if (
-        document.body.scrollTop > 150 ||
-        document.documentElement.scrollTop > 150
-    ) {
-        headerMenu.classList.add("menu-scroll");
-        for (let menuItem of menuItems) {
-            menuItem.querySelector("span").style.display = "none";
-        }
-    } else {
-        headerMenu.classList.remove("menu-scroll");
-        for (let menuItem of menuItems) {
-            menuItem.querySelector("span").style.display = "inline-block";
-        }
-    }
-});
-
 const swiperHeader = new Swiper(".swiper-header", {
     // Optional parameters
     loop: true,
