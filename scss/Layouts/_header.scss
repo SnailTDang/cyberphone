@@ -157,8 +157,8 @@
 
 .menu-scroll {
     // height: 70px;
-    -webkit-animation: 0.5s hidenMenu ease-in;
-    animation: 0.5s hidenMenu linear;
+//     -webkit-animation: 0.5s hidenMenu ease-in;
+//     animation: 0.5s hidenMenu linear;
     .navbar-brand {
         @include styleText($fs-2 + 1, $fw-3, $color-blue-2);
         img {
